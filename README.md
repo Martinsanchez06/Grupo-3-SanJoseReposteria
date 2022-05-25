@@ -23,3 +23,7 @@ Emmanuel Cadavid Cano (19):  Programador de sistemas de infomacion en formacion.
 3. https://choconato.co/collections/tortas-artesanales (Choco.Nato Artesanal).
 4. https://www.dolcellapasteleria.com/ (Dolcella Pasteleria y cafe).
 5. https://reposteriaelportal.com/ (El Portal 1978).
+
+# sitios de wireframes
+1. https://wireframepro.mockflow.com/view/MULMIZwkHnb
+2. https://wireframepro.mockflow.com/view/MTRku71TK
