@@ -1,0 +1,23 @@
+{
+  "name": "grupo-3-sanjosereposteria",
+  "version": "1.0.0",
+  "description": "Nuestra propuesta de e-commerce es uno sobre un emprendimiento de reposteria, en donde nos vamos a asegurar de ofrecer la mejor experiencia virtual para nuestros clientes ofreciendoles a ellos un sitio dinamico e interactivo en el cual van a poder encontrar una gran variedad en reposteria para su satisfaccion y gusto, y todo en nuestra tienda online hecha para ellos, nuestros clientes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martinsanchez06/Grupo-3-SanJoseReposteria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Martinsanchez06/Grupo-3-SanJoseReposteria/issues"
+  },
+  "homepage": "https://github.com/Martinsanchez06/Grupo-3-SanJoseReposteria#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
