@@ -22,4 +22,6 @@ app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "./views/login.html"))
 });
 
-// Holi soy Camila
+app.get("/productdetail", (req, res) => {
+    res.sendFile(path.join(__dirname, "./views/productdetail.html"))
+});
