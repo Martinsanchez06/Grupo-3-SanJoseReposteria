@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4fa28797ee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/css/styleHome.css">
     <title>Registro de usuario</title>
 </head>
+
 <body>
-    
+
     <header class="main-header">
 
         <div>
-            
-            <img src="" alt="Imagen del logo">
+
+            <img class="img-header" src="../public/images/Logo San José para pared2.png" alt="Imagen del logo">
 
         </div>
-        
-        <nav>
 
-            <div>
+        <nav class="navbar-main">
+            <ul class="nav-tabs">
+                <li class="nav-icons"><a href="#inicio">Inicio</a></li>
+                <li class="nav-icons"><a href="#producto">Productos</a></li>
+                <li class="nav-icons"><a href="#Micuenta">Mi cuenta</a></li>
+                <li class="nav-icons"><a href="#Contactos">Contáctos</a></li>
+            </ul>
 
-                <a href="#inicio">Inicio</a>
-                <a href="#producto">Productos</a>
-                <a href="#Micuenta">Mi cuenta</a>
-                <a href="#Contactos">Contáctos</a>
-                
-            </div>
 
+            <ul class="nav-tabs2">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </ul>
         </nav>
-
-        <div>
-
-            <a href="#"><i class="fas fa-search"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        </div>
 
     </header>
 
@@ -86,7 +85,7 @@
         </div>
 
         <div>
-            
+
             <label for="ciudad">Ciudad</label>
             <select name="ciudad" id="ciudad">
                 <option value="medellin">Medellin</option>
@@ -98,7 +97,7 @@
         </div>
 
         <div>
-            
+
             <label for="password">Contraseña:</label>
             <input type="password" placeholder="****" name="password" id="password">
 
@@ -120,14 +119,15 @@
         <div>
 
             <input type="checkbox" name="politica" value="politica" id="politica">
-            <label for="politica">He leído la política de tratamiento de datos personales y acepto el uso de mis datos</label>
+            <label for="politica">He leído la política de tratamiento de datos personales y acepto el uso de mis
+                datos</label>
 
         </div>
 
         <div>
 
             <button type="submit">Enviar</button>
-            
+
         </div>
 
     </form>
@@ -135,6 +135,7 @@
     <footer>
 
     </footer>
-    
+
 </body>
+
 </html>
