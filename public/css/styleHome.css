@@ -8,7 +8,12 @@
 .main-header {
     background-color: #fae1cf;
     display: flex;
+<<<<<<< HEAD
     justify-content: space-between;
+=======
+    list-style: none;
+
+>>>>>>> b167d3ade22b36372a1bd03c9bea7bface688811
 }
 
 .img-header {
@@ -35,6 +40,7 @@
     display: flex;
 }
 
+<<<<<<< HEAD
 .nav-tabs2 li {
     display: flex;
 }
@@ -63,6 +69,8 @@
 .fa-shopping-cart {
     display: none;
 }
+=======
+>>>>>>> b167d3ade22b36372a1bd03c9bea7bface688811
 .ingreso div h2{
     text-align: center;
 }
