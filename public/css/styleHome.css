@@ -1,26 +1,73 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-.main-header{
-    background-color:#fae1cf;
-}
-
-.img-header{
-    width:80px;
-}
-
-.nav-tabs{
-  
+/* ESTILOS DEL HEADER */
+.main-header {
+    background-color: #fae1cf;
     display: flex;
+    justify-content: space-between;
 }
 
-.nav-icons{
+.img-header {
+    width: 100px;
+}
+
+.nav-tabs {
+    display: flex;
     list-style: none;
+
 }
 
-.navbar-main{
+.nav-icons {
+    display: none;
+    list-style-type: none;
+    font-size: 17px;
+    font-family: "brygada 1918", serif;
+    color: #ffffff;
+    padding: 6px;
+    margin: 0px 7px 0px 7px;
+}
+
+.navbar-main {
     display: flex;
 }
+
+.nav-tabs2 li {
+    display: flex;
+}
+
+.fa-bars,
+.fa-search,
+.fa-shopping-cart {
+    font-size: 27px;
+    margin: 9px;
+    color: rgb(209, 73, 143);
+}
+
+.fa-bars{
+    margin-top:40px;
+    font-size: 45px;
+}
+
+.nav-link-1{
+    background-color:red;
+}
+
+.fa-search {
+    display: none;
+}
+
+.fa-shopping-cart {
+    display: none;
+}
+.ingreso div h2{
+    text-align: center;
+}
+
+.ingreso div h3{
+    text-align: center;
+}
+
