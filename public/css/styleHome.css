@@ -52,10 +52,6 @@
     font-size: 45px;
 }
 
-.nav-link-1{
-    background-color:red;
-}
-
 .fa-search {
     display: none;
 }
@@ -70,4 +66,89 @@
 .ingreso div h3{
     text-align: center;
 }
+
+/* ETILOS DE FOOTER*/
+
+.main-footer {
+    width: 100%;
+    background-color: #fae1cf;
+}
+
+.main-footer .footer-container{
+    padding: 20px;
+}
+
+.main-footer .footer-container .div-img-footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-img {
+    width: 27%;
+}
+
+.div-ul-footer {
+    width: 100%;
+}
+
+.div-ul-footer ul li{
+    list-style: none;
+    text-align: left;
+}
+
+.div-ul-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.div-footer-icons{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.div-footer-icons ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.div-footer-icons ul li a {
+    padding-left: 20%;
+    color: #000000;
+}
+
+/* ESTILOS DE REGISTRO */
+
+.seccion-registro {
+    width: 100%;
+}
+
+.seccion-registro .tit-registro{
+    width: 100%;
+    text-align: center;
+
+}
+
+.seccion-registro .tit-crea-cuenta {
+    width: 100%;
+    text-align: center;
+}
+
+.form-registro {
+    width: 100%;
+}
+
+.seccion-registro .form-registro div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-registro .form-registro div input, label {
+    display: flex;
+    flex-direction: column;
+}
+
+
 
