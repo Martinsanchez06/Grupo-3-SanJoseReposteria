@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<!-- HEADER -->
+    <!-- HEADER -->
     <header class="main-header">
 
         <div>
@@ -37,16 +37,16 @@
         </nav>
 
     </header>
-<!-- PARTE DE REGISTRO -->
-    <section>
+    <!-- PARTE DE REGISTRO -->
+    <section class="seccion-registro">
 
-        <div>
+        <div class="tit-registro">
 
             <h2>¡Registrate!</h2>
 
         </div>
 
-        <div>
+        <div class="tit-crea-cuenta">
 
             <h3>Crea tu cuenta</h3>
 
@@ -54,7 +54,7 @@
 
 
 
-        <form action="/registro" method="POST">
+        <form class="Form-registro" action="/registro" method="POST">
 
             <div>
 
@@ -137,101 +137,57 @@
 
     <footer class="main-footer">
 
-        <div class="footer-img">
+        <div class="footer-container">
 
-            <img src="./images/Logo San José para pared2.png" alt="imagen del logo">
+            <div class="div-img-footer">
 
+                <img class="footer-img" src="./images/Logo San José para pared2.png" alt="imagen del logo">
+
+            </div>
+
+            <div class="div-ul-footer">
+                <ul>
+                    <li>
+                        <a>Nuestra Compañía</a>
+                    </li>
+                    <li>
+                        <a>Nuestra Historia</a>
+                    </li>
+                    <li>
+                        <a>Misión</a>
+                    </li>
+                    <li>
+                        <a>Visión</a>
+                    </li>
+                    <li>
+                        <a>Trabaja con Nosotros</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="div-footer-icons">
+                <ul>
+                    <li>
+                        <a href="#" class="facebook">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="instagram">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <div>
-            <ul>
-                <li>
-                    <a>Nuestra Compañía</a>
-                </li>
-                    <a>Nuestra Historia</a>
-                <li>
-                    <a>Misión</a>
-                </li>
-                    <a>Visión</a>
-                <li>
-                    <a>Trabaja con Nosotros</a>
-                </li>
-            
-            </ul>
-        </div>
-
-        <div>
-            <ul>
-                <li>
-                    <a>
-                        <i class="fab fa-facebook-square"></i> 
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <i class="fab fa-instagram-square"></i>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <i class="fas fa-envelope"></i> 
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-
-            <label for="ciudad">Ciudad</label>
-            <select name="ciudad" id="ciudad">
-                <option value="medellin">Medellin</option>
-                <option value="envigado">Envigado</option>
-                <option value="itagui">Itagüí</option>
-                <option value="la-estrella">La Estrella</option>
-            </select>
-
-        </div>
-
-        <div>
-
-            <label for="password">Contraseña:</label>
-            <input type="password" placeholder="****" name="password" id="password">
-
-        </div>
-
-        <div>
-
-            <label for="password">Confirmar contraseña:</label>
-            <input type="password" placeholder="****" name="password" id="password">
-
-        </div>
-<!-- POLITICA DE TRATAMIENTO -->
-        <div>
-
-            <h3>Política de Tratamiento de Datos Personales</h3>
-
-        </div>
-
-        <div>
-
-            <input type="checkbox" name="politica" value="politica" id="politica">
-            <label for="politica">He leído la política de tratamiento de datos personales y acepto el uso de mis
-                datos</label>
-
-        </div>
-
-        <div>
-
-            <button type="submit">Enviar</button>
-
-        </div>
-
-    </form>
-<!-- PIE DE PAGINA -->
-    <footer>
 
     </footer>
-
 </body>
 
 </html>
