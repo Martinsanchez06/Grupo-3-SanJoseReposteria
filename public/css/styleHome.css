@@ -6,12 +6,14 @@
 
 /* ESTILOS DEL HEADER */
 .main-header {
+    padding: 20px;
     background-color: #fae1cf;
     display: flex;
     justify-content: space-between;
 }
 
-.img-header {
+.img-header,
+.img-footer {
     width: 100px;
 }
 
@@ -47,8 +49,8 @@
     color: rgb(209, 73, 143);
 }
 
-.fa-bars{
-    margin-top:40px;
+.fa-bars {
+    margin-top: 40px;
     font-size: 45px;
 }
 
@@ -59,26 +61,27 @@
 .fa-shopping-cart {
     display: none;
 }
-.ingreso div h2{
+
+.ingreso div h2 {
     text-align: center;
 }
 
-.ingreso div h3{
+.ingreso div h3 {
     text-align: center;
+
 }
 
-/* ETILOS DE FOOTER*/
+/* ESTILOS DE FOOTER*/
 
 .main-footer {
     width: 100%;
     background-color: #fae1cf;
-}
-
-.main-footer .footer-container{
     padding: 20px;
 }
 
-.main-footer .footer-container .div-img-footer{
+
+
+.main-footer .div-img-footer{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -121,15 +124,18 @@
 
 .seccion-registro {
     width: 100%;
+    padding: 20px;
 }
 
 .seccion-registro .tit-registro{
+    padding-bottom: 20px;
     width: 100%;
     text-align: center;
 
 }
 
 .seccion-registro .tit-crea-cuenta {
+    padding-bottom: 20px;
     width: 100%;
     text-align: center;
 }
@@ -138,17 +144,34 @@
     width: 100%;
 }
 
-.seccion-registro .form-registro div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.control-form{
+    margin-bottom: 15px;
 }
 
-.seccion-registro .form-registro div input, label {
-    display: flex;
-    flex-direction: column;
+.control-form label {
+    margin-bottom: 5px;
+    font-style: italic;
+    display: block;
 }
+
+.control {
+    padding: 8px;
+    width: 100%;
+}
+
+.div-politic-title{
+    margin-bottom: 20px;
+}
+
+.control-politic label{
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+
+
+
+
 
 
 
