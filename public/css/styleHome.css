@@ -46,7 +46,7 @@
 .fa-shopping-cart {
     font-size: 27px;
     margin: 9px;
-    color: rgb(209, 73, 143);
+    color: #ADD8E6;
 }
 
 .fa-bars {
@@ -159,14 +159,48 @@
     width: 100%;
 }
 
-.div-politic-title{
+.div-politic-title {
     margin-bottom: 20px;
+}
+
+.control-politic {
+    padding-bottom: 20px;
 }
 
 .control-politic label{
     margin-bottom: 5px;
     font-style: italic;
 }
+
+.button-form {
+    display: flex;
+    justify-content: center;
+}
+
+.button-form button {
+    border: none;
+    border-radius: 8%;
+    width: 30%;
+    height: 50px;
+    background-color: #FFA500;
+    color: #000000;
+    transition: 
+    background-color, 0.5s,
+    color, 0.5s;
+
+}
+
+.button-form button:hover {
+    background-color: #ADD8E6;
+    color: #FFFFFF;
+}
+
+.div-olvidaste {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 
 
