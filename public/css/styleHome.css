@@ -6,6 +6,7 @@
 
 /* ESTILOS DEL HEADER */
 .main-header {
+    padding: 20px;
     background-color: #fae1cf;
     display: flex;
     justify-content: space-between;
@@ -40,14 +41,6 @@
     display: flex;
 }
 
-main{
-
-}
-
-footer{
-
-}
-
 .fa-bars,
 .fa-search,
 .fa-shopping-cart {
@@ -59,10 +52,6 @@ footer{
 .fa-bars {
     margin-top: 40px;
     font-size: 45px;
-}
-
-.nav-link-1 {
-    background-color: red;
 }
 
 .fa-search {
@@ -79,4 +68,109 @@ footer{
 
 .ingreso div h3 {
     text-align: center;
+
 }
+
+/* ESTILOS DE FOOTER*/
+
+.main-footer {
+    width: 100%;
+    background-color: #fae1cf;
+    padding: 20px;
+}
+
+
+
+.main-footer .div-img-footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-img {
+    width: 27%;
+}
+
+.div-ul-footer {
+    width: 100%;
+}
+
+.div-ul-footer ul li{
+    list-style: none;
+    text-align: left;
+}
+
+.div-ul-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.div-footer-icons{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.div-footer-icons ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.div-footer-icons ul li a {
+    padding-left: 20%;
+    color: #000000;
+}
+
+/* ESTILOS DE REGISTRO */
+
+.seccion-registro {
+    width: 100%;
+    padding: 20px;
+}
+
+.seccion-registro .tit-registro{
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.seccion-registro .tit-crea-cuenta {
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-registro {
+    width: 100%;
+}
+
+.control-form{
+    margin-bottom: 15px;
+}
+
+.control-form label {
+    margin-bottom: 5px;
+    font-style: italic;
+    display: block;
+}
+
+.control {
+    padding: 8px;
+    width: 100%;
+}
+
+.div-politic-title{
+    margin-bottom: 20px;
+}
+
+.control-politic label{
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+
+
+
+
+
+
