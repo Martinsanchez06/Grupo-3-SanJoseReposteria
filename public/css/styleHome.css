@@ -46,7 +46,7 @@
 .fa-shopping-cart {
     font-size: 27px;
     margin: 9px;
-    color: rgb(209, 73, 143);
+    color:#8CC0DE;
 }
 
 .fa-bars {
@@ -70,6 +70,12 @@
     text-align: center;
 
 }
+/* ESTILOS MAIN */
+
+.divisor{
+background-color: rgb(255, 0, 0);
+height: 100vh;
+}
 
 /* ESTILOS DE FOOTER*/
 
@@ -89,34 +95,42 @@
 
 .footer-img {
     width: 27%;
+    margin-bottom: 20px;
 }
 
-.div-ul-footer {
+.ul-footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.div-ul1-footer {
+    margin-right: 25px;
     width: 100%;
 }
 
-.div-ul-footer ul li{
+.div-ul1-footer ul li{
     list-style: none;
     text-align: left;
 }
 
-.div-ul-footer ul li a:hover {
+.div-ul1-footer ul li a:hover {
     text-decoration: underline;
 }
 
-.div-footer-icons{
-    margin-top: 20px;
+.div-ul2-footer {
     width: 100%;
+    display: flex;
 }
 
-.div-footer-icons ul{
+.div-ul2-footer ul{
     list-style: none;
     display: flex;
+    padding-left: 20%;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
-.div-footer-icons ul li a {
-    padding-left: 20%;
+.div-ul2-footer ul li a {
     color: #000000;
 }
 
