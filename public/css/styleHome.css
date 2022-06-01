@@ -46,7 +46,7 @@
 .fa-shopping-cart {
     font-size: 27px;
     margin: 9px;
-    color: #ADD8E6;
+    color:#8CC0DE;
 }
 
 .fa-bars {
@@ -70,6 +70,18 @@
     text-align: center;
 
 }
+/* ESTILOS MAIN */
+
+.contain-main {
+    min-height: 90vh;
+}
+
+/* ESTILOS DE MAIN DE CARRITO DE COMPRAS */
+
+.divisor{
+background-color: #F4F4F4;
+height: 90vh;
+}
 
 /* ESTILOS DE FOOTER*/
 
@@ -89,34 +101,42 @@
 
 .footer-img {
     width: 27%;
+    margin-bottom: 20px;
 }
 
-.div-ul-footer {
+.ul-footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.div-ul1-footer {
+    margin-right: 25px;
     width: 100%;
 }
 
-.div-ul-footer ul li{
+.div-ul1-footer ul li{
     list-style: none;
     text-align: left;
 }
 
-.div-ul-footer ul li a:hover {
+.div-ul1-footer ul li a:hover {
     text-decoration: underline;
 }
 
-.div-footer-icons{
-    margin-top: 20px;
+.div-ul2-footer {
     width: 100%;
+    display: flex;
 }
 
-.div-footer-icons ul{
+.div-ul2-footer ul{
     list-style: none;
     display: flex;
+    padding-left: 20%;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
-.div-footer-icons ul li a {
-    padding-left: 20%;
+.div-ul2-footer ul li a {
     color: #000000;
 }
 
@@ -173,39 +193,190 @@
 }
 
 .button-form {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .button-form button {
-    border: none;
-    border-radius: 8%;
-    width: 30%;
-    height: 50px;
     background-color: #FFA500;
     color: #000000;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
     transition: 
-    background-color, 0.5s,
+    background-color, 0.5s
     color, 0.5s;
 
 }
 
 .button-form button:hover {
-    background-color: #ADD8E6;
+    background-color: #8CC0DE;
     color: #FFFFFF;
 }
 
-.div-olvidaste {
-    text-align: center;
+/* ESTILOS DE LOGIN */
+
+.ingreso {
+    width: 100%;
+    padding: 20px;
+}
+
+.div-olvidaste{
+    width: 100%;
     margin-top: 20px;
-    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ESTILOS DE PRODUCT DETAIL */
+
+.div-big-img {
+    position: relative;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.div-big-img a .big-img {
+    width: 100%;
+}
+
+.div-litle-imgs {
+    width: 100%;
+}
+
+.div-litle-imgs a {
+    width: 100%;    
+}
+
+.div-litle-imgs a .litle-img {
+    width: 20%;
+}
+
+.div-description {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.product-detail {
+    width: 100%;
+    padding: 20px;
+}
+
+.sizes {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.circle-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.ul-circle {
+    list-style: none;
+}
+
+.li-cakesize {
+    text-align: center;
+    font-weight: bold;
+}
+
+.li-circle {
+    padding: 10px;
+}
+
+.a-portion {
+    text-decoration: none;
+    color: #000000;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 70px;
+    border-color: #fae1cf;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 12px;
+    margin: auto;
+    text-align: center;
+}
+
+.circle:hover {
+    border-color: #FFA500;
+    border-width: 3px;
+    font-weight: bold;
+}
+
+.li-price {
+    text-align: center;
+}
+
+.li-price span {
+    font-weight: bold;
+}
+
+.div-add-shoppingcar {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
+.amunt-of {
+    flex-grow: 0.3;
+    padding-left: 20px;
+}
+
+.amunt-of .menos {
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.amunt-of .mas {
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    top: 4px;
+    text-decoration: none;
 }
 
 
+.amunt-of input {
+    width: 50px;
+    border-radius: 20px;
+    border-width: 1px;
+}
 
+.div-add-button {
+    position: relative;
+    top: 7px;
 
+}
 
+.add-button {
+    background-color: #FFA500;
+    color: #000000;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    transition: 
+    background-color, 0.5s
+    color, 0.5s;
+}
 
-
+.add-button:hover {
+    background-color: #8CC0DE;
+    color: #FFFFFF;
+}
 
 
