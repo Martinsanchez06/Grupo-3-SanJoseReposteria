@@ -24,11 +24,11 @@
 }
 
 .nav-icons {
-  display: none;
+  display:none;
   list-style-type: none;
-  font-size: 17px;
+  font-size: 19px;
   font-family: "brygada 1918", serif;
-  color: #ffffff;
+  color: #000000;
   padding: 6px;
   margin: 0px 7px 0px 7px;
 }
@@ -87,7 +87,7 @@
 }
 
 .h3-carrito-de-compras {
- 
+
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -98,36 +98,33 @@
   justify-content: space-around;
 }
 
-.p-carrito-de-compras {
-  border: solid red 2px;
+.p1-carrito-de-compras {
+  font-weight: bold;
+  padding-left: 5px;
 }
 
-.producto-carrito-de-compras {
-  border: solid red 2px;
+.p2-carrito-de-compras,
+.p3-carrito-de-compras {
+  padding-left: 5px;
+  font-weight: bold;
 }
+
 
 .img-producto-carrito-de-compras {
   margin: 20px 5px 10px;
-  border: solid red 2px;
+  border: solid rgba(255, 0, 0, 0.367) 2px;
   height: 290px;
   width: 290px;
 }
 
-.content-descripcion-producto-carrito-de-compras {
-  border: solid red 2px;
-}
 
-.content-bottom{
-  
-}
 
 .descripcion-producto-carrito-de-compras {
-  margin: 10px auto;
-  border: solid red 2px;
+  margin: 10px 5px;
   width: 390px;
 }
 
-.p-precio{
+.p-precio {
   margin: 10px 0px;
 }
 
@@ -137,7 +134,7 @@
   width: 200px;
   height: 30px;
   border-radius: 4px;
-  background-color:#279add;
+  background-color: #279add;
   font-weight: bold;
 }
 
@@ -244,4 +241,56 @@
 .control-politic label {
   margin-bottom: 5px;
   font-style: italic;
+}
+
+/* ----- MEDIA QUERIES-----*/
+
+/* -Containes 1100 px- */
+@media only screen and (max-width: 1100px) {
+  .nav-icons {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 25px;
+    font-family: "brygada 1918", serif;
+    color: #ffffff;
+    padding: 6px;
+    margin: 0px 7px 0px 7px;
+  }
+  
+.fa-bars,
+.fa-search,
+.fa-shopping-cart {
+  display: none;
+  font-size: 27px;
+  margin: 9px;
+  color: #8CC0DE;
+}
+}
+
+/* -Tablet- */
+@media only screen and (max-width: 768px) {
+
+  .nav-icons {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 25px;
+    font-family: "brygada 1918", serif;
+    color: #ffffff;
+    padding: 6px;
+    margin: 0px 7px 0px 7px;
+  }
+}
+
+/* -Mobile- */
+@media only screen and (max-width: 480px) {
+  .img-producto-carrito-de-compras {
+    margin: 20px 5px 10px;
+    height: 30vh !important;
+    width: 70vw !important;
+  }
+
+  .btn-CDC {
+    width: 150px !important;
+  }
+
 }
