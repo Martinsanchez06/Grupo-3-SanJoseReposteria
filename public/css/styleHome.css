@@ -6,7 +6,7 @@
 
 /* ESTILOS DEL HEADER */
 .main-header {
-  padding: 10px 16px ;
+  padding: 10px 16px;
   background-color: #fae1cf;
   display: flex;
   justify-content: space-between;
@@ -79,14 +79,15 @@
 
 .main-carrito-de-compras {
   background-color: #F1F1F1;
-  height: 90vh;
+  min-height: 90vh;
   width: 90%;
   margin: auto;
   margin-bottom: 20px;
+  padding-left: 3px;
 }
 
 .h3-carrito-de-compras {
-  border: solid red 2px;
+ 
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -105,7 +106,40 @@
   border: solid red 2px;
 }
 
-.descripcion-carrito-de-compras {}
+.img-producto-carrito-de-compras {
+  margin: 20px 5px 10px;
+  border: solid red 2px;
+  height: 290px;
+  width: 290px;
+}
+
+.content-descripcion-producto-carrito-de-compras {
+  border: solid red 2px;
+}
+
+.content-bottom{
+  
+}
+
+.descripcion-producto-carrito-de-compras {
+  margin: 10px auto;
+  border: solid red 2px;
+  width: 390px;
+}
+
+.p-precio{
+  margin: 10px 0px;
+}
+
+.btn-CDC {
+  border: solid 1px;
+  margin: 10px;
+  width: 200px;
+  height: 30px;
+  border-radius: 4px;
+  background-color:#279add;
+  font-weight: bold;
+}
 
 /* ESTILOS DE FOOTER*/
 
