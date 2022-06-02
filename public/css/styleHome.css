@@ -6,7 +6,7 @@
 
 /* ESTILOS DEL HEADER */
 .main-header {
-  padding: 10px 16px ;
+  padding: 10px 16px;
   background-color: #fae1cf;
   display: flex;
   justify-content: space-between;
@@ -24,11 +24,11 @@
 }
 
 .nav-icons {
-  display: none;
+  display:none;
   list-style-type: none;
-  font-size: 17px;
+  font-size: 19px;
   font-family: "brygada 1918", serif;
-  color: #ffffff;
+  color: #000000;
   padding: 6px;
   margin: 0px 7px 0px 7px;
 }
@@ -82,14 +82,15 @@
 
 .main-carrito-de-compras {
   background-color: #F1F1F1;
-  height: 90vh;
+  min-height: 90vh;
   width: 90%;
   margin: auto;
   margin-bottom: 20px;
+  padding-left: 3px;
 }
 
 .h3-carrito-de-compras {
-  border: solid red 2px;
+
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -100,15 +101,45 @@
   justify-content: space-around;
 }
 
-.p-carrito-de-compras {
-  border: solid red 2px;
+.p1-carrito-de-compras {
+  font-weight: bold;
+  padding-left: 5px;
 }
 
-.producto-carrito-de-compras {
-  border: solid red 2px;
+.p2-carrito-de-compras,
+.p3-carrito-de-compras {
+  padding-left: 5px;
+  font-weight: bold;
 }
 
 
+.img-producto-carrito-de-compras {
+  margin: 20px 5px 10px;
+  border: solid rgba(255, 0, 0, 0.367) 2px;
+  height: 290px;
+  width: 290px;
+}
+
+
+
+.descripcion-producto-carrito-de-compras {
+  margin: 10px 5px;
+  width: 390px;
+}
+
+.p-precio {
+  margin: 10px 0px;
+}
+
+.btn-CDC {
+  border: solid 1px;
+  margin: 10px;
+  width: 200px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #279add;
+  font-weight: bold;
+}
 
 /* ESTILOS DE FOOTER*/
 
@@ -407,3 +438,24 @@
 }
 
 
+.control-politic label {
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+/* ----- MEDIA QUERIES-----*/
+
+/* -Containes 1100 px- */
+@media only screen and (max-width: 1100px) {
+
+}
+
+/* -Tablet- */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* -Mobile- */
+@media only screen and (max-width: 480px) {
+  
+}
