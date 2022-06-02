@@ -1,75 +1,76 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 /* ESTILOS DEL HEADER */
 .main-header {
-    padding: 20px;
-    background-color: #fae1cf;
-    display: flex;
-    justify-content: space-between;
+  padding: 10px 16px ;
+  background-color: #fae1cf;
+  display: flex;
+  justify-content: space-between;
 }
 
 .img-header,
 .img-footer {
-    width: 100px;
+  width: 60px;
 }
 
 .nav-tabs {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 
 }
 
 .nav-icons {
-    display: none;
-    list-style-type: none;
-    font-size: 17px;
-    font-family: "brygada 1918", serif;
-    color: #ffffff;
-    padding: 6px;
-    margin: 0px 7px 0px 7px;
+  display: none;
+  list-style-type: none;
+  font-size: 17px;
+  font-family: "brygada 1918", serif;
+  color: #ffffff;
+  padding: 6px;
+  margin: 0px 7px 0px 7px;
 }
 
 .navbar-main {
-    display: flex;
+  display: flex;
 }
 
 .nav-tabs2 li {
-    display: flex;
+  display: flex;
 }
 
 .fa-bars,
 .fa-search,
 .fa-shopping-cart {
-    font-size: 27px;
-    margin: 9px;
-    color:#8CC0DE;
+  font-size: 27px;
+  margin: 9px;
+  color: #8CC0DE;
 }
 
 .fa-bars {
-    margin-top: 40px;
-    font-size: 45px;
+  margin-top: 12px;
+  font-size: 40px;
 }
 
 .fa-search {
-    display: none;
+  display: none;
 }
 
 .fa-shopping-cart {
-    display: none;
+  display: none;
 }
 
 .ingreso div h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .ingreso div h3 {
-    text-align: center;
+  text-align: center;
 
 }
+
 /* ESTILOS MAIN */
 
 .contain-main {
@@ -78,105 +79,131 @@
 
 /* ESTILOS DE MAIN DE CARRITO DE COMPRAS */
 
-.divisor{
-background-color: #F4F4F4;
-height: 90vh;
+
+.main-carrito-de-compras {
+  background-color: #F1F1F1;
+  height: 90vh;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
 }
+
+.h3-carrito-de-compras {
+  border: solid red 2px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.titles-carrito-de-compras {
+  display: flex;
+  justify-content: space-around;
+}
+
+.p-carrito-de-compras {
+  border: solid red 2px;
+}
+
+.producto-carrito-de-compras {
+  border: solid red 2px;
+}
+
+
 
 /* ESTILOS DE FOOTER*/
 
 .main-footer {
-    width: 100%;
-    background-color: #fae1cf;
-    padding: 20px;
+  width: 100%;
+  background-color: #fae1cf;
+  padding: 20px;
 }
 
 
 
-.main-footer .div-img-footer{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.main-footer .div-img-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-img {
-    width: 27%;
-    margin-bottom: 20px;
+  width: 27%;
+  margin-bottom: 20px;
 }
 
-.ul-footer{
-    display: flex;
-    justify-content: space-around;
+.ul-footer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .div-ul1-footer {
-    margin-right: 25px;
-    width: 100%;
+  margin-right: 25px;
+  width: 100%;
 }
 
-.div-ul1-footer ul li{
-    list-style: none;
-    text-align: left;
+.div-ul1-footer ul li {
+  list-style: none;
+  text-align: left;
 }
 
 .div-ul1-footer ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .div-ul2-footer {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
-.div-ul2-footer ul{
-    list-style: none;
-    display: flex;
-    padding-left: 20%;
-    flex-direction: column;
-    justify-content: space-evenly;
+.div-ul2-footer ul {
+  list-style: none;
+  display: flex;
+  padding-left: 20%;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .div-ul2-footer ul li a {
-    color: #000000;
+  color: #000000;
 }
 
 /* ESTILOS DE REGISTRO */
 
 .seccion-registro {
-    width: 100%;
-    padding: 20px;
+  width: 100%;
+  padding: 20px;
 }
 
-.seccion-registro .tit-registro{
-    padding-bottom: 20px;
-    width: 100%;
-    text-align: center;
+.seccion-registro .tit-registro {
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
 
 }
 
 .seccion-registro .tit-crea-cuenta {
-    padding-bottom: 20px;
-    width: 100%;
-    text-align: center;
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .form-registro {
-    width: 100%;
+  width: 100%;
 }
 
-.control-form{
-    margin-bottom: 15px;
+.control-form {
+  margin-bottom: 15px;
 }
 
 .control-form label {
-    margin-bottom: 5px;
-    font-style: italic;
-    display: block;
+  margin-bottom: 5px;
+  font-style: italic;
+  display: block;
 }
 
 .control {
-    padding: 8px;
-    width: 100%;
+  padding: 8px;
+  width: 100%;
 }
 
 .div-politic-title {
