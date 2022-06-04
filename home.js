@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.static("public"));
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Proceso exitoso");
 });
 
@@ -24,4 +24,8 @@ app.get("/login", (req, res) => {
 
 app.get("/productdetail", (req, res) => {
     res.sendFile(path.join(__dirname, "./views/productdetail.html"))
+});
+
+app.get("/carritoDeCompras", (req, res) => {
+    res.sendFile(path.join(__dirname, "./views/carritoDeCompras.html"))
 });

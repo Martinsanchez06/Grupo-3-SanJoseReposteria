@@ -71,7 +71,159 @@
 
 }
 
-/* ESTILOS MAIN */
+/* ESTILOS DEL HEADER */
+.main-header {
+  background-color: #fae1cf;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-header,
+.img-footer {
+  width: 100px;
+}
+
+.nav-tabs {
+  display: flex;
+  list-style: none;
+
+}
+
+.nav-icons {
+  display: none;
+  list-style-type: none;
+  font-size: 17px;
+  font-family: "brygada 1918", serif;
+  color: #ffffff;
+  padding: 6px;
+  margin: 0px 7px 0px 7px;
+}
+
+.navbar-main {
+  display: flex;
+}
+
+.nav-tabs2 li {
+  display: flex;
+}
+
+.fa-bars,
+.fa-search,
+.fa-shopping-cart {
+  font-size: 27px;
+  margin: 9px;
+  color: rgb(209, 73, 143);
+}
+
+.fa-bars {
+  margin-top: 40px;
+  font-size: 45px;
+}
+
+.nav-link-1 {
+  background-color: red;
+}
+
+.fa-search {
+  display: none;
+}
+
+.fa-shopping-cart {
+  display: none;
+}
+
+.ingreso div h2 {
+  text-align: center;
+}
+
+.ingreso div h3 {
+  text-align: center;
+}
+
+ul {
+  list-style: circle;
+
+}
+h1, h4, div{
+  font-family: arial;
+}
+.grid div{
+  background: #ecf0f1;
+  padding-top: 4em !important;
+  padding-bottom: 1em !important;
+  padding: 6em;
+  border: 2px solid white;
+}
+
+/*.grid div:hover{
+  border: 2px solid #7C9FF6;
+}*/
+.grid{
+  display: grid;
+  grid-template-columns: 7% 40% 6% 40%;
+}
+.space{
+  background: white !important;
+  padding: 1em;
+  border: 1px solid white !important;
+}
+button{
+  background-color: black;
+  color: white;
+}
+.grid-2{
+  display: grid;
+  grid-template-columns: 1% 45% 4% 40%;
+}
+.grid-2 div{
+  padding-top: 4em !important;
+  padding-bottom: 1em !important;
+  padding: 6em;
+  border: 2px solid white;
+}
+.container{
+  display: flex;
+}
+.grid button:hover{
+  padding: 3% !important;
+  background-color: #ecf0f1;
+  color: black;
+
+}
+.grid-3{
+  margin-left: 4% !important;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap:  3em;
+}
+.grid-3 div{
+  border: 1px solid #D0D0D0;
+  min-height: 350px;
+  max-height: auto;
+}
+
+.img-prod{
+  width: 30%;
+  padding: 1em;
+  border-radius: 27px;
+
+}.img-prod:hover{
+  width: 25% !important;
+}
+.btn-car:hover{
+  background-color: white;
+  color: black;
+}
+.img-prod2{
+  width: 5em;
+  height: 70px;
+  padding: 9px;
+  border-radius:50%;
+}
+.img-prod2:hover{
+  width: 6em;
+  height: 75px;
+}
 
 /* ESTILOS DE MAIN DE CARRITO DE COMPRAS */
 
@@ -112,6 +264,7 @@
 
 .img-producto-carrito-de-compras {
   margin: 20px 5px 10px;
+  border-radius: 7px;
   border: solid rgba(255, 0, 0, 0.367) 2px;
   height: 290px;
   width: 290px;
