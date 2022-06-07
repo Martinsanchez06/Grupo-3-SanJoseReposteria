@@ -4,7 +4,7 @@
   "description": "Nuestra propuesta de e-commerce es uno sobre un emprendimiento de reposteria, en donde nos vamos a asegurar de ofrecer la mejor experiencia virtual para nuestros clientes ofreciendoles a ellos un sitio dinamico e interactivo en el cual van a poder encontrar una gran variedad en reposteria para su satisfaccion y gusto, y todo en nuestra tienda online hecha para ellos, nuestros clientes.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon home.js",
+    "server": "nodemon home.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/Martinsanchez06/Grupo-3-SanJoseReposteria#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "morgan" : "^1.10.0",
+     "express": "^4.18.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
