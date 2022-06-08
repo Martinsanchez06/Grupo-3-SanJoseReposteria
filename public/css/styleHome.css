@@ -233,15 +233,17 @@ button {
   justify-content: space-around;
 }
 
-
-.p1-carrito-de-compras {
-  font-weight: bold;
+p{
   padding-left: 5px;
 }
 
+
+.p1-carrito-de-compras {
+  font-weight: bold;
+  }
+
 .p2-carrito-de-compras,
 .p3-carrito-de-compras {
-  padding-left: 5px;
   font-weight: bold;
 }
 
@@ -273,6 +275,27 @@ button {
   height: 30px;
   border-radius: 10px;
   background-color: #0886a5;
+  font-weight: bold;
+}
+
+.footer-main-carrito-de-compras{
+  
+  background-color: #f1f1f1ad;
+  min-height: 20vh;
+  border-radius: 20px;
+  width: 90%;
+  margin: 16px auto;
+  margin-bottom: 20px;
+  padding-left: 3px;
+  padding-bottom: 10px;
+}
+
+.p-subtotal, .p-total{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.h3-subtotal, .h3-total{
   font-weight: bold;
 }
 
