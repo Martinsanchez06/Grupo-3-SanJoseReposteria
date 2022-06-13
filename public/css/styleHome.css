@@ -1,3 +1,4 @@
+
 * {
   margin: 0px;
   padding: 0px;
@@ -201,6 +202,7 @@ button {
 
 
 .main-carrito-de-compras {
+  border: solid 2px rgb(236, 236, 236);
   background-color: #f1f1f1ad;
   min-height: 90vh;
   border-radius: 20px;
@@ -211,6 +213,12 @@ button {
   padding-bottom: 10px;
 }
 
+.producto-content{
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 95%;
+}
+
 .h3-carrito-de-compras-1 {
   padding-top: 15px;
 }
@@ -218,14 +226,13 @@ button {
 .h3-carrito-de-compras {
   border-radius: 15px;
   justify-content: center;
-  height: 30px;
+  height: 26px;
   font-weight: 20px;
   margin: auto;
   color: #2c2c2c;
-  width: 210px;
-  background-color: #ffcf76;
+  width:93%;
+  background-color:#ffffff;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .titles-carrito-de-compras {
@@ -234,12 +241,14 @@ button {
 }
 
 p{
-  padding-left: 5px;
+  padding-left: 15px;
 }
 
 
 .p1-carrito-de-compras {
   font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
   }
 
 .p2-carrito-de-compras,
@@ -247,19 +256,23 @@ p{
   font-weight: bold;
 }
 
+.div-img-producto-carrito-de-compras {
+  margin: 10px auto;
+  width: 80%;
+  height: 435px;
+}
+
 
 .img-producto-carrito-de-compras {
-  margin: 20px 5px 10px;
-  border-radius: 7px;
-  border: solid rgba(77, 77, 77, 0.367) 2px;
-  height: 290px;
-  width: 290px;
+  border-radius: 3px;
+  height: 100%;
+  width: 100%;
 }
 
 
 
 .descripcion-producto-carrito-de-compras {
-  margin: 10px 5px;
+  margin: 10px 15px;
   width: 390px;
 }
 
@@ -268,10 +281,11 @@ p{
 }
 
 .btn-CDC {
-  border: solid 1px #ffcf76;
+  border: solid 1px #0886a5;
   color: #f3f3f3;
   margin: 10px;
   width: 200px;
+  margin: 10px;
   height: 30px;
   border-radius: 10px;
   background-color: #0886a5;
@@ -279,7 +293,7 @@ p{
 }
 
 .footer-main-carrito-de-compras{
-  
+  border: solid 2px rgb(236, 236, 236);
   background-color: #f1f1f1ad;
   min-height: 20vh;
   border-radius: 20px;
@@ -293,6 +307,10 @@ p{
 .p-subtotal, .p-total{
   margin-top: 10px;
   margin-bottom: 5px;
+}
+
+.h3-subtotal{
+  padding-top: 10px;
 }
 
 .h3-subtotal, .h3-total{
