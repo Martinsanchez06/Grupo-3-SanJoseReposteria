@@ -1,8 +1,12 @@
 const express = require("express");
-
+const rutasMain = require("./routers/main");
+const rutasProductos = require("./routers/productos");
 const path = require("path");
 
 const app = express();
+
+app.set("view engine", "ejs");
+app.set("views", "./views");
 
 app.use(express.static("public"));
 
@@ -10,22 +14,14 @@ app.listen(process.env.PORT || 3000, () => {
     console.log("Proceso exitoso");
 });
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/home.html"))
-});
+app.use("/main", rutasMain);
+app.use("/productos", rutasProductos);
 
-app.get("/registro", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/registro.html")) 
-});
 
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/login.html"))
-});
 
-app.get("/productdetail", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/productdetail.html"))
-});
 
-app.get("/carritoDeCompras", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/carritoDeCompras.html"))
-});
+
+
+
+
+

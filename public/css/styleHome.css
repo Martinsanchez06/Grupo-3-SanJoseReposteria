@@ -120,10 +120,6 @@
   font-size: 45px;
 }
 
-.nav-link-1 {
-  background-color: red;
-}
-
 .fa-search {
   display: none;
 }
@@ -168,7 +164,7 @@ h1, h4, div{
   border: 1px solid white !important;
 }
 button{
-  background-color: black;
+  background-color: #3c7d8f;
   color: white;
 }
 .grid-2{
@@ -186,7 +182,7 @@ button{
 }
 .grid button:hover{
   padding: 3% !important;
-  background-color: #ecf0f1;
+  background-color: #00a8a8;
   color: black;
 
 }
