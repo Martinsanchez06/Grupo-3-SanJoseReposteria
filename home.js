@@ -14,7 +14,7 @@ app.listen(process.env.PORT || 3000, () => {
     console.log("Proceso exitoso");
 });
 
-app.use("/main", rutasMain);
+app.use("/", rutasMain);
 app.use("/productos", rutasProductos);
 
 
