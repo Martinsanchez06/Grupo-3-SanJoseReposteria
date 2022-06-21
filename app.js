@@ -31,8 +31,3 @@ app.get("/productdetail", (req, res) => {
 app.get("/carritoDeCompras", (req, res) => {
     res.sendFile(path.join(__dirname, "./views/carritoDeCompras.html"))
 });
-
-app.get("/carritoDeCompras/:id", (req, res) => {
-    let idCarritoDeCompras = req.params.id;
-    res.send('lo hiciste y estas en el id ' + idCarritoDeCompras)
-});
