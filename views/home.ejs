@@ -1,41 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San José Reposteria</title>
-    <link rel="stylesheet" href="/css/styleHome.css">
-    <script src="/public/js/home.js"></script>
-</head>
+<%- include("partials/head.ejs") %>
 
 <body>
-    <header class="main-header">
 
-        <div>
-    
-          <img class="img-header" src="./images/Logo San José para pared2.png" alt="Imagen del logo">
-    
-        </div>
-    
-        <nav class="navbar-main">
-          <ul class="nav-tabs">
-            <li><a class="nav-icons" href="#inicio">Inicio</a></li>
-            <li><a class="nav-icons" href="#producto">Productos</a></li>
-            <li><a class="nav-icons" href="#Micuenta">Mi cuenta</a></li>
-            <li><a class="nav-icons"href="#Contactos">Contáctos</a></li>
-          </ul>
-    
-    
-          <ul class="nav-tabs2">
-            <a href="#"><i class="fas fa-search"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
-            <a href='#'><i class="fas fa-bars"></i></a>
-          </ul>
-        </nav>
-    
-      </header>
+  <%- include("partials/header.ejs") %>
+
       <main>
         <hr><center>...</center><hr>
 
@@ -147,64 +118,8 @@
     </div>
 
     <center><hr>...<hr></center>
-    <footer class="main-footer">
-
-        <div class="footer-container">
     
-          <div class="div-img-footer">
-    
-            <img class="footer-img" src="./images/Logo San José para pared.png" alt="imagen del logo">
-    
-          </div>
-          <div class="ul-footer">
-            <div class="div-ul1-footer">
-              <ul>
-                <li>
-                  <a>Nuestra Compañía</a>
-                </li>
-                <li>
-                  <a>Nuestra Historia</a>
-                </li>
-                <li>
-                  <a>Misión</a>
-                </li>
-                <li>
-                  <a>Visión</a>
-                </li>
-                <li>
-                  <a>Trabaja con Nosotros</a>
-                </li>
-    
-              </ul>
-            </div>
-    
-            <div class="div-ul2-footer">
-              <ul>
-                <h3>siguenos</h3>
-                <li>
-                  <p>facebook:</p>
-                  <a href="#" class="facebook">
-                    <i class="fab fa-facebook-square"></i>
-                  </a>
-                </li>
-                <li>
-                  <p>instagram:</p>
-                  <a href="#" class="instagram">
-                    <i class="fab fa-instagram-square"></i>
-                  </a>
-                </li>
-                <li>
-                  <p>email:</p>
-                  <a href="#" class="email">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    
-      </footer>
+    <%- include("partials/footer.ejs") %>
     
 </body>
 

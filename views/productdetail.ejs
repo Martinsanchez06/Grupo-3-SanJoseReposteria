@@ -1,42 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/4fa28797ee.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/styleHome.css">
-    <title>Detalle Producto</title>
-</head>
+<%- include("partials/head.ejs") %>
 
 <body>
 
-    <header class="main-header">
-
-        <div>
-
-            <img class="img-header" src="./images/Logo San José para pared2.png" alt="Imagen del logo">
-
-        </div>
-
-        <nav class="navbar-main">
-            <ul class="nav-tabs">
-                <li class="nav-icons"><a href="#inicio">Inicio</a></li>
-                <li class="nav-icons"><a href="#producto">Productos</a></li>
-                <li class="nav-icons"><a href="#Micuenta">Mi cuenta</a></li>
-                <li class="nav-icons"><a href="#Contactos">Contáctos</a></li>
-            </ul>
-
-
-            <ul class="nav-tabs2">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                <a href='#'><i class="fas fa-bars"></i></a>
-            </ul>
-        </nav>
-
-    </header>
+    <%- include("partials/header.ejs") %>
 
     <!-- Main -->
 
@@ -52,15 +21,15 @@
 
             <div class="div-big-img">
 
-                <a href=""><img class="big-img" src="./images/IMG-1417.jpg" alt=""></a>
+                <a href=""><img class="big-img" src="/images/IMG-1417.jpg" alt=""></a>
 
             </div>
 
             <div class="div-litle-imgs">
 
-                <a href=""><img class="litle-img" src="./images/IMG-1420.jpg" alt=""></a>
+                <a href=""><img class="litle-img" src="/images/IMG-1420.jpg" alt=""></a>
 
-                <a href=""><img class="litle-img" src="./images/IMG-1422.jpg" alt=""></a>
+                <a href=""><img class="litle-img" src="/images/IMG-1422.jpg" alt=""></a>
 
             </div>
 
@@ -220,59 +189,7 @@
     </div>
     <!-- PIE DE PAGINA -->
 
-    <footer class="main-footer">
-
-        <div class="footer-container">
-
-            <div class="div-img-footer">
-
-                <img class="footer-img" src="./images/Logo San José para pared2.png" alt="imagen del logo">
-
-            </div>
-
-            <div class="div-ul-footer">
-                <ul>
-                    <li>
-                        <a>Nuestra Compañía</a>
-                    </li>
-                    <li>
-                        <a>Nuestra Historia</a>
-                    </li>
-                    <li>
-                        <a>Misión</a>
-                    </li>
-                    <li>
-                        <a>Visión</a>
-                    </li>
-                    <li>
-                        <a>Trabaja con Nosotros</a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="div-footer-icons">
-                <ul>
-                    <li>
-                        <a href="#" class="facebook">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="instagram">
-                            <i class="fab fa-instagram-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </footer>
+    <%- include("partials/footer.ejs") %>
 
 </body>
 
