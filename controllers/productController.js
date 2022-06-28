@@ -5,6 +5,9 @@ const productController = {
     },
     carritoCompras: (req, res) => {
         res.render("carritoDeCompras")
+    },
+    create: (req, res) => {
+        res.render("createProduct")
     }
 };
 
