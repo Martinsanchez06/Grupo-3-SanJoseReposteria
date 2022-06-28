@@ -5,93 +5,6 @@
   box-sizing: border-box;
 }
 
-/* ESTILOS DEL HEADER */
-.main-header {
-  padding: 10px 16px;
-  background-color: #fae1cf;
-  display: flex;
-  justify-content: space-between;
-}
-
-.img-header,
-.img-footer {
-  width: 60px;
-}
-
-.nav-tabs {
-  display: flex;
-  list-style: none;
-
-}
-
-.nav-icons {
-  display: none;
-  list-style-type: none;
-  font-size: 19px;
-  font-family: "brygada 1918", serif;
-  color: #000000;
-  padding: 6px;
-  margin: 0px 7px 0px 7px;
-}
-
-.navbar-main {
-  display: flex;
-}
-
-.nav-tabs2 li {
-  display: flex;
-}
-
-.fa-bars,
-.fa-search,
-.fa-shopping-cart {
-  font-size: 27px;
-  margin: 9px;
-  color: #8CC0DE;
-}
-
-.fa-bars {
-  margin-top: 12px;
-  font-size: 40px;
-}
-
-.fa-search {
-  display: none;
-}
-
-.fa-shopping-cart {
-  display: none;
-}
-
-.ingreso div h2 {
-  text-align: center;
-}
-
-.ingreso div h3 {
-  text-align: center;
-
-}
-
-.nav-link-1 {
-  background-color: red;
-}
-
-.fa-search {
-  display: none;
-}
-
-.fa-shopping-cart {
-  display: none;
-}
-
-.ingreso div h2 {
-  text-align: center;
-}
-
-.ingreso div h3 {
-  text-align: center;
-}
-
 ul {
   list-style: circle;
 
@@ -124,9 +37,8 @@ div {
   padding: 1em;
   border: 1px solid white !important;
 }
-
-button {
-  background-color: black;
+button{
+  background-color: #3c7d8f;
   color: white;
 }
 
@@ -148,7 +60,7 @@ button {
 
 .grid button:hover {
   padding: 3% !important;
-  background-color: #ecf0f1;
+  background-color: #00a8a8;
   color: black;
 
 }
@@ -462,6 +374,11 @@ p{
   text-align: center;
 }
 
+.div-olvidaste a {
+  text-decoration: none;
+  color: #000000;
+}
+
 /* ESTILOS DE PRODUCT DETAIL */
 
 .div-big-img {
@@ -617,13 +534,235 @@ p{
   font-style: italic;
 }
 
+/* CREATEPRODUCT */
+
+.create-section {
+  width: 100%;
+  padding: 20px;
+}
+
+.create-section .h2-div {
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-create {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.area-fieldc {
+  padding: 8px;
+  width: 100%;
+}
+
+.button-formc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button-formc button {
+  background-color: #FFA500;
+  color: #000000;
+  width: 80px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  transition:
+  background-color, 0.5s color, 0.5s;
+
+}
+
+.button-formc button:hover {
+  background-color: #8CC0DE;
+  color: #FFFFFF;
+}
+
+
+
 /* ----- MEDIA QUERIES-----*/
 
 /* -Containes 1100 px- */
-@media only screen and (max-width: 1100px) {}
+@media only screen and (min-width: 768px) {
+
+  
+
+  /* REGISTRO DE ESCRITORIO */
+
+  .div-desktopR {
+    background-color: #ffffff; 
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-style:groove;
+    border-radius: 20px;
+    border-color: #e4f0f3;
+    height: 860px;
+  }
+
+  .div-desktopR .control-form .control {
+    border-radius: 8px;
+  }
+
+  .tit-crea-cuenta h4{
+    font-size: 30px;
+  }
+
+  /* LOGIN DE ESCRITORIO */
+
+  .contain-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .div-desktop{
+    background-color: #ffffff; 
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-style:groove;
+    border-radius: 20px;
+    border-color: #e4f0f3;
+    height: 400px;
+  }
+
+  .div-desktop .ingreso{
+    padding: 50px;
+  }
+
+  .div-desktop .control-form .control {
+    border-radius: 8px;
+  }
+  
+  .button-form button {
+    background-color: #3c7d8f;
+    color: #ffffff;
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    transition:
+    background-color, 0.5s color, 0.5s;
+  
+  }
+
+  .button-form button:hover {
+    background-color: #8CC0DE;
+    color: #FFFFFF;
+  }
+
+}
 
 /* -Tablet- */
-@media only screen and (max-width: 768px) {}
+@media only screen and (min-width: 460px) {
+
+  /* LOGIN TABLET */
+
+  /* PRODUCT DETAIL TABLET VIEW */
+
+  .contain-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+  }
+
+  .div-big-img a {
+    width: 50px;
+  }
+
+  .div-big-img a .big-img{
+    position: relative;
+    
+    width: 300px;
+
+  }
+
+  .div-litle-imgs {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .sizes {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 70px;
+    border-color: #fae1cf;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 12px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .amunt-of {
+    flex-grow: 0.3;
+    padding-left: 20px;
+  }
+  
+  .amunt-of .menos {
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: 12px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .amunt-of .mas {
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: 14px;
+    text-decoration: none;
+  }
+  
+  
+  .amunt-of input {
+    height: 30px;
+    width: 70px;
+    position: relative;
+    top: 10px;
+    border-radius: 20px;
+    border-width: 1px;
+  }
+  
+
+  .add-button {
+    background-color: #FFA500;
+    color: #000000;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 20px;
+    border: none;
+    transition:
+      background-color, 0.5s color, 0.5s;
+  }
+
+  .add-button:hover {
+    background-color: #8CC0DE;
+    color: #FFFFFF;
+  }
+
+  
+  
+}
 
 /* -Mobile- */
 @media only screen and (max-width: 480px) {}

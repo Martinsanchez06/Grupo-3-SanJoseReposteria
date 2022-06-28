@@ -1,0 +1,103 @@
+/* ESTILOS DEL HEADER */
+.main-header {
+    padding: 10px 16px;
+    background-color: #fae1cf;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-header,
+.img-footer {
+    width: 60px;
+}
+
+.nav-tabs {
+    display: flex;
+    list-style: none;
+
+}
+
+.nav-icons {
+    display: none;
+    list-style-type: none;
+    font-size: 19px;
+    font-family: "brygada 1918", serif;
+    color: #000000;
+    padding: 6px;
+    margin: 0px 7px 0px 7px;
+}
+
+.navbar-main {
+    display: flex;
+}
+
+.nav-tabs2 li {
+    display: flex;
+}
+
+.fa-bars,
+.fa-search,
+.fa-shopping-cart {
+    font-size: 27px;
+    margin: 9px;
+    color: #f89684;
+}
+
+.fa-bars {
+    margin-top: 12px;
+    font-size: 40px;
+}
+
+.fa-search {
+    display: none;
+}
+
+.fa-shopping-cart {
+    display: none;
+}
+
+.ingreso div h2 {
+    text-align: center;
+}
+
+.ingreso div h3 {
+    text-align: center;
+
+}
+
+/* ----- MEDIA QUERIES-----*/
+
+/* -Containes 1100 px- */
+@media only screen and (min-width: 768px) {}
+
+/* -Tablet- */
+@media only screen and (min-width: 460px) {
+    .img-header {
+        width: 90px;
+    }
+
+    .nav2-link {
+        text-decoration: none;
+    }
+
+    .fa-bars {
+        border: solid red 1px;
+        margin-top:25px;
+        font-size: 30px;
+    }
+
+    .fa-search {
+        border: solid red 1px;
+        display: inline;
+        font-size: 35xp;
+    }
+
+    .fa-shopping-cart {
+        border: solid red 1px;
+        display: inline;
+        font-size: 35xp;
+    }
+}
+
+/* -Mobile- */
+@media only screen and (max-width: 480px) {}
