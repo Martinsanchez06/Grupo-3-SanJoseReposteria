@@ -686,7 +686,7 @@ p {
     text-decoration: none;
     color: #00a8a8;
     padding: 0px 20px;
-    font-size: 16px;
+    font-size: 18px;
 
   }
 
@@ -713,7 +713,7 @@ p {
   }
 }
 
-/* -Tablet- */
+/* -Tablet Header- */
 @media only screen and (min-width: 460px) and (max-width: 767px) {
   .img-header {
     width: 90px;
