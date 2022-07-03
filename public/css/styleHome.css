@@ -639,13 +639,16 @@ p {
 }
 
 .img-createProduct {
-  margin-top: 50px;
-  width: 500px;
+  width: 0px;
+  height: 0px;
 }
 
 .form-create {
+  
   width: 100%;
   margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 30px;
 }
 
 .area-fieldc {
@@ -659,16 +662,31 @@ p {
   justify-content: center;
 }
 
+.button-formc2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .button-formc button {
   background-color: #FFA500;
   color: #000000;
-  width: 80px;
-  height: 30px;
+  width: 190px;
+  height: 32px;
   border-radius: 20px;
   border: none;
-  transition:
-    background-color, 0.5s color, 0.5s;
+  transition: background-color, 0.5s color, 0.5s;
+}
 
+.button-formc2 button {
+  background-color: #FFA500;
+  color: #000000;
+  width: 200px;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: none;
+  transition: background-color, 0.5s color, 0.5s;
 }
 
 .button-formc button:hover {
@@ -716,7 +734,7 @@ p {
 
   }
 
-  .search{
+  .search {
     width: 30%;
   }
 
@@ -745,12 +763,12 @@ p {
 
 @media only screen and (min-width: 0px) and (max-width: 854px) {
   .search {
-   display: none; 
+    display: none;
   }
 }
 
 /* -Tablet Header- */
-@media only screen and (min-width: 640px) and (max-width: 767px){
+@media only screen and (min-width: 640px) and (max-width: 767px) {
 
   .nav-tabs2 {
     display: flex;
@@ -758,7 +776,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 460px) and (max-width: 640px){
+@media only screen and (min-width: 460px) and (max-width: 640px) {
 
   .nav-tabs2 {
     display: flex;
@@ -770,10 +788,10 @@ p {
   .img-header {
     width: 90px;
   }
-  
-  .navbar-main{
+
+  .navbar-main {
     display: flex;
-    width: 100%;  
+    width: 100%;
   }
 
 
@@ -797,13 +815,15 @@ p {
     font-size: 32px;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 460px){
+/* MOBILE HEADER */
+@media only screen and (min-width: 0px) and (max-width: 460px) {
 
-  .nav-tabs2{
+  .nav-tabs2 {
     padding-left: 71%;
   }
 
 }
+
 /* -Containes 1100 px- */
 @media only screen and (min-width: 768px) {
 
@@ -989,5 +1009,20 @@ p {
   }
 
 
+
+}
+
+@media only screen and (min-width: 460px){
+
+  .form-create{
+    margin-right: 20px;
+  }
+  
+  .img-createProduct {
+    margin-top:15%;
+    width: 60%;
+    height: 60%;
+  }
+  
 
 }
