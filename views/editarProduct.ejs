@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/4fa28797ee.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/styleHome.css">
+	<link rel="icon" type="image/x-icon" href="/images/Logo San José para pared2.png">
+	<title>Creacion de producto</title>
+</head>
+
+<body>
+
+	<%- include("partials/header.ejs") %>
+
+		<div class="contain-main">
+
+			<section class="create-section">
+
+
+				<div class="h2-div">
+
+					<h2>Formulario de edición de productos</h2>
+
+				</div>
+
+			</section>
+
+			<form class="form-create" action="?_method=PUT" method="POST">
+
+				<div class="control-form">
+
+					<label for="name">Nombre del producto:</label>
+					<input type="text" placeholder="Maria Luisa" name="name" id="name" class="control" required>
+
+				</div>
+
+				<div class="control-form">
+
+					<label for="price">Precio del producto:</label>
+					<input type="text" placeholder="EJ: $30.000" name="price" id="price" class="control" required>
+
+				</div>
+
+				<div class="control-form">
+
+					<label for="image1">Imagen 1 del producto:</label>
+					<input type="file" placeholder="Jose Sanchez" name="image1" id="image1" class="control" required>
+
+				</div>
+
+				<div class="control-form">
+
+					<label for="image2">Imagen 2 del producto:</label>
+					<input type="file" placeholder="Jose Sanchez" name="image2" id="image2" class="control" required>
+
+				</div>
+
+				<div class="control-form">
+
+					<label for="image3">Imagen 3 del producto:</label>
+					<input type="file" placeholder="Jose Sanchez" name="image3" id="image3" class="control" required>
+
+				</div>
+
+				<div class="control-form">
+
+					<label for="size">Tamaño del producto:</label>
+					<input type="text" placeholder="EJ: 15" name="size" id="size" class="control" required>
+
+				</div>
+
+				<div class="control-form">
+
+					<label for="category">Categoria</label>
+					<select name="category" id="category" class="control" required>
+						<option value="tematicas">Temáticas</option>
+						<option value="frias">Frías</option>
+						<option value="caseras">Caseras</option>
+						<option value="especiales">Especiales</option>
+						<option value="postres">Postres</option>
+						<option value="saludables">Saludables</option>
+						<option value="envinadas">Envinadas</option>
+					</select>
+
+				</div>
+
+				<div class="control-form">
+					<label for="description" class="form-label">Descripción:</label>
+					<textarea name="description" id="description" class="area-fieldc"></textarea>
+				</div>
+
+				<div class="button-formc">
+
+					<button type="submit">Guardar producto</button>
+
+				</div>
+
+			</form>
+
+
+		</div>
+
+
+		<%- include("partials/footer.ejs") %>
+
+</body>
+
+</html>
