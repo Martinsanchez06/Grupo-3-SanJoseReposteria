@@ -10,4 +10,6 @@ router.get("/carritoDeCompras", productController.carritoCompras);
 
 router.get("/createProduct", productController.create);
 
+router.get("/editarProduct", productController.editar);
+
 module.exports = router;
