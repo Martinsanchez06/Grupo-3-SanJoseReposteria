@@ -381,6 +381,10 @@ p{
 
 /* ESTILOS DE PRODUCT DETAIL */
 
+.contain-mainPD {
+  min-height: 90vh;
+}
+
 .div-big-img {
   position: relative;
   padding-top: 20px;
@@ -395,9 +399,7 @@ p{
   width: 100%;
 }
 
-.div-litle-imgs a {
-  width: 100%;
-}
+
 
 .div-litle-imgs a .litle-img {
   width: 20%;
@@ -666,7 +668,7 @@ p{
 
   /* PRODUCT DETAIL TABLET VIEW */
 
-  .contain-main {
+  .contain-mainPD {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -687,7 +689,14 @@ p{
   .div-litle-imgs {
     width: 100%;
     margin-top: 20px;
+    justify-content: flex-start;
   }
+
+  .div-litle-imgs img {
+    max-width: 460px;
+  }
+
+  
 
   .sizes {
     width: 100%;
