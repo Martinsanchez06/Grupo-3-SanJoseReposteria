@@ -1079,7 +1079,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 460px) (max-width: 626px) {
+@media only screen and (min-width: 460px) and (max-width: 626px) {
 .main-footer{
     display: flex;
     justify-content: space-between;
