@@ -426,6 +426,26 @@ p {
 
 }
 
+.button-form-a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-form-a {
+  background-color: #FFA500;
+  color: #000000;
+  width: 210px;
+  margin-top: 20px;
+  height: 26px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  transition:
+    background-color, 0.5s color, 0.5s;
+
+}
+
 .button-form button:hover {
   background-color: #8CC0DE;
   color: #FFFFFF;
@@ -617,6 +637,11 @@ p {
   text-align: center;
 }
 
+.img-createProduct {
+  margin-top: 50px;
+  width: 500px;
+}
+
 .form-create {
   width: 100%;
   margin-bottom: 20px;
@@ -785,27 +810,35 @@ p {
     border-style: groove;
     border-radius: 20px;
     border-color: #e4f0f3;
-    height: 400px;
+    height: 66vh;
   }
 
   .div-desktop .ingreso {
-    padding: 50px;
+    padding: 30px;
   }
 
   .div-desktop .control-form .control {
     border-radius: 8px;
   }
 
-  .button-form button {
+  .button-form button,
+  .btn-form-a {
     background-color: #3c7d8f;
     color: #ffffff;
     width: 300px;
     height: 30px;
+    text-align: center;
     border-radius: 20px;
     border: none;
     transition:
       background-color, 0.5s color, 0.5s;
 
+  }
+
+  .btn-form-a {
+    padding-top: 7px;
+    height: 40px;
+    margin-bottom: 130px;
   }
 
   .button-form button:hover {
