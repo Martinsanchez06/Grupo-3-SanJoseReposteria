@@ -20,8 +20,6 @@ const productController = {
 
         let productToEdit = product[idProduct];
 
-        // res.render(productToEdit)
-
         res.render("editarProduct", {productToEdit: productToEdit})
     }
 };
