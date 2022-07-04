@@ -10,6 +10,10 @@ router.get("/carritoDeCompras", productController.carritoCompras);
 
 router.get("/createProduct", productController.create);
 
-router.get("/editarProduct", productController.editar);
+router.get("/editarProduct/:idProduct", productController.editar);
+
+router.put("/editarProduct", function(req, res){
+    res.send('lo logre');
+});
 
 module.exports = router;

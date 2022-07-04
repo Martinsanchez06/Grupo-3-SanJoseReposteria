@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/4fa28797ee.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styleHome.css">
-    <link rel="icon" type="image/x-icon" href="/images/Logo San José para pared2.png">
-    <title>Carrito de compras</title>
-  </head>
-  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/4fa28797ee.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/styleHome.css">
+  <link rel="icon" type="image/x-icon" href="/images/Logo San José para pared2.png">
+  <title>Carrito de compras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+</head>
+
 <body>
   <!-- HEADER -->
 
   <%- include("partials/header.ejs") %>
 
-  <!-- MAIN -->
-  <main>
-    <div class="main-carrito-de-compras">
-      <div class="h3-carrito-de-compras-1">
-        <h3 class="h3-carrito-de-compras">Carrito de compras</h3>
-      </div>
-      <div class="titles-carrito-de-compras">
-      </div>
-      <div class="producto-content">
-        <div class="producto-carrito-de-compras">
+    <!-- MAIN -->
+    <main>
+      <div class="main-carrito-de-compras">
+        <div class="h3-carrito-de-compras-1">
+          <h3 class="h3-carrito-de-compras">Carrito de compras</h3>
+        </div>
+        <div class="titles-carrito-de-compras">
+        </div>
+        <div class="producto-content">
+          <div class="producto-carrito-de-compras">
+            <p class="p1-carrito-de-compras">Producto</p>
+            <div class="div-img-producto-carrito-de-compras">
+              <a href="#">
+                <img class="img-producto-carrito-de-compras" src="/images/WhatsApp Image 2022-05-31 at 9.17.56 PM.jpeg"
+                  alt="">
+              </a>
+            </div>
+
+
+            <div class="content-bottom">
+              <div class="content-descripcion-producto-carrito-de-compras">
+
+                <div class="descripcion-producto-carrito-de-compras">Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.
+                  Delectus minima maxime quasi omnis quod </div>
+                <button class="btn-CDC">Enviar</button>
+              </div>
+              <p class="p2-carrito-de-compras">Cantidad</p>
+              <p class="p-precio">0</p>
+              <p class="p3-carrito-de-compras">Precio</p>
+              <p class="p-precio">$0</p>
+            </div>
+          </div>
+        </div>
+        <div class="producto-content">
           <p class="p1-carrito-de-compras">Producto</p>
           <div class="div-img-producto-carrito-de-compras">
             <a href="#">
-              <img class="img-producto-carrito-de-compras" src="/images/WhatsApp Image 2022-05-31 at 9.17.56 PM.jpeg"
+              <img class="img-producto-carrito-de-compras" src="/images/WhatsApp Image 2022-05-31 at 9.17.59 PM.jpeg"
                 alt="">
             </a>
           </div>
@@ -49,44 +77,19 @@
             <p class="p-precio">$0</p>
           </div>
         </div>
+
       </div>
-      <div class="producto-content">
-        <p class="p1-carrito-de-compras">Producto</p>
-        <div class="div-img-producto-carrito-de-compras">
-          <a href="#">
-            <img class="img-producto-carrito-de-compras" src="/images/WhatsApp Image 2022-05-31 at 9.17.59 PM.jpeg"
-              alt="">
-          </a>
-        </div>
-
-
-        <div class="content-bottom">
-          <div class="content-descripcion-producto-carrito-de-compras">
-
-            <div class="descripcion-producto-carrito-de-compras">Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
-              Delectus minima maxime quasi omnis quod </div>
-            <button class="btn-CDC">Enviar</button>
-          </div>
-          <p class="p2-carrito-de-compras">Cantidad</p>
-          <p class="p-precio">0</p>
-          <p class="p3-carrito-de-compras">Precio</p>
-          <p class="p-precio">$0</p>
-        </div>
+      <div class="footer-main-carrito-de-compras">
+        <p class="h3-subtotal">SUBTOTAL</p>
+        <p class="p-subtotal">$0</p>
+        <p class="h3-total">TOTAL DE TU COMPRA</p>
+        <P class="p-total">$0</P>
       </div>
+    </main>
 
-    </div>
-    <div class="footer-main-carrito-de-compras">
-      <p class="h3-subtotal">SUBTOTAL</p>
-      <p class="p-subtotal">$0</p>
-      <p class="h3-total">TOTAL DE TU COMPRA</p>
-      <P class="p-total">$0</P>
-    </div>
-  </main>
+    <!-- PIE DE PAGINA -->
 
-  <!-- PIE DE PAGINA -->
-
-  <%- include("partials/footer.ejs") %>
+    <%- include("partials/footer.ejs") %>
 
 </body>
 
