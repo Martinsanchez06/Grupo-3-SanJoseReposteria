@@ -8,6 +8,19 @@ const productController = {
     },
     create: (req, res) => {
         res.render("createProduct")
+    },
+    editar: (req, res) => {
+        let idProduct = req.params.idProduct
+
+        let product = [
+            {id: 1 , name: "Pastel"},
+            {id: 2 , name: "torta"},
+            {id: 3 , name: "torta de cumpleaños"}
+        ]
+
+        let productToEdit = product[idProduct];
+
+        res.render("editarProduct", {productToEdit: productToEdit})
     }
 };
 
