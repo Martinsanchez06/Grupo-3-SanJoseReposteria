@@ -3,8 +3,10 @@ const express = require("express");
 const productController = require("../controllers/productController");
 
 const router = express.Router();
-
 //const multer = require("multer");
+
+
+//----------AQUI LLAMAMOS A UNA RUTA---------- 
 
 router.get("/productdetail", productController.detail);
 
@@ -14,23 +16,16 @@ router.get("/createProduct", productController.create);
 
 router.get("/editarProduct/:idProduct", productController.editar);
 
+router.get("/lista", productController.list);
+
 // ----------AQUI CREAMOS UN PRODUCTO-----------
 
 router.post("/createProduct", productController.guardar);
 
 
-
-router.get("/lista", productController.list);
-
-router.put("/editarProduct", function (req, res) {
-    res.send('lo logre');
-});
-
 // ----------AQUI EDITAMOS UN PRODUCTO-----------
 
-router.put("/editarProduct", function (req, res) {
-    res.send('Put funciona');
-});
+router.put("/editarProduct", productController.editar);
 
 // ----------AQUI ELIMINAMOS UN PRODUCTO-----------
 

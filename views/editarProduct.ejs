@@ -25,7 +25,7 @@
 
 				<div class="h2-div">
 
-					<h2>Estas editando el producto <%= productToEdit.name %></h2>
+					<h2>Estas editando el producto</h2>
 
 					<img class="img-createProduct" src="/images/Logo San José para pared2.png" alt="Imagen del logo">
 
@@ -35,10 +35,10 @@
 
 			<form class="form-create" action="/productos/editarProduct?_method=PUT" method="POST">
 
-				<div class="control-form">
+				<div class="control-form"> 
 
 					<label for="name">Nombre del producto:</label>
-					<input type="text" value="<%= productToEdit.name %>" name="name" id="name" class="control" required>
+					<input type="text" value="" name="name" id="name" class="control" required>
 
 				</div>
 
