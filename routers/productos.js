@@ -14,23 +14,22 @@ router.get("/carritoDeCompras", productController.carritoCompras);
 
 router.get("/createProduct", productController.create);
 
-router.get("/editarProduct/:idProduct", productController.editar);
+router.get("/editarProduct/:id", productController.editar);
 
 router.get("/lista", productController.list);
+
+router.get("/detail", productController.singleDetail);
 
 // ----------AQUI CREAMOS UN PRODUCTO-----------
 
 router.post("/createProduct", productController.guardar);
 
-
 // ----------AQUI EDITAMOS UN PRODUCTO-----------
 
-router.put("/editarProduct", productController.editar);
+router.put("/editarProduct/:id", productController.editar);
 
 // ----------AQUI ELIMINAMOS UN PRODUCTO-----------
 
-router.delete("/editarProduct", function (req, res) {
-    res.send('Delete funciona')
-})
+router.delete("/listadoProductos", productController.delete);
 
 module.exports = router;

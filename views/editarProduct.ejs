@@ -25,7 +25,7 @@
 
 				<div class="h2-div">
 
-					<h2>Estas editando el producto</h2>
+					<h2>Estas editando el producto <%= product.nombre %></h2>
 
 					<img class="img-createProduct" src="/images/Logo San José para pared2.png" alt="Imagen del logo">
 
@@ -33,54 +33,57 @@
 
 			</section>
 
-			<form class="form-create" action="/productos/editarProduct?_method=PUT" method="POST">
+			<form class="form-create" method="POST" action="?_method=PUT">	
+
+				<!-- <input name="id" value="<%= product.id %>" hidden readonly> -->
+
 
 				<div class="control-form"> 
 
 					<label for="name">Nombre del producto:</label>
-					<input type="text" value="" name="name" id="name" class="control" required>
+					<input type="text" value="<%= product.nombre %>" name="nombre" id="name" class="control" required>
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="price">Precio del producto:</label>
-					<input type="text" placeholder="EJ: $30.000" name="price" id="price" class="control" required>
+					<input type="text" value=" <%= product.precio %> " name="precio" id="price" class="control" required>
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="image1">Imagen 1 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="image1" id="image1" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen1" id="image1" class="control-img">
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="image2">Imagen 2 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="image2" id="image2" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen2" id="image2" class="control-img">
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="image3">Imagen 3 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="image3" id="image3" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen3" id="image3" class="control-img">
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="size">Tamaño del producto:</label>
-					<input type="text" placeholder="EJ: 15" name="size" id="size" class="control" required>
+					<input type="text" placeholder="EJ: 15" name="tamaño" id="size" class="control" required>
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="category">Categoria</label>
-					<select name="category" id="category" class="control" required>
+					<select name="categoria" id="category" class="control" required>
 						<option value="tematicas">Temáticas</option>
 						<option value="frias">Frías</option>
 						<option value="caseras">Caseras</option>
@@ -105,7 +108,7 @@
 
 			</form>
 
-			<form action="/productos/editarProduct/?_method=DELETE" method="POST">				
+			<form action="/productos/listadoProductos/?_method=DELETE" method="POST" method="POST">				
 				<div class="button-formc">
 
 					<button type="submit">Eliminar producto</button>

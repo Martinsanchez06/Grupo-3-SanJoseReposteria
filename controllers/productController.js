@@ -47,25 +47,53 @@ const productController = {
 
     },
     editar: (req, res) => {
-        let idProduct = req.params.idProduct
+        let idProduct = req.params.id
 
-        let archivoJSONEdit = fs.readFileSync('data/products.json', {encoding: 'utf-8'})
+        let rutaEdit = path.join('data', 'products.json')
 
-        let product = JSON.parse(archivoJSONEdit);
+        let archivoJSONEdit = fs.readFileSync(rutaEdit, {encoding: 'utf-8'})
 
-        let productToEdit = product[idProduct];
+        let products = JSON.parse(archivoJSONEdit);
 
-        res.render("editarProduct", {productToEdit: productToEdit})
+        let productToEdit = products.findIndex( product=> product.id === idProduct);
+
+        if(req.method === 'PUT'){
+
+            const data= req.body;
+
+            console.log(req.body)
+
+            products[productToEdit] = {...products[productToEdit], ...data}
+
+            fs.writeFileSync(rutaEdit, JSON.stringify(products));
+        }
+
+        res.render("editarProduct", {'product': products[productToEdit]})
     },
     list: (req, res) => {
 
-        //let archivoJSON = fs.readFileSync("prodcutos.json", { encoding: "utf-8" });
+        let rutaProducts = path.join('data','products.json');
 
-        //let productos = JSON.parse(archivoJSON);
+        let archivoJSON = fs.readFileSync(rutaProducts, { encoding: "utf-8" });
 
-        //{"productos": productos}
+        let productos = JSON.parse(archivoJSON);
 
-        res.render("listadoProductos");
+        // {"productos": productos}
+
+        res.render("listadoProductos", {"productos": productos});
+    },
+    singleDetail: (req, res) => {
+
+        let rutaProducts = path.join('data','products.json');
+
+        let archivoJSON = fs.readFileSync(rutaProducts, { encoding: "utf-8" });
+
+        let productos = JSON.parse(archivoJSON);
+
+        res.render("detail", {"productos": productos});
+    },
+    delete: (req, res) => {
+        
     }
 };
 

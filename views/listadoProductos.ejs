@@ -19,30 +19,15 @@
     <!--Header-->
     <%- include("partials/header.ejs") %>
 
-        <article class="card">
-            <div class="card-left">
-                <figure>
-                    <img src="/images/IMG-1596.JPG" alt="">
-                </figure>
-                <h3>Id producto</h3>
+    <!--Main-->
+    <div class="container-product">
+        <% productos.forEach(productos => { %>
+            <%- include("product.ejs", {productos}) %>
+        <% }) %> 
+    </div>
 
-            </div>
-            <div class="card-content">
-                <h3>nombre prodcuto</h3>
-
-                <p>Categoria:</p>
-
-                <p>Tamaño: <a href="#" target="_blank"></a></p>
-
-                <div>
-                    <a class="ver-detalle" href="/Productos/editarProduct/0">Editar</a>
-                </div>
-
-            </div>
-
-        </article>
-        <!--Footer-->
-        <%- include("partials/footer.ejs") %>
+    <!--Footer-->
+    <%- include("partials/footer.ejs") %>
 
 </body>
 
