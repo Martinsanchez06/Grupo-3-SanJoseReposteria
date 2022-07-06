@@ -21,6 +21,16 @@ const productController = {
         let productToEdit = product[idProduct];
 
         res.render("editarProduct", {productToEdit: productToEdit})
+    },
+    list: (req, res) => {
+
+        //let archivoJSON = fs.readFileSync("prodcutos.json", { encoding: "utf-8" });
+
+        //let productos = JSON.parse(archivoJSON);
+
+        //{"productos": productos}
+
+        res.render("listadoProductos");
     }
 };
 

@@ -16,19 +16,26 @@ router.get("/editarProduct/:idProduct", productController.editar);
 
 // ----------AQUI CREAMOS UN PRODUCTO-----------
 
-router.post("/createProduct", function(req, res){
+router.post("/createProduct", function (req, res) {
     res.send('Post funciona');
+
+})
+
+router.get("/lista", productController.list);
+
+router.put("/editarProduct", function (req, res) {
+    res.send('lo logre');
 });
 
 // ----------AQUI EDITAMOS UN PRODUCTO-----------
 
-router.put("/editarProduct", function(req, res){
+router.put("/editarProduct", function (req, res) {
     res.send('Put funciona');
 });
 
 // ----------AQUI ELIMINAMOS UN PRODUCTO-----------
 
-router.delete("/editarProduct", function(req, res){
+router.delete("/editarProduct", function (req, res) {
     res.send('Delete funciona')
 })
 
