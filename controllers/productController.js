@@ -13,7 +13,9 @@ const productController = {
         res.render("createProduct")
     },
     guardar: (req,res) => {
-        let rutaProducts= path.join('data','products.json')
+        
+        let rutaProducts= path.join('data','products.json');
+
         let producto = {
             nombre: req.body.name,
             precio: req.body.price,
@@ -26,8 +28,11 @@ const productController = {
         let productos;
 
         if (archivoproducto == '') {
+
             productos=[];
+
         } else {
+
             productos=JSON.parse(archivoproducto);
         }
 
