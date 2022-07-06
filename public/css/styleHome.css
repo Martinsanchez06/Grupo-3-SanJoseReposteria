@@ -95,9 +95,10 @@ div {
   border: 2px solid #7C9FF6;
 }*/
 
-.main-home{
+.main-home {
   height: 80vh;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 7% 40% 6% 40%;
@@ -365,7 +366,7 @@ p {
 }
 
 .div-ul2-footer ul li {
-  
+
   padding-top: 12px;
 }
 
@@ -662,7 +663,7 @@ p {
 }
 
 .form-create {
-  
+
   width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -710,6 +711,69 @@ p {
 .button-formc button:hover {
   background-color: #8CC0DE;
   color: #FFFFFF;
+}
+
+/* LISTADO DE PRODCUTOS */
+
+.card {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+
+  
+}
+
+.card-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+  padding: 1rem;
+
+  background-color: #00a8a8;
+  color: white;
+  text-align: center;
+
+  border-radius: 25px;
+}
+
+.card-left figure {
+  height: 120px;
+  width: 120px;
+  margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+  background-color: white;
+}
+
+.card-left figure img {
+  width: 100%;
+}
+
+.card-content {
+  width: 70%;
+  padding: 1rem;
+
+  background-color: #E6E6E6;
+
+  border-radius: 25px;
+}
+
+.ver-detalle {
+  background-color: #3c7d8f;
+  color: #ffffff;
+  text-decoration: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 6px;
+  border: none;
+  transition:
+    background-color, 0.5s color, 0.5s;
 }
 
 
@@ -833,6 +897,7 @@ p {
     font-size: 32px;
   }
 }
+
 /* MOBILE HEADER */
 @media only screen and (min-width: 0px) and (max-width: 460px) {
 
@@ -844,6 +909,10 @@ p {
 
 /* -Containes 1100 px- */
 @media only screen and (min-width: 768px) {
+
+  /* LISTADO DE PRODUCTOS */
+
+  
 
   /* REGISTRO DE ESCRITORIO */
 
@@ -960,7 +1029,7 @@ p {
     max-width: 460px;
   }
 
-  
+
 
   .sizes {
     width: 100%;
@@ -1037,18 +1106,18 @@ p {
 
 }
 
-@media only screen and (min-width: 460px){
+@media only screen and (min-width: 460px) {
 
-  .form-create{
+  .form-create {
     margin-right: 20px;
   }
-  
+
   .img-createProduct {
-    margin-top:15%;
+    margin-top: 15%;
     width: 60%;
     height: 60%;
   }
-  
+
 
 }
 
@@ -1057,12 +1126,12 @@ p {
 /* FOOTER ESCRITORIO */
 
 @media only screen and (min-width: 626px) {
-  .main-footer{
+  .main-footer {
     display: flex;
     justify-content: space-between;
   }
 
-  .div-img-footer{
+  .div-img-footer {
     display: flex;
     margin-left: 2%;
     width: 80vh;
@@ -1077,11 +1146,11 @@ p {
     width: 100%;
   }
 
-  .div-ul2-footer ul li h3{
+  .div-ul2-footer ul li h3 {
     margin-top: 8px;
   }
 
-  .div-ul2-footer li{
+  .div-ul2-footer li {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -1089,12 +1158,12 @@ p {
 }
 
 @media only screen and (min-width: 460px) and (max-width: 626px) {
-.main-footer{
+  .main-footer {
     display: flex;
     justify-content: space-between;
   }
 
-  .div-img-footer{
+  .div-img-footer {
     display: flex;
     margin-left: 2%;
     width: 80vh;
@@ -1109,11 +1178,11 @@ p {
     width: 100%;
   }
 
-  .div-ul2-footer ul li h3{
+  .div-ul2-footer ul li h3 {
     margin-top: 8px;
   }
 
-  .div-ul2-footer li{
+  .div-ul2-footer li {
     list-style: none;
     display: flex;
     flex-direction: column;
