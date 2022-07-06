@@ -408,6 +408,8 @@ p {
 }
 
 .control {
+  border-radius: 13px;
+  border: 1px solid #707070;
   padding: 8px;
   width: 100%;
 }
@@ -670,6 +672,7 @@ p {
 .area-fieldc {
   padding: 8px;
   width: 100%;
+  height: 180px;
 }
 
 .button-formc {
@@ -856,7 +859,7 @@ p {
     height: 860px;
   }
 
-  .div-desktopR .control-form .control {
+  .div-desktopR{
     border-radius: 8px;
   }
 
@@ -892,7 +895,7 @@ p {
     padding: 30px;
   }
 
-  .div-desktop .control-form .control {
+  .div-desktop{
     border-radius: 8px;
   }
 
