@@ -18,9 +18,9 @@ router.get("/editarProduct/:idProduct", productController.editar);
 
 router.post("/createProduct", productController.guardar);
 
-
-
 router.get("/lista", productController.list);
+
+router.get("/detail", productController.singleDetail);
 
 router.put("/editarProduct", function (req, res) {
     res.send('lo logre');

@@ -718,13 +718,17 @@ p {
 
 /* LISTADO DE PRODCUTOS */
 
+.container-product { 
+  padding: 0 2rem; 
+}
+
+/* PARCIAL DE LISTADO DE PRODUCTOS */
+
 .card {
   display: flex;
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: 20px;
-
-  
 }
 
 .card-left {

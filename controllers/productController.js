@@ -61,14 +61,26 @@ const productController = {
     },
     list: (req, res) => {
 
-        //let archivoJSON = fs.readFileSync("prodcutos.json", { encoding: "utf-8" });
+        let rutaProducts = path.join('data','products.json');
 
-        //let productos = JSON.parse(archivoJSON);
+        let archivoJSON = fs.readFileSync(rutaProducts, { encoding: "utf-8" });
+
+        let productos = JSON.parse(archivoJSON);
 
         //{"productos": productos}
 
-        res.render("listadoProductos");
-    }
+        res.render("listadoProductos", {"productos": productos});
+    },
+    singleDetail: (req, res) => {
+
+        let rutaProducts = path.join('data','products.json');
+
+        let archivoJSON = fs.readFileSync(rutaProducts, { encoding: "utf-8" });
+
+        let productos = JSON.parse(archivoJSON);
+
+        res.render("detail", {"productos": productos});
+    },
 };
 
 module.exports = productController;
