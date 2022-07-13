@@ -687,6 +687,7 @@ p {
 .button-formc2 {
   width: 100%;
   display: flex;
+  margin-top: 25%;
   justify-content: center;
 }
 
@@ -705,7 +706,6 @@ p {
   color: #000000;
   width: 200px;
   height: 35px;
-  margin-top: 20px;
   border-radius: 20px;
   border: none;
   transition: background-color, 0.5s color, 0.5s;
@@ -714,6 +714,16 @@ p {
 .button-formc button:hover {
   background-color: #8CC0DE;
   color: #FFFFFF;
+}
+
+.button-formc2 input {
+  background-color: #FFA500;
+  color: #000000;
+  width: 190px;
+  height: 32px;
+  border-radius: 20px;
+  border: none;
+  transition: background-color, 0.5s color, 0.5s;
 }
 
 
@@ -1168,6 +1178,13 @@ p {
     height: 60%;
   }
 
+  .button-formc2 {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
 
 }
 

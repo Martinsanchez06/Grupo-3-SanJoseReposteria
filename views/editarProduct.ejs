@@ -19,6 +19,7 @@
 	<%- include("partials/header.ejs") %>
 
 		<div class="contain-main">
+			
 
 			<section class="create-section">
 
@@ -33,9 +34,9 @@
 
 			</section>
 
-			<form class="form-create" method="POST" action="?_method=PUT">	
+			<form class="form-create" method="POST" action="?_method=PUT">
 
-				<div class="control-form"> 
+				<div class="control-form">
 
 					<label for="name">Nombre del producto:</label>
 					<input type="text" value="" name="nombre" id="name" class="control" required>
@@ -103,13 +104,15 @@
 
 				</div>
 
-				
+
 
 			</form>
 
-			<form action="/productos/lista/?_method=DELETE" method="POST">				
-				<input type="submit" name="delete" value="ELIMINAR PRODUCTO">
-			</form>	
+			<form class="form-delete" action="/productos/lista/?_method=DELETE" method="POST">
+				<div class="button-formc2">
+					<input type="submit" name="delete" value="ELIMINAR PRODUCTO">
+				</div>
+			</form>
 
 
 		</div>
