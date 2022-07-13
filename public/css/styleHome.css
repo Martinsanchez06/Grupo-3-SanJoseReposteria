@@ -716,11 +716,6 @@ p {
   color: #FFFFFF;
 }
 
-/* LISTADO DE PRODCUTOS */
-
-.container-product { 
-  padding: 0 2rem; 
-}
 
 /* PARCIAL DE LISTADO DE PRODUCTOS */
 
@@ -733,6 +728,8 @@ p {
 
 .card-left {
   display: flex;
+  margin-right: 15px;
+  margin-left: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -748,13 +745,11 @@ p {
 }
 
 .card-left figure {
-  height: 120px;
-  width: 120px;
-  margin: 0;
-
+  height: 140px;
+  width: 210px;
+  margin-bottom: 20px;
+  border-radius: 10px;
   overflow: hidden;
-
-  border-radius: 50%;
   background-color: white;
 }
 
@@ -765,24 +760,72 @@ p {
 .card-content {
   width: 70%;
   padding: 1rem;
-
   background-color: #E6E6E6;
-
   border-radius: 25px;
+  margin-right: 2rem;
 }
 
 .ver-detalle {
   background-color: #3c7d8f;
   color: #ffffff;
   text-decoration: none;
-  width: 60px;
+  width: 100px;
+  height: 27px;
+  margin-top: 16px;
+  margin-left: 15px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  transition:
+    background-color, 0.5s color, 0.5s;
+}
+
+.ver-detalle-a {
+  background-color: #3c7d8f;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  width: 80px;
   height: 30px;
+  margin-top: 80px;
   border-radius: 6px;
   border: none;
   transition:
     background-color, 0.5s color, 0.5s;
 }
 
+.h3-product {
+  margin-left: 15px;
+}
+
+.p-product {
+  margin-top: 8px;
+}
+
+/* ----- DETAIL ----- */
+
+.p-detail {
+  margin-top: 8px;
+}
+
+.h3-detail {
+  margin-left: 15px;
+}
+
+.ver-detalle-detail {
+  background-color: #3c7d8f;
+  color: #ffffff;
+  text-decoration: none;
+  width: 210px;
+  height: 27px;
+  margin-top: 16px;
+  margin-left: 15px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  transition:
+    background-color, 0.5s color, 0.5s;
+}
 
 
 /* ----- MEDIA QUERIES-----*/
@@ -919,7 +962,7 @@ p {
 
   /* LISTADO DE PRODUCTOS */
 
-  
+
 
   /* REGISTRO DE ESCRITORIO */
 
@@ -934,7 +977,7 @@ p {
     height: 860px;
   }
 
-  .div-desktopR{
+  .div-desktopR {
     border-radius: 8px;
   }
 
@@ -970,7 +1013,7 @@ p {
     padding: 30px;
   }
 
-  .div-desktop{
+  .div-desktop {
     border-radius: 8px;
   }
 
@@ -1193,5 +1236,44 @@ p {
     list-style: none;
     display: flex;
     flex-direction: column;
+  }
+}
+
+/* ----- PRODUCT MEDIA QUERY ----- */
+
+@media only screen and (min-width: 0px) and (max-width: 492px) {
+  .card-content {
+    display: none;
+  }
+
+  .card-left {
+    margin: auto;
+    width: 70vw;
+    height: 40vh;
+  }
+
+  .card-left figure {
+    width: 70%;
+    height: 80%;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 492px) and (max-width: 718px) {
+  .card-content {
+    display: none;
+  }
+
+  .card-left {
+    margin: auto;
+    width: 60vw;
+    height: 50vh;
+  }
+
+  .card-left figure {
+    width: 70%;
+    height: 75%;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
 }
