@@ -26,10 +26,10 @@ router.post("/createProduct", productController.guardar);
 
 // ----------AQUI EDITAMOS UN PRODUCTO-----------
 
-router.put("/editarProduct/:id", productController.editar);
+router.put("/editarProduct/:idProduct", productController.editar);
 
 // ----------AQUI ELIMINAMOS UN PRODUCTO-----------
 
-router.delete("/listadoProductos", productController.delete);
+router.delete("/lista", productController.delete);
 
 module.exports = router;
