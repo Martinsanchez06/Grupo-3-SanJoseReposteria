@@ -20,11 +20,11 @@
     <%- include("partials/header.ejs") %>
 
     <!--Main-->
-    <div class="container-product">
+    
         <% productos.forEach(productos => { %>
             <%- include("product.ejs", {productos}) %>
         <% }) %> 
-    </div>
+
 
     <!--Footer-->
     <%- include("partials/footer.ejs") %>
