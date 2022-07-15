@@ -6,7 +6,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const app = express();
 
-// -------MOTOR DE EJS-------
+// -------MOTOR DE VISTAS EJS-------
 app.set("view engine", "ejs");
 app.set("views", "./views");
 

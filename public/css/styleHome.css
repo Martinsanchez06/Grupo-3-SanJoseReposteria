@@ -83,6 +83,120 @@ div {
   font-family: arial;
 }
 
+/* ESTILOS HOME */
+
+.div-img-slider {
+  width: 100%;
+
+}
+
+.div-img-slider .img-slider {
+  width: 100%;
+  height: 50vh;
+}
+
+.product-contain {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.product-contain .product-home {
+  padding: 20px;
+  background-color: #ffffff;
+  width: 400px;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-style: groove;
+  border-radius: 20px;
+  border-color: #e4f0f3;
+  height: 100%;
+}
+
+.div-img-home {
+  width: 100%;
+}
+
+.div-img-home .img-product-home {
+  width: 100%;
+
+}
+
+.div-btn-agregar {
+  margin-top: 20px;
+}
+
+.div-btn-agregar .btn-agregar {
+  background-color: #3c7d8f;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  transition:
+    background-color, 0.5s color, 0.5s;
+}
+
+.btn-agregar:hover {
+  background-color: #8CC0DE;
+  color: #FFFFFF;
+}
+
+.section-nuestrac {
+  width: 100%;
+  padding: 20px;
+}
+
+.div-nuestrac h2 {
+  text-align: center;
+}
+
+.div-p-nuestrac p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.section-blog {
+  padding: 20px;
+  width: 100%;
+  background-color: #fae1cf;
+  border-bottom: 3px solid #00a8a8;
+}
+
+.button-form-noticias {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.div-noticias {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-form-noticias button {
+  background-color: #3c7d8f;
+  color: #ffffff;
+  width: 90px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  transition:
+    background-color, 0.5s color, 0.5s;
+}
+
+.button-form-noticias button:hover {
+  background-color: #8CC0DE;
+  color: #FFFFFF;
+}
+
+
+/* estilos viejos */
 .grid div {
   background: #ecf0f1;
   padding-top: 4em !important;
@@ -435,9 +549,9 @@ p {
 }
 
 .button-form button {
-  background-color: #FFA500;
-  color: #000000;
-  width: 60px;
+  background-color: #3c7d8f;
+  color: #ffffff;
+  width: 70px;
   height: 30px;
   border-radius: 20px;
   border: none;
@@ -453,11 +567,12 @@ p {
 }
 
 .btn-form-a {
-  background-color: #FFA500;
-  color: #000000;
+  background-color: #3c7d8f;
+  color: #ffffff;
   width: 210px;
   margin-top: 20px;
   height: 26px;
+  text-align: center;
   text-decoration: none;
   border-radius: 20px;
   border: none;
@@ -485,6 +600,17 @@ p {
 }
 
 .div-olvidaste a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.div-nuevo {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.div-nuevo a {
   text-decoration: none;
   color: #000000;
 }
@@ -718,8 +844,8 @@ p {
 
 /* LISTADO DE PRODCUTOS */
 
-.container-product { 
-  padding: 0 2rem; 
+.container-product {
+  padding: 0 2rem;
 }
 
 /* PARCIAL DE LISTADO DE PRODUCTOS */
@@ -917,9 +1043,32 @@ p {
 /* -Containes 1100 px- */
 @media only screen and (min-width: 768px) {
 
-  /* LISTADO DE PRODUCTOS */
+  /* HOME */
 
-  
+  .div-product-contain {
+    width: 100%;
+    
+  }
+
+  .product-contain {
+    display: inline-block;
+    width: auto;
+  }
+  .product-home {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-style: groove;
+    border-radius: 20px;
+    border-color: #e4f0f3;
+    height: 100%;
+  }
+
+
 
   /* REGISTRO DE ESCRITORIO */
 
@@ -934,12 +1083,12 @@ p {
     height: 860px;
   }
 
-  .div-desktopR{
+  .div-desktopR {
     border-radius: 8px;
   }
 
   .tit-crea-cuenta h4 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
 
@@ -963,19 +1112,19 @@ p {
     border-style: groove;
     border-radius: 20px;
     border-color: #e4f0f3;
-    height: 66vh;
+    height: 75vh;
   }
 
   .div-desktop .ingreso {
     padding: 30px;
   }
 
-  .div-desktop{
+  .div-desktop {
     border-radius: 8px;
   }
 
-  .button-form button,
-  .btn-form-a {
+  .button-form button {
+    margin-top: 25px;
     background-color: #3c7d8f;
     color: #ffffff;
     width: 300px;
@@ -988,16 +1137,34 @@ p {
 
   }
 
-  .btn-form-a {
-    padding-top: 7px;
-    height: 40px;
-    margin-bottom: 130px;
-  }
-
   .button-form button:hover {
     background-color: #8CC0DE;
     color: #FFFFFF;
   }
+
+  .button-form-a .btn-form-a {
+    margin-top: 15px;
+    background-color: #3c7d8f;
+    color: #ffffff;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    transition:
+      background-color, 0.5s color, 0.5s;
+
+  }
+
+  .button-form-a .btn-form-a:hover {
+    background-color: #8CC0DE;
+    color: #FFFFFF;
+  }
+
+
+
+
 
 }
 

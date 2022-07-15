@@ -47,6 +47,7 @@ const productController = {
 
     },
     editar: (req, res) => {
+        
         let idProduct = req.params.id
 
         let rutaEdit = path.join('data', 'products.json')
