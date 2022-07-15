@@ -19,14 +19,14 @@
 	<%- include("partials/header.ejs") %>
 
 		<div class="contain-main">
-			
+
 
 			<section class="create-section">
 
 
 				<div class="h2-div">
 
-					<h2>Estas editando el producto</h2>
+					<h2>Estas editando el producto:<h2>
 
 					<img class="img-createProduct" src="/images/Logo San José para pared2.png" alt="Imagen del logo">
 
@@ -39,14 +39,15 @@
 				<div class="control-form">
 
 					<label for="name">Nombre del producto:</label>
-					<input type="text" value="" name="nombre" id="name" class="control" required>
+					<input type="text" value=" " name="nombre" id="name" class="control" required>
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="price">Precio del producto:</label>
-					<input type="text" value="" name="precio" id="price" class="control" required>
+					<input type="text" value=" " name="precio" id="price" class="control"
+						required>
 
 				</div>
 
@@ -108,7 +109,7 @@
 
 			</form>
 
-			<form class="form-delete" action="/productos/lista/?_method=DELETE" method="POST">
+			<form class="form-delete" action="?_method=DELETE" method="POST">
 				<div class="button-formc2">
 					<input type="submit" name="delete" value="ELIMINAR PRODUCTO">
 				</div>
