@@ -14,11 +14,11 @@ router.get("/carritoDeCompras", productController.carritoCompras);
 
 router.get("/createProduct", productController.create);
 
-router.get("/editarProduct/:id", productController.editar);
+router.get("/editarProduct/:id", productController.editarFormulario);
 
 router.get("/lista", productController.list);
 
-router.get("/detail", productController.singleDetail);
+router.get("/detail/:id", productController.singleDetail);
 
 // ----------AQUI CREAMOS UN PRODUCTO-----------
 
@@ -30,6 +30,6 @@ router.put("/editarProduct/:id", productController.editar);
 
 // ----------AQUI ELIMINAMOS UN PRODUCTO-----------
 
-router.delete("/listadoProductos", productController.delete);
+router.delete("/editarProduct/:id", productController.delete);
 
 module.exports = router;
