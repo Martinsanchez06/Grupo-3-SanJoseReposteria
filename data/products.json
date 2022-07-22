@@ -1,53 +1,63 @@
 [
- {
-  "id": "2",
-  "nombre": "Limón, lavanda y amapola",
-  "categoria": "Especiales",
-  "precio": "$60.000",
-  "imagen1": "",
-  "imagen2": "",
-  "imagen3": "",
-  "tamaño": "8-10 porciones"
- },
- {
-  "id": "3",
-  "nombre": "Genovesa de tres leches",
-  "categoria": "Frías",
-  "precio": "$60.000",
-  "imagen1": "",
-  "imagen2": "",
-  "imagen3": "",
-  "tamaño": "8-10 porciones"
- },
- {
-  "id": "4",
-  "nombre": "perro",
-  "categoria": "tematicas",
-  "precio": "mascota",
-  "imagen1": "",
-  "imagen2": "",
-  "imagen3": "",
-  "tamaño": "lola",
-  "description": "xdxd"
- },
- {
-  "id": "5",
-  "nombre": "Envinada Navidad",
-  "categoria": "Envinadas",
-  "precio": "$60.000",
-  "imagen1": "",
-  "imagen2": "",
-  "imagen3": "",
-  "tamaño": "8-10 porciones"
- },
- {
-  "id": "6",
-  "nombre": "León",
-  "categoria": "Temáticas",
-  "precio": "$150.000",
-  "imagen1": "",
-  "imagen2": "",
-  "imagen3": "",
-  "tamaño": "20 porciones"
- }
+    {   
+        "id":"1",
+        "nombre": "María Luisa Arequipe",
+        "categoria": "Caseras",
+        "precio": "$40.000",
+        "imagen1": "",
+        "imagen2": "",
+        "imagen3": "",
+        "tamaño": "6-8 porciones"
+    },
+    {
+        "id": "2",
+        "nombre": "Limón, lavanda y amapola",
+        "categoria": "Especiales",
+        "precio": "$60.000",
+        "imagen1": "",
+        "imagen2": "",
+        "imagen3": "",
+        "tamaño": "8-10 porciones",
+        "descripcion": ""
+    },
+    {
+        "id": "3",
+        "nombre": "Genovesa de tres leches",
+        "categoria": "Frías",
+        "precio": "$60.000",
+        "imagen1": "",
+        "imagen2": "",
+        "imagen3": "",
+        "tamaño": "8-10 porciones"
+    },
+    {
+        "id": "4",
+        "nombre": "Zanahoria con harina de almendras y splenda",
+        "categoria": "Especiales",
+        "precio": "$40.000",
+        "imagen1": "",
+        "imagen2": "",
+        "imagen3": "",
+        "tamaño": "6-8 porciones"
+    },
+    {
+        "id": "5",
+        "nombre": "Envinada Navidad",
+        "categoria": "Envinadas",
+        "precio": "$60.000",
+        "imagen1": "",
+        "imagen2": "",
+        "imagen3": "",
+        "tamaño": "8-10 porciones"
+    },
+    {
+        "id": "6",
+        "nombre": "León",
+        "categoria": "Temáticas",
+        "precio": "$150.000",
+        "imagen1": "",
+        "imagen2": "",
+        "imagen3": "",
+        "tamaño": "20 porciones"
+    }
 ]

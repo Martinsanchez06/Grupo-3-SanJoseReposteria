@@ -39,14 +39,14 @@
 				<div class="control-form">
 
 					<label for="name">Nombre del producto:</label>
-					<input type="text" value=" " name="nombre" id="name" class="control" required>
+					<input type="text" placeholder="<%= productos.nombre%> " name="nombre" id="name" class="control" required>
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="price">Precio del producto:</label>
-					<input type="text" value=" " name="precio" id="price" class="control"
+					<input type="text" placeholder="<%= productos.precio%> " name="precio" id="price" class="control"
 						required>
 
 				</div>
@@ -75,7 +75,7 @@
 				<div class="control-form">
 
 					<label for="size">Tamaño del producto:</label>
-					<input type="text" placeholder="EJ: 15" name="tamaño" id="size" class="control" required>
+					<input type="text" placeholder="<%= productos.tamaño%>" name="tamaño" id="size" class="control" required>
 
 				</div>
 
@@ -96,7 +96,7 @@
 
 				<div class="control-form">
 					<label for="description" class="form-label">Descripción:</label>
-					<textarea name="description" id="description" class="area-fieldc"></textarea>
+					<textarea placeholder="<%= productos.descripcion%>" name="description" id="description" class="area-fieldc"></textarea>
 				</div>
 
 				<div class="button-formc">

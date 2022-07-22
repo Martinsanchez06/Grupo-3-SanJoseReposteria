@@ -41,12 +41,34 @@ const productController = {
         res.render("listadoProductos", { "productos": productos });
     },
     singleDetail: (req, res) => {
-        let id = req.params.id
-		let product = productos.find(product => product.id == id)
-		res.render('detail', {product , "productos": productos  })
+        let productoEncontrado = productos.find(products => products.id === req.params.id);
+        res.render("detail", { "productos": 
+        {
+            "id": productoEncontrado.id,
+            "nombre": productoEncontrado.nombre,
+            "categoria": productoEncontrado.categoria,
+            "precio": productoEncontrado.precio,
+            "imagen1": "",
+            "imagen2": "",
+            "imagen3": "",
+            "tamaño": productoEncontrado.tamaño,
+            "descripcion": productoEncontrado.descripcion,
+           } });
     },
     editarFormulario: (req, res) => {
-        res.render("editarProduct", { "productos": productos });
+        let productoEncontrado = productos.find(products => products.id === req.params.id);
+        res.render("editarProduct", { "productos": 
+        {
+            "id": productoEncontrado.id,
+            "nombre": productoEncontrado.nombre,
+            "categoria": productoEncontrado.categoria,
+            "precio": productoEncontrado.precio,
+            "imagen1": "",
+            "imagen2": "",
+            "imagen3": "",
+            "tamaño": productoEncontrado.tamaño,
+            "descripcion": productoEncontrado.descripcion,
+           } });
     },
     editar: (req, res) => {
         let idProduct = req.params.id
@@ -60,14 +82,6 @@ const productController = {
 
         console.log(req.body)
         res.render('listadoProductos' , { "productos": productos })
-        
-        // const userIndex = productos.findIndex(item => parseInt(item.id) === parseInt(req.params.id));
-        // if (userIndex !== -1) {
-        //     productos[userIndex] = { ...productos[userIndex], ...req.body };
-        //     fs.writeFileSync(userIndex, JSON.stringify(productos, null, ' '));;
-        // }
-        
-    
     },
     delete: (req, res) => {
         let id = req.params.id;
