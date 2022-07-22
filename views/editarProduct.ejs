@@ -23,14 +23,22 @@
 
 			<section class="create-section">
 
+				
+
 
 				<div class="h2-div">
 
-					<h2>Estas editando el producto:<h2>
+					<h2>Estas editando el producto: <%= productos.nombre%><h2>
 
 					<img class="img-createProduct" src="/images/Logo San José para pared2.png" alt="Imagen del logo">
 
 				</div>
+
+				<form class="form-delete" action="?_method=DELETE" method="POST">
+					<div class="button-formc2">
+						<input type="submit" name="delete" value="ELIMINAR PRODUCTO">
+					</div>
+				</form>
 
 			</section>
 
@@ -39,14 +47,14 @@
 				<div class="control-form">
 
 					<label for="name">Nombre del producto:</label>
-					<input type="text" value=" " name="nombre" id="name" class="control" required>
+					<input type="text" placeholder="<%= productos.nombre%> " name="nombre" id="name" class="control" required>
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="price">Precio del producto:</label>
-					<input type="text" value=" " name="precio" id="price" class="control"
+					<input type="text" placeholder="<%= productos.precio%> " name="precio" id="price" class="control"
 						required>
 
 				</div>
@@ -75,7 +83,7 @@
 				<div class="control-form">
 
 					<label for="size">Tamaño del producto:</label>
-					<input type="text" placeholder="EJ: 15" name="tamaño" id="size" class="control" required>
+					<input type="text" placeholder="<%= productos.tamaño%>" name="tamaño" id="size" class="control" required>
 
 				</div>
 
@@ -96,12 +104,12 @@
 
 				<div class="control-form">
 					<label for="description" class="form-label">Descripción:</label>
-					<textarea name="description" id="description" class="area-fieldc"></textarea>
+					<textarea placeholder="<%= productos.descripcion%>" name="description" id="description" class="area-fieldc"></textarea>
 				</div>
 
 				<div class="button-formc">
 
-					<button type="submit">Editar producto</button>
+					<button type="submit">EDITAR PRODUCTO</button>
 
 				</div>
 
@@ -109,11 +117,7 @@
 
 			</form>
 
-			<form class="form-delete" action="?_method=DELETE" method="POST">
-				<div class="button-formc2">
-					<input type="submit" name="delete" value="ELIMINAR PRODUCTO">
-				</div>
-			</form>
+			
 
 
 		</div>
