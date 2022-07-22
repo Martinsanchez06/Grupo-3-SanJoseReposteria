@@ -59,7 +59,7 @@ const productController = {
         }
 
         console.log(req.body)
-        res.render("editarProduct", { 'product': products[productToEdit] })
+        res.render('listadoProductos' , { "productos": productos })
         
         // const userIndex = productos.findIndex(item => parseInt(item.id) === parseInt(req.params.id));
         // if (userIndex !== -1) {

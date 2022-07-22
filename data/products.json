@@ -1,17 +1,6 @@
 [
  {
-  "id": ":1",
-  "nombre": " martin",
-  "categoria": "tematicas",
-  "precio": "prueba",
-  "imagen1": "",
-  "imagen2": "",
-  "imagen3": "",
-  "tamaño": "prueba",
-  "description": "aprueba"
- },
- {
-  "id": ":2",
+  "id": "2",
   "nombre": "Limón, lavanda y amapola",
   "categoria": "Especiales",
   "precio": "$60.000",
@@ -21,7 +10,7 @@
   "tamaño": "8-10 porciones"
  },
  {
-  "id": ":3",
+  "id": "3",
   "nombre": "Genovesa de tres leches",
   "categoria": "Frías",
   "precio": "$60.000",
@@ -31,7 +20,7 @@
   "tamaño": "8-10 porciones"
  },
  {
-  "id": ":4",
+  "id": "4",
   "nombre": "perro",
   "categoria": "tematicas",
   "precio": "mascota",
@@ -42,7 +31,7 @@
   "description": "xdxd"
  },
  {
-  "id": ":5",
+  "id": "5",
   "nombre": "Envinada Navidad",
   "categoria": "Envinadas",
   "precio": "$60.000",
@@ -52,7 +41,7 @@
   "tamaño": "8-10 porciones"
  },
  {
-  "id": ":6",
+  "id": "6",
   "nombre": "León",
   "categoria": "Temáticas",
   "precio": "$150.000",
