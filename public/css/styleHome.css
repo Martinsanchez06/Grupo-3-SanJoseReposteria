@@ -1121,6 +1121,11 @@ p {
     height: 100%;
   }
 
+  .div-img-slider .img-slider {
+    width: 100%;
+    height: 80vh;
+  }
+
 
 
   /* REGISTRO DE ESCRITORIO */
