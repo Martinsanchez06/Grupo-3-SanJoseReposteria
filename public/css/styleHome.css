@@ -1333,7 +1333,7 @@ p {
 
 }
 
-@media only screen and (min-width: 460px) {
+@media only screen and (min-width: 460px)  {
 
   .form-create {
     margin-right: 20px;
@@ -1388,6 +1388,14 @@ p {
     list-style: none;
     display: flex;
     flex-direction: column;
+  }
+
+  .button-formc2 {
+    width: 100%;
+    display: flex;
+    margin-top: 205px;
+    margin-bottom: 20px;
+    justify-content: center;
   }
 }
 
