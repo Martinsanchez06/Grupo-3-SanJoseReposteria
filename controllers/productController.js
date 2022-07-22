@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/products.json');
+const productsFilePath = path.join('data', 'products.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -17,38 +17,24 @@ const productController = {
         res.render("createProduct")
     },
     guardar: (req, res) => {
-
         let rutaProducts = path.join('data', 'products.json');
-
         let producto = {
             nombre: req.body.name,
             precio: req.body.price,
             tamaño: req.body.size,
             descripcion: req.body.description
         }
-
         let archivoproducto = fs.readFileSync(rutaProducts, { encoding: 'utf-8' });
-
         let productos;
-
         if (archivoproducto == '') {
-
             productos = [];
-
         } else {
-
             productos = JSON.parse(archivoproducto);
         }
-
         productos.push(producto);
-
         productosJSON = JSON.stringify(productos);
-
         fs.writeFileSync(rutaProducts, productosJSON);
-
         res.redirect('/productos/lista');
-
-
     },
 
     list: (req, res) => {
@@ -84,11 +70,12 @@ const productController = {
     
     },
     delete: (req, res) => {
-        let id = req.body.id;
+        let id = req.params.id;
         let finalProducts = productos.filter(product => product.id != id);
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
         res.redirect('/productos/lista')
-        console.log(productos);
+        console.log(req.params.id);
+        console.log(productos)
     }
 };
 

@@ -19,7 +19,7 @@
 
     <!-- Main -->
 
-    <% if(productos) { %>
+    <% if(products) { %>
     <article class="card">
         <div class="card-left">
             <figure>
@@ -31,17 +31,17 @@
         </div>
         <div class="card-content">
             
-            <h3 class="h3-detail"><%= productos.nombre %></h3>
+            <h3 class="h3-detail"><%= products.nombre %></h3>
     
-            <p class="p-detail">precio: <span><%= productos.precio %></span></p>
+            <p class="p-detail">precio: <span><%= products.precio %></span></p>
     
-            <p class="p-detail">Tamaño: <span><%= productos.tamaño %></span></p>
+            <p class="p-detail">Tamaño: <span><%= products.tamaño %></span></p>
 
-            <p class="p-detail">descripcion: <span><%= productos.descripcion %></span></p>
+            <p class="p-detail">descripcion: <span><%= products.descripcion %></span></p>
 
             <div class="ver-detalle">
 
-                <a class="ver-detalle-a" href="/productos/editarProduct/:<%= productos.id %>">Editar</a>
+                <a class="ver-detalle-a" href="/productos/editarProduct/:<%= products.id %>">Editar</a>
 
             </div>
             
