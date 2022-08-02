@@ -1,10 +1,24 @@
-{
-    "nombre":"nombre",
-    "email":"administrador@gmail.com",
-    "numeroID":"123456789",
-    "categoria":"administrador", 
-    "fechanacimiento":"01/02/1990",
-    "ciudad":"Bogota",
-    "contraseña": "xcyc7td",
-    "imagenReg":""
-}
+[
+ {
+  "id": 1,
+  "nombre": "nombre",
+  "email": "administrador@gmail.com",
+  "numeroID": "123456789",
+  "categoria": "administrador",
+  "fechanacimiento": "01/02/1990",
+  "ciudad": "Bogota",
+  "contraseña": "xcyc7td",
+  "imagenReg": ""
+ },
+ {
+  "id": 2,
+  "numeroID": "1006858138",
+  "nombre": "Juan Martinez",
+  "email": "mljuanpablo@gmail.com",
+  "fechanacimiento": "2002-02-16",
+  "ciudad": "Bogotá",
+  "password": "12345",
+  "con_password": "12345",
+  "politica": "politica"
+ }
+]
