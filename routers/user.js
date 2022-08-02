@@ -21,12 +21,28 @@ const storage = multer.diskStorage({
 const imagenSubida = multer({ storage })
 
 const validaciones = [
-    body('numeroID').notEmpty().withMessage('tienes que escribir tu numero de identificacion'),
-    body('nombre').notEmpty().withMessage('tienes que escribir tu nombre'),
-    body('email').notEmpty().withMessage('tienes que escribir un correo electronico'),
-    body('ciudad').notEmpty().withMessage('tienes que seleccionar tu ciudad'),
-    body('password').notEmpty().withMessage('tienes que escribir una contraseña'),
-    body('con_password').notEmpty().withMessage('tienes que escribir una contraseña'),
+    body('numeroID').notEmpty().withMessage('Tienes que escribir tu número de identificación'),
+    body('nombre').notEmpty().withMessage('Tienes que escribir tu nombre'),
+    body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
+    .isEmail().withMessage('Tienes que escribir un correo electrónico válido'),
+    body('ciudad').notEmpty().withMessage('Tienes que seleccionar tu ciudad'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('con_password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('imagenReg').custom((value,{ req }) => { 
+        let file= req.file;
+        let extensionesAceptadas= ['.jpg','.png','.gif'];
+        
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else{
+            let extensionArchivo= path.extname(file.originalname)
+            if (!extensionesAceptadas.includes(extensionArchivo)){
+                throw new Error('Las extensiones de archivo permitidas son .jpg .png .gif') ;
+            }
+    
+        }
+        return true;
+    })
 ]
 
 // -----AQUI SE LLAMA A LA VISTA DEL REGISTRO-----

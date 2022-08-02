@@ -40,8 +40,13 @@
                         <div class="control-form">
 
                             <label for="numero-identificacion">Numero de identificación:</label>
-                            <input type="number" placeholder="100156089" name="numeroID"
-                                id="numero-identificacion" class="control" >
+                            <input type="number" 
+                            placeholder="100156089" 
+                            name="numeroID"
+                            id="numero-identificacion" 
+                            class="control <%=locals.errors && errors.numeroID ? 'is-invalid' : null%>" 
+                            value="<%=locals.datosAntiguos ? datosAntiguos.numeroID : null%>"
+                            >
                                 <%if (locals.errors && errors.numeroID) {%>
 
                                     <div class="mensaje-error">
@@ -54,7 +59,12 @@
                         <div class="control-form">
 
                             <label for="nombre">Nombre y apellido:</label>
-                            <input type="text" placeholder="Jose Sanchez" name="nombre" id="nombre" class="control"
+                            <input type="text" 
+                            placeholder="Jose Sanchez" 
+                            name="nombre" 
+                            id="nombre" 
+                            class="control <%=locals.errors && errors.nombre ? 'is-invalid' : null%>"
+                            value="<%=locals.datosAntiguos ? datosAntiguos.nombre : null%>"
                                 >
                             <%if (locals.errors && errors.nombre) {%>
 
@@ -69,15 +79,26 @@
 
                             <label for="image1">Sube tu imagen</label>
                             <input class="control-img" type="file" name="imagenReg" >
+                            <% if (locals.errors && errors.imagenReg) { %>
+                              <div class="mensaje-error">
+                               <%= errors.imagenReg.msg %>
+                              </div>
+
+                            <% } %>
                             
                         </div>
-
+                        
 
                         <div class="control-form">
 
                             <label for="email">Correo Electrónico:</label>
-                            <input type="email" placeholder="example@example.com" name="email" id="email"
-                                class="control" >
+                            <input type="email" 
+                            placeholder="example@example.com" 
+                            name="email" 
+                            id="email"
+                            class="control <%=locals.errors && errors.email ? 'is-invalid' : null%>" 
+                            value="<%=locals.datosAntiguos ? datosAntiguos.email : null%>"
+                            >
                                 <%if (locals.errors && errors.email) {%>
 
                                     <div class="mensaje-error">
@@ -98,14 +119,21 @@
                         <div class="control-form">
 
                             <label for="ciudad">Ciudad</label>
-                            <select name="ciudad" id="ciudad" class="control" >
-                                <option value="">Elige una ciudad</option>
-                                <%
+                            <select 
+                            name="ciudad" 
+                            id="ciudad" 
+                            class= "form-select <%= locals.errors && errors.ciudad ? 'is-invalid' : null %>"
+                        >
+                            <option value="">Elige una ciudad</option>
+                            <%
                                 let ciudades = ['Medellin', 'Bogotá', 'Envigado', 'Itagüí', 'La Estrella'];
-                                %>
-                                <% for (const unaCiudad of ciudades) {%>
-                                    <option value="<%= unaCiudad %>"> <%= unaCiudad %> </option>
-                                <% } %>
+                            %>
+                            <% for (const unaCiudad of ciudades) { %>
+                                <option 
+                                value="<%= unaCiudad %>"
+                                <%= locals.datosAntiguos && (unaCiudad === datosAntiguos.ciudad) ? 'selected': null %>
+                                > <%= unaCiudad %> </option>
+                            <% } %>
                                 <!-- <option value="medellin">Medellin</option>
                                 <option value="bogota">Bogotá</option>
                                 <option value="envigado">Envigado</option>
@@ -118,7 +146,7 @@
                                     <%= errors.ciudad.msg %>
                                 </div>
 
-                            <% } %>ciudad
+                            <% } %>
                         </div>
 
                         <div class="control-form">

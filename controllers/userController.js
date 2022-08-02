@@ -12,9 +12,12 @@ const userController = {
 
         if(resultadoValidacion.errors.length > 0) {
             return res.render("registro", {
-                errors : resultadoValidacion.mapped()
-            })
+                errors : resultadoValidacion.mapped(),
+                datosAntiguos: req.body
+            });
         }
+
+        return res.send('Okay, las validaciones se pasaron y no tienes errores')
     },
     login: (req, res) => {
         res.render("login");

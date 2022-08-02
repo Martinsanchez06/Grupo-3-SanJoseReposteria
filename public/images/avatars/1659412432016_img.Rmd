@@ -1,0 +1,321 @@
+---
+title: "Starting with data"
+output: html_notebook
+---
+
+# Qué son DataFrames y Tibbles ?
+
+Los Data Frames son la estructura de datos de facto para los datos tabulares en R y lo que usamos para el procesamiento de datos, las estadísticas y el trazado.
+
+Un Data Frame es la representación de datos en el formato de una tabla donde las columnas son vectores que tienen la misma longitud. Los marcos de datos son análogos a la hoja de cálculo más familiar en programas como Excel, con una diferencia clave. Debido a que las columnas son vectores, cada columna debe contener un solo tipo de datos (por ejemplo, caracteres, números enteros, factores). Por ejemplo, aquí hay una figura que representa un marco de datos que comprende un vector numérico, un carácter y un vector lógico.
+
+![dataframe](/Users/karina/OneDrive/R Carpentries/dataframe.png)
+
+
+# Datos SAFI?
+
+SAFI (Studying African Farmer-Led Irrigation) es un estudio que analiza los métodos agrícolas y de riego en Tanzania y Mozambique. Los datos de la encuesta se recopilaron a través de entrevistas realizadas entre noviembre de 2016 y junio de 2017. Para esta lección, usaremos un subconjunto de los datos disponibles. Para obtener información sobre el conjunto de datos de enseñanza completo utilizado en otras lecciones de este taller, consulte la descripción del conjunto de datos. 
+
+# Importando los datos 
+
+
+Vamos a cargar los datos en la memoria de R usando la función `read_csv ()` del paquete `readr`, que es parte de `tidyverse`. Para leer más de `Tidyverse` dar click aquí: [tidyverse](https://www.tidyverse.org/).
+
+
+Antes de que podamos usar las funciones `read_csv()` y `here()`, necesitamos cargar los paquetes `tidyverse` y `here`.
+
+Además, los datos faltantes se codifican como "NULL" en el conjunto de datos. Se lo diremos a la función, por lo que R convertirá automáticamente todas las entradas "NULL" en el conjunto de datos en `NA`.
+
+```{r}
+
+library(tidyverse)
+library(here)
+
+interviews <- read_csv(
+  here("data", "SAFI_clean.csv"), 
+  na = "NULL")
+
+# Note: Base R ofrece read.csv en lugar de read_csv. El primero genera un DataFrame y el segundo un objeto de tipo Tibble.
+
+tail(interviews)
+head(interviews)
+class(interviews)
+
+
+dim(interviews) # returns a vector with the number of rows as the first element, and the number of columns as the second element (the dimensions of the object)
+
+nrow(interviews) # returns the number of rows
+ncol(interviews) # returns the number of columns
+
+names(interviews) # nombre de las columnas 
+
+str(interviews)
+summary(interviews)
+glimpse(interviews)
+
+
+```
+
+
+# Indexando y subsetting data frames
+
+```{r}
+
+## El primer elemento en la primera columna 
+
+interviews[1, 1]
+
+interviews[1, 6] ## ????
+
+# Primer columna del Tibble (como vector)
+interviews[[1]]
+interviews[1]
+
+interviews[1:3, 7]
+
+interviews[3, ]
+
+head_interviews <- interviews[1:6, ]
+
+interviews[, -1]  # Todo el Tibble sin la primera columna 
+
+interviews[-c(7:131), ]   # Equivalent to head(interviews)
+
+```
+
+Subsetting
+
+```{r}
+
+
+interviews["village"]       # Resulta en un tibble
+
+interviews[, "village"]     # Resulta en un tibble
+
+interviews[["village"]]     # Resulta en un vector
+
+interviews$village          # Resulta en un vector
+
+```
+
+
+## Ejercicio
+
+
+
+1. Crear un tibble (interviews_100) que contenga solo los datos de la fila 100 del conjunto de datos de entrevistas.
+
+2. obtener no de filas con nrow () 
+        Usar ese número para sacar solo la última fila del tibble.
+        Compare eso con lo que ve como la última fila usando tail() para asegurarse de que cumpla con las expectativas.
+        Extraiga esa última fila usando nrow () en lugar del número de fila.
+        Cree un nuevo tibble (entrevistas_últimas) a partir de esa última fila.
+
+
+3. Usando el número de filas en el conjunto de datos de entrevistas que encontró en la pregunta 2, extraer la fila que está en el medio del conjunto de datos. Almacene el contenido de esta fila del medio en un objeto denominado entrevistas_medio. (pista: este conjunto de datos tiene un número impar de filas, por lo que encontrar el medio es un poco más complicado que dividir n_rows por 2. Utilice la función median () y lo que ha aprendido sobre las secuencias en R para extraer la fila del medio.
+  
+
+4. Combine nrow () con la notación - anterior para reproducir el comportamiento de head (entrevistas), manteniendo solo las filas primera a sexta del conjunto de datos de entrevistas.
+
+
+# Factores
+
+R tiene una clase de datos especial, denominada factor, para tratar con datos categóricos que puede encontrar al crear gráficos o realizar análisis estadísticos. Los factores son muy útiles y, de hecho, contribuyen a que R sea especialmente adecuado para trabajar con datos. Así que vamos a dedicar un poco de tiempo a presentarlos.
+
+Los factores representan datos categóricos. Se almacenan como números enteros asociados a etiquetas y se pueden ordenar (ordinal) o desordenar (nominal). Los factores crean una relación estructurada entre los diferentes niveles (valores) de una variable categórica, como los días de la semana o las respuestas a una pregunta en una encuesta. Esto puede hacer que sea más fácil ver cómo un elemento se relaciona con los otros elementos de una columna. Si bien los factores se ven (y a menudo se comportan) como vectores de caracteres, en realidad R. los trata como vectores enteros. Por lo tanto, debe tener mucho cuidado al tratarlos como cadenas.
+
+
+```{r}
+
+respondent_floor_type <- factor(c("earth", "cement", "cement", "earth"))
+
+```
+
+
+R asignará 1 al nivel "cemento" y 2 al nivel "tierra" (porque c viene antes de e, aunque el primer elemento de este vector es "tierra"). Puede ver esto usando la función niveles () y puede encontrar el número de niveles usando nlevels ():
+
+```{r}
+
+levels(respondent_floor_type)
+nlevels(respondent_floor_type)
+respondent_floor_type # current order
+
+
+```
+
+```{r}
+respondent_floor_type <- factor(respondent_floor_type, 
+                                levels = c("earth", "cement"))
+
+respondent_floor_type # despues de re-ordenar
+
+```
+
+Recode "cement" to "brick"
+
+```{r}
+
+levels(respondent_floor_type)
+
+levels(respondent_floor_type)[2] <- "brick"
+
+levels(respondent_floor_type)
+
+```
+
+
+Hasta ahora, el factor no está ordenado, como una variable nominal. R no conoce la diferencia entre una variable nominal y una ordinal. Convierte su factor en un factor ordenado usando la opción ordenada = VERDADERO dentro de su función de factor. Observe cómo los niveles informados cambiaron del factor desordenado anterior a la versión ordenada a continuación. Los niveles ordenados utilizan el signo menor que <para indicar la clasificación de nivel.
+
+
+```{r}
+
+
+respondent_floor_type_ordered <- factor(respondent_floor_type, 
+                                        ordered = TRUE)
+
+respondent_floor_type_ordered # after setting as ordered factor
+
+```
+
+                                        
+# Convirtiendo factores
+
+```{r}
+as.character(respondent_floor_type)
+
+```
+
+Convertir factores en los que los niveles aparecen como números (como niveles de concentración o años) en un vector numérico es un poco más complicado. La función as.numeric () devuelve los valores de índice del factor, no sus niveles, por lo que dará como resultado un conjunto de números completamente nuevo (y no deseado en este caso). Un método para evitar esto es convertir factores en caracteres y luego en números. Otro método es utilizar la función niveles (). Comparar:
+
+```{r}
+year_fct <- factor(c(1990, 1983, 1977, 1998, 1990))
+
+as.numeric(year_fct)  # Alerta!!!
+
+as.numeric(as.character(year_fct))       # funciona
+
+as.numeric(levels(year_fct))[year_fct] # el modo recomendado
+
+```
+
+# Renombrando factores
+
+```{r}
+
+memb_assoc <- interviews$memb_assoc
+
+memb_assoc <- as.factor(memb_assoc)
+
+memb_assoc
+
+```
+
+```{r}
+plot(memb_assoc)
+
+```
+
+Hay algunos encuestados para los que la información sobre si formaban parte de una asociación de riego no se registró y no se codificó como datos faltantes. No aparecen en la trama. Codifiquémoslos de manera diferente para que puedan contarse y visualizarse en nuestra trama.
+
+```{r}
+
+memb_assoc <- interviews$memb_assoc
+
+memb_assoc[is.na(memb_assoc)] <- "undetermined"
+
+memb_assoc <- as.factor(memb_assoc)
+
+memb_assoc
+
+```
+
+```{r}
+
+plot(memb_assoc)
+
+```
+
+
+## Ejercicio
+
+1. Renombrar los niveles de factores para que la primera letra esté em Mayuscula:  “No”,”Undetermined”, and “Yes”.
+
+2. Ahora que está renombrado los factor level a “Undetermined”, recrear el barplot con “Undetermined” de 'ultimo (despues de “Yes”)?
+
+
+# Formatting fechas 
+
+Uno de los problemas más comunes que tienen los usuarios de R nuevos (¡y experimentados!) Es convertir la información de fecha y hora en una variable que sea apropiada y utilizable durante los análisis. La mejor práctica para tratar con datos de fecha es asegurarse de que cada componente de su fecha se almacene como una variable separada. En nuestro conjunto de datos, tenemos una columna entrevista_fecha que contiene información sobre el año, mes y día en que se realizó la entrevista. Convirtamos esas fechas en tres columnas separadas.
+
+```{r}
+
+str(interviews)
+
+```
+Extraigamos nuestra columna interview_date e inspeccionemos la estructura:
+
+```{r}
+
+library(lubridate)
+dates <- interviews$interview_date
+str(dates)
+
+
+```
+
+Ahora podemos usar las funciones de day(), month() y year() para extraer esta información de la fecha y crear nuevas columnas en nuestro marco de datos para almacenarla:
+
+```{r}
+
+interviews$day <- day(dates)
+interviews$month <- month(dates)
+interviews$year <- year(dates)
+interviews
+
+```
+En nuestro ejemplo, la variable `interview_date` fue leido correctamente. Sin embargo, ellas son comunmente leidas como `character` y se puede usar `as_date` para convertirlas al formato apropiado `Date/POSIXct`.
+
+```{r}
+
+char_dates <- c("7/31/2012", "8/9/2014", "4/30/2016")
+str(char_dates)
+
+```
+
+Nosotros podemos convertir el vector de fechas a:
+
+```{r}
+
+as_date(char_dates, format = "%m/%d/%Y")
+class(as_date(char_dates, format = "%m/%d/%Y"))
+
+```
+
+
+Aquí, la parte %y del formato representa un año de dos dígitos en lugar de un año de cuatro dígitos, y esto conduce a errores de análisis.
+
+O en el siguiente ejemplo, observe lo que sucede cuando se cambian los elementos de mes y día del formato.
+
+```{r}
+
+as_date(char_dates, format = "%d/%m/%y")
+
+```
+
+
+Dado que no hay un mes numerado 30 o 31, la primera y tercera fechas no se pueden analizar.
+
+También podemos usar las funciones ymd (), mdy () o dmy () para convertir variables de caracteres a la fecha.
+
+
+
+
+
+
+
+
+
+
+
+
+
