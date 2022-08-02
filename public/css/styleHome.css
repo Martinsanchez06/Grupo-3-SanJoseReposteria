@@ -512,6 +512,10 @@ p {
   width: 100%;
 }
 
+.mensaje-error {
+  color: red;
+}
+
 .control-form {
   margin-bottom: 15px;
 }
@@ -1130,7 +1134,7 @@ p {
 
   .div-desktopR {
     background-color: #ffffff;
-    width: 500px;
+    width: 540px;
     display: flex;
     flex-direction: column;
     border-style: groove;
