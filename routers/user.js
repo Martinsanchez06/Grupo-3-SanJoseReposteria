@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
         cb(null, './public/images/avatars')
     },
     filename: (req, file, cb) => {
-        let filename = `${Date.now()}_img${path.extname(file.originalname)}`
+        let filename = 'Usuario#' + Date.now() + '_img' + path.extname(file.originalname)
         cb(null, filename)
     }
 })
@@ -56,5 +56,9 @@ router.post("/registro", imagenSubida.single('imagenReg'), validaciones, userCon
 // -----AQUI SE LLAMA A LA VISTA DEL LOGIN-----
 
 router.get("/login", userController.login);
+
+// -----AQUI SE LLAMA A LA VISTA DE PROCESAMIENTO DEL LOGIN-----
+
+router.post("/login", validaciones , userController.procesoDeLogin);
 
 module.exports = router;

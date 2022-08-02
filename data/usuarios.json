@@ -20,5 +20,16 @@
   "password": "12345",
   "con_password": "12345",
   "politica": "politica"
+ },
+ {
+  "id": 3,
+  "numeroID": "1030538674",
+  "nombre": "Martin Sanchez ",
+  "email": "sanchezmartin2435@gmail.com",
+  "fechanacimiento": "2005-06-25",
+  "ciudad": "Bogotá",
+  "password": "$2a$10$580qFvGQenVsH4oM27iJs.bwG107mVCGyUEI4ORySqVfVzeSuXxQ2",
+  "con_password": "$2a$10$tLSJ.ruzTBvDpYbnLNV3ZulJKTpsPp1X8xRlKTtzqCn8wyBP6tyui",
+  "avatar": "Usuario#1659464733840_img.jpg"
  }
 ]

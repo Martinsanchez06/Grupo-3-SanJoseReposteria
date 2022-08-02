@@ -32,14 +32,18 @@
 
 
 
-                    <form action="/login" method="GET" class="info-login" class="Form-registro">
+                    <form action="/user/login" method="POST" class="info-login">
 
                         <div class="control-form">
 
                             <label for="email">Correo Electrónico:</label>
                             <input type="email" placeholder="example@example.com" name="email" id="email"
                                 class="control">
-
+                            <%if (locals.errors && errors.email) {%>
+                                <div class="mensaje-error">
+                                    <%= errors.email.msg %>
+                                </div>
+                            <% } %>
                         </div>
 
                         <div class="control-form">
