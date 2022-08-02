@@ -975,6 +975,12 @@ p {
     background-color, 0.5s color, 0.5s;
 }
 
+.img-usuario{
+  height: 100px;
+  width: 150px;
+}
+
+
 
 /* ----- MEDIA QUERIES-----*/
 
@@ -1351,8 +1357,6 @@ p {
     background-color: #8CC0DE;
     color: #FFFFFF;
   }
-
-
 
 }
 

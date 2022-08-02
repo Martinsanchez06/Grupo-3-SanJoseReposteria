@@ -55,5 +55,16 @@
   "con_password": "$2a$10$xSpBUD9tINt5AycNK38bhum0TxXc1rtqc/n4.KnzH8nf8Cl7Q9lhe",
   "politica": "politica",
   "avatar": "Usuario#1659475209038_img.jpg"
+ },
+ {
+  "id": 6,
+  "numeroID": "1234567",
+  "nombre": "prueba",
+  "email": "sanchezmartin3524@hotmail.com",
+  "fechanacimiento": "2022-05-22",
+  "ciudad": "Medellin",
+  "password": "$2a$10$/46BgI8S5ZUf/86n.XtcruuuYzgEYHLtewPUypGLzbJt2O.dQU12W",
+  "con_password": "$2a$10$gj/2ESN7f6fM2R/ZihUN1Omi8paneA.PYbAG3Ad4LW9zhOsp3LERi",
+  "avatar": "usuario1659482121755_img.jpg"
  }
 ]
