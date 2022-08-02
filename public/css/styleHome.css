@@ -511,6 +511,10 @@ p {
   width: 100%;
 }
 
+.mensaje-error {
+  color: red;
+}
+
 .control-form {
   margin-bottom: 15px;
 }
@@ -864,14 +868,12 @@ p {
 .card-left {
   display: flex;
   margin-right: 15px;
-  margin-left: 2rem;
+  margin-left: 5%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 30%;
-  padding: 1rem;
-
+  padding: 1% 1%;
   background-color: #00a8a8;
   color: white;
   text-align: center;
@@ -880,7 +882,7 @@ p {
 }
 
 .card-left figure {
-  height: 140px;
+  height: 39vh;
   width: 210px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -897,7 +899,7 @@ p {
   padding: 1rem;
   background-color: #E6E6E6;
   border-radius: 25px;
-  margin-right: 2rem;
+  margin-right: 5%;
 }
 
 .ver-detalle {
@@ -1131,7 +1133,7 @@ p {
 
   .div-desktopR {
     background-color: #ffffff;
-    width: 500px;
+    width: 540px;
     display: flex;
     flex-direction: column;
     border-style: groove;

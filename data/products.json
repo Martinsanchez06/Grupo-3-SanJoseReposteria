@@ -1,6 +1,6 @@
 [
-    {   
-        "id":"1",
+    {
+        "id": "1",
         "nombre": "María Luisa Arequipe",
         "categoria": "Caseras",
         "precio": "$40.000",
@@ -28,7 +28,8 @@
         "imagen1": "",
         "imagen2": "",
         "imagen3": "",
-        "tamaño": "8-10 porciones"
+        "tamaño": "8-10 porciones",
+        "descripcion": ""
     },
     {
         "id": "4",
@@ -38,7 +39,8 @@
         "imagen1": "",
         "imagen2": "",
         "imagen3": "",
-        "tamaño": "6-8 porciones"
+        "tamaño": "6-8 porciones",
+        "descripcion": ""
     },
     {
         "id": "5",
@@ -48,7 +50,8 @@
         "imagen1": "",
         "imagen2": "",
         "imagen3": "",
-        "tamaño": "8-10 porciones"
+        "tamaño": "8-10 porciones",
+        "descripcion": ""
     },
     {
         "id": "6",
@@ -58,6 +61,7 @@
         "imagen1": "",
         "imagen2": "",
         "imagen3": "",
-        "tamaño": "20 porciones"
+        "tamaño": "20 porciones",
+        "descripcion": ""
     }
 ]
