@@ -1,6 +1,9 @@
 const express = require("express");
 
 const userController = require("../controllers/userController");
+const guestMiddelware = require("../middlewares/guestMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
+
 
 const router = express.Router();
 const path = require("path")
@@ -47,7 +50,7 @@ const validaciones = [
 
 // -----AQUI SE LLAMA A LA VISTA DEL REGISTRO-----
 
-router.get("/registro", userController.registro);
+router.get("/registro", guestMiddelware, userController.registro);
 
 // -----AQUI SE PROCESA LA VISTA DEL REGISTRO-----
 
@@ -55,10 +58,18 @@ router.post("/registro", imagenSubida.single('imagenReg'), validaciones, userCon
 
 // -----AQUI SE LLAMA A LA VISTA DEL LOGIN-----
 
-router.get("/login", userController.login);
+router.get("/login", guestMiddelware, userController.login);
 
 // -----AQUI SE LLAMA A LA VISTA DE PROCESAMIENTO DEL LOGIN-----
 
 router.post("/login", validaciones , userController.procesoDeLogin);
+
+//-----AQUI SE LLAMA A LA VISTA DE PERFIL DEL USUARIO----
+
+router.get("/perfil/", authMiddleware, userController.perfil);
+
+//-----PROCESO DE LOGOUT----
+
+router.get("/logout/", userController.logout);
 
 module.exports = router;

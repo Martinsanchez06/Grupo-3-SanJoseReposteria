@@ -1,9 +1,11 @@
 const express = require("express");
+const session = require("express-session");
 const rutasMain = require("./routers/main");
 const rutasProductos = require("./routers/productos");
 const rutasUser = require("./routers/user");
 const path = require("path");
 const methodOverride = require("method-override");
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const app = express();
 
 // -------MOTOR DE VISTAS EJS-------
@@ -16,12 +18,18 @@ app.listen(port, () =>{
     console.log(`listening on port ${port}`);
 });
 
-// --------CONFIGURACIONES--------
+// --------MIDLEWARES--------
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.static("public"));
+app.use(session({
+    secret: "secreto",
+    resave: false,
+    saveUninitialized: false,
+}));
+app.use(userLoggedMiddleware);
 
 // --------RUTAS A USAR--------
 

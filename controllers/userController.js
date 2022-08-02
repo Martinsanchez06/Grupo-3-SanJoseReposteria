@@ -47,6 +47,11 @@ const userController = {
     login: (req, res) => {
         res.render("login");
     },
+    perfil: (req, res) => {
+        res.render("perfilUsuario", {
+            user: req.session.usuarioLogueado
+        });
+    },
 
     procesoDeLogin: (req, res) => {
 
@@ -55,7 +60,9 @@ const userController = {
         if (usuarioParaCrear) {
             let contraseñaCorrecta = bcryptjs.compareSync(req.body.password, usuarioParaCrear.password)
             if (contraseñaCorrecta) {
-                return res.send('ok puedes ingresar')
+                delete usuarioParaCrear.password;
+                req.session.usuarioLogueado = usuarioParaCrear;
+                return res.redirect('/user/perfil');
             }
             
         return res.render('login', {
@@ -74,6 +81,10 @@ const userController = {
             }
         })
 
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect("/")
     }
 }
 

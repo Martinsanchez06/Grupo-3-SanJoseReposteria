@@ -1027,7 +1027,13 @@ p {
     border-radius: 15px;
   }
 
-
+  .fa-user-circle {
+    margin-top: 35px;
+    margin-right: 10px;
+    color: #00a8a8;
+    display: inline-block;
+    font-size: 29px;
+  }
   .fa-search {
     margin-top: 35px;
     margin-right: 10px;

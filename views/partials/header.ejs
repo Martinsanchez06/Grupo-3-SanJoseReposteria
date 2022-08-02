@@ -10,19 +10,24 @@
     <ul class="nav-tabs">
       <li><a class="nav-icons" href="/">Inicio</a></li>
       <li><a class="nav-icons" href="/productos/lista">Productos</a></li>
-      <li><a class="nav-icons" href="/user/login">Mi cuenta</a></li>
       <li><a class="nav-icons" href="/productos/carritoDeCompras">Nuestros de postres</a></li>
       <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
     </ul>
 
 
     <ul class="nav-tabs2">
-      <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
+      <% if(locals.isLogged) { %>
+      <li><a class="nav2-link" href="#"><i class="fas fa-user-circle"></i></a></li>
+      <li><a class="nav-icons" href="/user/logout/">Logout</a></li>
       <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
       <li><a class="nav2-link" href='#'><i class="fas fa-bars"></i></a></li>
+      <% } else { %>
+      <li><a class="nav-icons" href="/user/login">Login</a></li>
+      <li><a class="nav-icons" href="/user/registro">Registro</a></li>
+      <% } %>
     </ul>
   </nav>
-  <div class="search">
+  <!--<div class="search">
     <input type="search" name="search" id="search-header" placeholder="Busca aqui tu postre" autocomplete="off">
-  </div>
+  </div>-->
 </header>
