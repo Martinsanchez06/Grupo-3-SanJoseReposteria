@@ -92,7 +92,7 @@ div {
 
 .div-img-slider .img-slider {
   width: 100%;
-  height: 50vh;
+  height: 35vh;
 }
 
 .product-contain {
@@ -123,7 +123,15 @@ div {
 
 .div-img-home .img-product-home {
   width: 100%;
+  border-radius: 20px;
 
+}
+
+.sizes-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .div-btn-agregar {
@@ -147,6 +155,7 @@ div {
 }
 
 .section-nuestrac {
+  margin-bottom: 70px;
   width: 100%;
   padding: 20px;
 }
@@ -161,10 +170,11 @@ div {
 }
 
 .section-blog {
+  background-image: url("/images/happy-birthday-gfd91e059c_1920.jpg");
   padding: 20px;
   width: 100%;
+  height: 300px;
   background-color: #fae1cf;
-  border-bottom: 3px solid #00a8a8;
 }
 
 .div-inputN input {
@@ -185,6 +195,7 @@ div {
 }
 
 .div-noticias {
+  margin-top: 50px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -434,6 +445,7 @@ p {
   width: 100%;
   background-color: #fae1cf;
   padding: 20px;
+  border-top: 3px solid #00a8a8;
 }
 
 
@@ -1009,9 +1021,12 @@ p {
   .nav-tabs2 {
     margin-right: 0px;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-icons {
+    
     display: inline-block;
     text-decoration: none;
     color: #00a8a8;
@@ -1034,7 +1049,6 @@ p {
   }
 
   .fa-user-circle {
-    margin-top: 35px;
     margin-right: 10px;
     color: #00a8a8;
     display: inline-block;
@@ -1097,10 +1111,13 @@ p {
 
   .fa-bars,
   .fa-search,
-  .fa-shopping-cart {
-    margin-top: 32px;
-    display: inline-block;
-    font-size: 29px;
+  .fa-shopping-cart,
+  .fa-user-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
   }
 
   .fa-bars {
@@ -1117,8 +1134,7 @@ p {
 
 }
 
-/* -Containes 1100 px- */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 460px) {
 
   /* HOME */
 
@@ -1131,10 +1147,11 @@ p {
     display: inline-block;
     width: auto;
   }
-  .product-home {
-    padding: 20px;
+  .product-contain .product-home {
+    margin-left: 1px;
+    padding: 5px;
     background-color: #ffffff;
-    width: 100px;
+    width: 400px;
     display: flex;
     text-align: center;
     justify-content: space-around;
@@ -1149,109 +1166,6 @@ p {
     width: 100%;
     height: 80vh;
   }
-
-
-
-  /* REGISTRO DE ESCRITORIO */
-
-  .div-desktopR {
-    background-color: #ffffff;
-    width: 540px;
-    display: flex;
-    flex-direction: column;
-    border-style: groove;
-    border-radius: 20px;
-    border-color: #e4f0f3;
-    height: 860px;
-  }
-
-  .div-desktopR {
-    border-radius: 8px;
-  }
-
-  .tit-crea-cuenta h4 {
-    font-size: 25px;
-  }
-
-
-
-  /* LOGIN DE ESCRITORIO */
-
-  .contain-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    min-height: 90vh;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-
-  .div-desktop {
-    background-color: #ffffff;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    border-style: groove;
-    border-radius: 20px;
-    border-color: #e4f0f3;
-    height: 75vh;
-  }
-
-  .div-desktop .ingreso {
-    padding: 30px;
-  }
-
-  .div-desktop {
-    border-radius: 8px;
-  }
-
-  .button-form button {
-    margin-top: 25px;
-    background-color: #3c7d8f;
-    color: #ffffff;
-    width: 300px;
-    height: 30px;
-    text-align: center;
-    border-radius: 20px;
-    border: none;
-    transition:
-      background-color, 0.5s color, 0.5s;
-
-  }
-
-  .button-form button:hover {
-    background-color: #8CC0DE;
-    color: #FFFFFF;
-  }
-
-  .button-form-a .btn-form-a {
-    margin-top: 15px;
-    background-color: #3c7d8f;
-    color: #ffffff;
-    width: 300px;
-    height: 30px;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 20px;
-    border: none;
-    transition:
-      background-color, 0.5s color, 0.5s;
-
-  }
-
-  .button-form-a .btn-form-a:hover {
-    background-color: #8CC0DE;
-    color: #FFFFFF;
-  }
-
-
-
-
-
-}
-
-/* -Tablet- */
-@media only screen and (min-width: 460px) {
 
   /* LOGIN TABLET */
 
@@ -1496,3 +1410,139 @@ p {
     margin-top: 30px;
   }
 }
+
+/* -Containes 1100 px- */
+@media only screen and (min-width: 768px) {
+
+  /* HOME */
+
+  .div-product-contain {
+    width: 100%;
+    
+  }
+
+  .product-contain {
+    display: inline-block;
+    width: auto;
+  }
+  .product-contain .product-home {
+    margin-left: 1px;
+    padding: 5px;
+    background-color: #ffffff;
+    width: 375px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-style: groove;
+    border-radius: 20px;
+    border-color: #e4f0f3;
+    height: 100%;
+  }
+
+  .div-img-slider .img-slider {
+    width: 100%;
+    height: 80vh;
+  }
+
+
+
+  /* REGISTRO DE ESCRITORIO */
+
+  .div-desktopR {
+    background-color: #ffffff;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    border-style: groove;
+    border-radius: 20px;
+    border-color: #e4f0f3;
+    height: 860px;
+  }
+
+  .div-desktopR {
+    border-radius: 8px;
+  }
+
+  .tit-crea-cuenta h4 {
+    font-size: 25px;
+  }
+
+
+
+  /* LOGIN DE ESCRITORIO */
+
+  .contain-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .div-desktop {
+    background-color: #ffffff;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-style: groove;
+    border-radius: 20px;
+    border-color: #e4f0f3;
+    height: 75vh;
+  }
+
+  .div-desktop .ingreso {
+    padding: 30px;
+  }
+
+  .div-desktop {
+    border-radius: 8px;
+  }
+
+  .button-form button {
+    margin-top: 25px;
+    background-color: #3c7d8f;
+    color: #ffffff;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    transition:
+      background-color, 0.5s color, 0.5s;
+
+  }
+
+  .button-form button:hover {
+    background-color: #8CC0DE;
+    color: #FFFFFF;
+  }
+
+  .button-form-a .btn-form-a {
+    margin-top: 15px;
+    background-color: #3c7d8f;
+    color: #ffffff;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    transition:
+      background-color, 0.5s color, 0.5s;
+
+  }
+
+  .button-form-a .btn-form-a:hover {
+    background-color: #8CC0DE;
+    color: #FFFFFF;
+  }
+
+
+
+
+
+}
+
+/* -Tablet- */
