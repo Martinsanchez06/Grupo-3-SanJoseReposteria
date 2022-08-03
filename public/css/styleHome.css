@@ -175,7 +175,6 @@ div {
   width: 100%;
   height: 300px;
   background-color: #fae1cf;
-  border-bottom: 3px solid #00a8a8;
 }
 
 .div-inputN input {
@@ -446,6 +445,7 @@ p {
   width: 100%;
   background-color: #fae1cf;
   padding: 20px;
+  border-top: 3px solid #00a8a8;
 }
 
 
