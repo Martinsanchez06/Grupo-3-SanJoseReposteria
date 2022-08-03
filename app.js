@@ -7,7 +7,6 @@ const rutasUser = require("./routers/user");
 const path = require("path");
 const methodOverride = require("method-override");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
-const cookieParser = require("cookie-parser");
 const app = express();
 
 // -------MOTOR DE VISTAS EJS-------

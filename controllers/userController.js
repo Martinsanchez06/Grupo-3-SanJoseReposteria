@@ -8,6 +8,7 @@ const userController = {
 
     registro: (req, res) => {
         res.cookie("testing", "", { maxAge: 1000 * 30 });
+        return res.render("registro")
     },
     registroProcesado: (req, res) => {
         const resultadoValidacion = validationResult(req)
@@ -52,7 +53,6 @@ const userController = {
     },
 
     procesoDeLogin: (req, res) => {
-        return res.send(req.body);
 
         let usuarioParaCrear = User.findByField('email', req.body.email)
 
@@ -88,9 +88,7 @@ const userController = {
 
     },
     perfil: (req, res) => {
-        console.log(req.cookies.userEmail);
-        console.log('PRUEBA AQUI');
-        console.log(req.session);
+        
         res.render("perfilUsuario", {
             user: req.session.usuarioLogueado
         });

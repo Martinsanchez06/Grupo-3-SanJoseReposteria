@@ -1,82 +1,14 @@
 [
  {
   "id": 1,
-  "nombre": "nombre",
-  "email": "administrador@gmail.com",
-  "numeroID": "123456789",
-  "categoria": "administrador",
-  "fechanacimiento": "01/02/1990",
-  "ciudad": "Bogota",
-  "contraseña": "xcyc7td",
-  "imagenReg": ""
- },
- {
-  "id": 2,
-  "numeroID": "1006858138",
-  "nombre": "Juan Martinez",
-  "email": "mljuanpablo@gmail.com",
-  "fechanacimiento": "2002-02-16",
-  "ciudad": "Bogotá",
-  "password": "12345",
-  "con_password": "12345",
-  "politica": "politica"
- },
- {
-  "id": 3,
   "numeroID": "1030538674",
-  "nombre": "Martin Sanchez ",
-  "email": "sanchezmartin2435@gmail.com",
-  "fechanacimiento": "2005-06-25",
-  "ciudad": "Bogotá",
-  "password": "$2a$10$580qFvGQenVsH4oM27iJs.bwG107mVCGyUEI4ORySqVfVzeSuXxQ2",
-  "con_password": "$2a$10$tLSJ.ruzTBvDpYbnLNV3ZulJKTpsPp1X8xRlKTtzqCn8wyBP6tyui",
-  "avatar": "Usuario#1659464733840_img.jpg"
- },
- {
-  "id": 4,
-  "numeroID": "1001559749",
-  "nombre": "Emmanuel Cadavid",
-  "email": "emmanuel46@gmail.com",
-  "fechanacimiento": "2003-04-02",
-  "ciudad": "Medellin",
-  "password": "$2a$10$ls.DFCiACAGgMiNjViIlFO3P1WjXLhjQ51KBQE73otTrywjP1xN2O",
-  "con_password": "$2a$10$7k9iSzweIB0oqMFb5FkFs.JrmLiOZlx7GKH/Dj9aE.8Z0q/wBXLWG",
-  "politica": "politica",
-  "avatar": "Usuario#1659467722633_img.jpg"
- },
- {
-  "id": 5,
-  "numeroID": "1001456789",
-  "nombre": "Emmanuel Cadavid Cano",
-  "email": "emmanuel64@gmail.com",
+  "nombre": "Usuario Administrador",
+  "email": "pisotresdecuatro@gmail.com",
   "fechanacimiento": "2022-05-22",
   "ciudad": "Medellin",
-  "password": "$2a$10$8sCyRjWFb8uUlQKoocTxzOfZ5Q/hQyNFuQvUg9RnV9VfAJE2gdwSK",
-  "con_password": "$2a$10$xSpBUD9tINt5AycNK38bhum0TxXc1rtqc/n4.KnzH8nf8Cl7Q9lhe",
+  "password": "$2a$10$vBaG4SzyI4tgHryiv8yPQ.I0UMZIQCw27TCfs9Hk1.LHc50GWfgK2",
+  "con_password": "$2a$10$.ugEWo5.peAeh33pp/mQX.qoLuS12FQ990qd.Kw4um.RxaNY5/ume",
   "politica": "politica",
-  "avatar": "Usuario#1659475209038_img.jpg"
- },
- {
-  "id": 6,
-  "numeroID": "1234567",
-  "nombre": "prueba",
-  "email": "sanchezmartin3524@hotmail.com",
-  "fechanacimiento": "2022-05-22",
-  "ciudad": "Medellin",
-  "password": "$2a$10$/46BgI8S5ZUf/86n.XtcruuuYzgEYHLtewPUypGLzbJt2O.dQU12W",
-  "con_password": "$2a$10$gj/2ESN7f6fM2R/ZihUN1Omi8paneA.PYbAG3Ad4LW9zhOsp3LERi",
-  "avatar": "usuario1659482121755_img.jpg"
- },
- {
-  "id": 7,
-  "numeroID": "10348555",
-  "nombre": "hola",
-  "email": "hola@gmial.com",
-  "fechanacimiento": "2022-05-22",
-  "ciudad": "Medellin",
-  "password": "$2a$10$B8ZVXY7GFUfifrKrq4XpeenReqql2/RLm9J1FWKRrtSZSkNb.gQX2",
-  "con_password": "$2a$10$WRJldL19Tjbz9WkZj3DqreGKWk4BrV65j85DPNR3DvvtbdXIuirN6",
-  "politica": "politica",
-  "avatar": "usuario1659487569249_img.jpg"
+  "avatar": "usuario1659566440732_img.jpg"
  }
 ]
