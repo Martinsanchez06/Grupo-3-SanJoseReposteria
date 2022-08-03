@@ -4,6 +4,8 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+
 /* ESTILOS DEL HEADER */
 
 .main-header {
@@ -100,7 +102,7 @@ div {
   width: 100%;
   display: flex;
   justify-content: center;
-  
+
 }
 
 .product-contain .product-home {
@@ -987,9 +989,29 @@ p {
     background-color, 0.5s color, 0.5s;
 }
 
-.img-usuario{
-  height: 100px;
-  width: 150px;
+.usuario-content {
+  height: 90vh
+}
+
+.img-usuario {
+  height: 300px;
+  width: 450px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.nombre-usuario {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.email-usuario {
+  border: 2px solid #3c7d8f;
+  background-color: #60cbe9;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px;
+  margin: 50px 10px;
 }
 
 
@@ -1026,7 +1048,7 @@ p {
   }
 
   .nav-icons {
-    
+
     display: inline-block;
     text-decoration: none;
     color: #00a8a8;
@@ -1054,6 +1076,7 @@ p {
     display: inline-block;
     font-size: 29px;
   }
+
   .fa-search {
     margin-top: 35px;
     margin-right: 10px;
@@ -1116,8 +1139,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+
+
   }
 
   .fa-bars {
@@ -1140,13 +1163,14 @@ p {
 
   .div-product-contain {
     width: 100%;
-    
+
   }
 
   .product-contain {
     display: inline-block;
     width: auto;
   }
+
   .product-contain .product-home {
     margin-left: 1px;
     padding: 5px;
@@ -1274,7 +1298,7 @@ p {
 
 }
 
-@media only screen and (min-width: 460px)  {
+@media only screen and (min-width: 460px) {
 
   .form-create {
     margin-right: 20px;
@@ -1418,13 +1442,14 @@ p {
 
   .div-product-contain {
     width: 100%;
-    
+
   }
 
   .product-contain {
     display: inline-block;
     width: auto;
   }
+
   .product-contain .product-home {
     margin-left: 1px;
     padding: 5px;
