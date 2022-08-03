@@ -66,5 +66,17 @@
   "password": "$2a$10$/46BgI8S5ZUf/86n.XtcruuuYzgEYHLtewPUypGLzbJt2O.dQU12W",
   "con_password": "$2a$10$gj/2ESN7f6fM2R/ZihUN1Omi8paneA.PYbAG3Ad4LW9zhOsp3LERi",
   "avatar": "usuario1659482121755_img.jpg"
+ },
+ {
+  "id": 7,
+  "numeroID": "10348555",
+  "nombre": "hola",
+  "email": "hola@gmial.com",
+  "fechanacimiento": "2022-05-22",
+  "ciudad": "Medellin",
+  "password": "$2a$10$B8ZVXY7GFUfifrKrq4XpeenReqql2/RLm9J1FWKRrtSZSkNb.gQX2",
+  "con_password": "$2a$10$WRJldL19Tjbz9WkZj3DqreGKWk4BrV65j85DPNR3DvvtbdXIuirN6",
+  "politica": "politica",
+  "avatar": "usuario1659487569249_img.jpg"
  }
 ]
