@@ -1,11 +1,13 @@
 const express = require("express");
 const session = require("express-session");
+const cookies = require("cookie-parser");
 const rutasMain = require("./routers/main");
 const rutasProductos = require("./routers/productos");
 const rutasUser = require("./routers/user");
 const path = require("path");
 const methodOverride = require("method-override");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const cookieParser = require("cookie-parser");
 const app = express();
 
 // -------MOTOR DE VISTAS EJS-------
@@ -29,6 +31,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
+app.use(cookies());
 app.use(userLoggedMiddleware);
 
 // --------RUTAS A USAR--------

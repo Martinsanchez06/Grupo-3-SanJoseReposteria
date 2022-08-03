@@ -1,12 +1,13 @@
 const { validationResult } = require('express-validator')
 const User = require("../models/User")
 const bcryptjs = require('bcryptjs');
+const { clearCookie } = require('express/lib/response');
 
 
 const userController = {
 
     registro: (req, res) => {
-        res.render("registro");
+        res.cookie("testing", "", { maxAge: 1000 * 30 });
     },
     registroProcesado: (req, res) => {
         const resultadoValidacion = validationResult(req)
@@ -45,10 +46,13 @@ const userController = {
     },
 
     login: (req, res) => {
+        console.log(req.cookies);
+        console.log(req.cookies.testing);
         res.render("login");
     },
 
     procesoDeLogin: (req, res) => {
+        return res.send(req.body);
 
         let usuarioParaCrear = User.findByField('email', req.body.email)
 
@@ -58,6 +62,11 @@ const userController = {
                 delete usuarioParaCrear.password;
                 delete usuarioParaCrear.con_password;
                 req.session.usuarioLogueado = usuarioParaCrear;
+
+                if (req.body.remember_user) {
+                    res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2 });
+                }
+
                 return res.redirect('/user/perfil');
             }
             
@@ -79,6 +88,7 @@ const userController = {
 
     },
     perfil: (req, res) => {
+        console.log(req.cookies.userEmail);
         console.log('PRUEBA AQUI');
         console.log(req.session);
         res.render("perfilUsuario", {
@@ -86,6 +96,7 @@ const userController = {
         });
     },
     logout: (req, res) => {
+        res.clearCookie("userEmail");
         req.session.destroy();
         return res.redirect("/")
     }
