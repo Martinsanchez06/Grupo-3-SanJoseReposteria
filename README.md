@@ -28,5 +28,5 @@ Emmanuel Cadavid Cano (19):  Programador de sistemas de infomacion en formacion.
 1. https://wireframepro.mockflow.com/view/MULMIZwkHnb
 2. https://wireframepro.mockflow.com/view/MTRku71TK
 
-# Carpeta con archivos de modelo de BD
+# Carpeta con archivos de modelo de DB
 https://drive.google.com/drive/folders/189l-gQ6SbiMxFi1y6NoFQfzCOV4sGPJ4?usp=sharing
