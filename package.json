@@ -29,6 +29,10 @@
     "method-override": "^3.0.0",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
+<<<<<<< HEAD
+=======
+    "mysql2": "^2.3.3",
+>>>>>>> 0f9872d4f7dbca541bb7e43d77e2a3072e9f6b32
     "sequelize": "^6.21.4"
   },
   "devDependencies": {
