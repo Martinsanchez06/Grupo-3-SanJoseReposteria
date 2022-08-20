@@ -10,5 +10,17 @@
   "con_password": "$2a$10$.ugEWo5.peAeh33pp/mQX.qoLuS12FQ990qd.Kw4um.RxaNY5/ume",
   "politica": "politica",
   "avatar": "usuario1659566440732_img.jpg"
+ },
+ {
+  "id": 2,
+  "numeroID": "71376843",
+  "nombre": "Jorge Ignacio Guerra Acevedo",
+  "email": "jorge.guerra2907@gmail.com",
+  "fechanacimiento": "1981-07-29",
+  "ciudad": "Medellin",
+  "password": "$2a$10$56c2O0PG1sUBh8OISxYq2u7p//N11fX3stMT4e8ZrIrNxDqYLopsK",
+  "con_password": "$2a$10$xTB3pn42ZmHvzy6u3TrPvelQ1WFOj5Qvgv/J.JdMcYeL3kTJcttHK",
+  "politica": "politica",
+  "avatar": "usuario1659567200471_img.jpg"
  }
 ]
