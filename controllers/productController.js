@@ -35,11 +35,16 @@ const productController = {
     },
 
     list: (req, res) => {
-        res.render("listadoProductos", { "productos": productos });
+        db.Producto.findAll()
+        .then(function (productos) {
+            res.render("listadoProductos", { productos })
+        })
     },
     singleDetail: (req, res) => {
-        let productoEncontrado = productos.find(products => products.id === req.params.id);
-        res.render("detail", { "productos": productoEncontrado })
+        db.Producto.findByPk(req.params.id)
+        .then(function (productos) {
+            res.render("detail", { productos })
+        })
     },
     editarFormulario: (req, res) => {
         let productoEncontrado = productos.find(products => products.id === req.params.id);
