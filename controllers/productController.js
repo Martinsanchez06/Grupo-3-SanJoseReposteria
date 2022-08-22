@@ -21,24 +21,17 @@ const productController = {
         res.render("createProduct")
     },
     guardar: (req, res) => {
-        let rutaProducts = path.join(__dirname, '../data/products.json');
-        let productoGuardado = {
+        db.Producto.create({
             nombre: req.body.nombre,
-            precio: req.body.precio,
-            tamaño: req.body.tamaño,
+            imagen_1: req.body.imagen1,
+            imagen_2:req.body.imagen2,
+            imagen_3:req.body.imagen3,
+            categoria: req.body.categoria,
+            precio:req.body.precio,
             descripcion: req.body.descripcion
-        };
-        let archivoproducto = fs.readFileSync(rutaProducts, { encoding: 'utf-8' });
-        let productos;
-        if (archivoproducto == '') {
-            productos = [];
-        } else {
-            productos = JSON.parse(archivoproducto);
-        }
-        productos.push(productoGuardado);
-        productosJSON = JSON.stringify(productos, null, ' ');
-        fs.writeFileSync(rutaProducts, productosJSON);
-        res.redirect('/productos/lista');
+        })
+
+        res.redirect("/productos/lista");
     },
 
     list: (req, res) => {
