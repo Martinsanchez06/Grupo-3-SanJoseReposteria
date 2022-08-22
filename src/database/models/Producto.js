@@ -1,5 +1,5 @@
 module.exports= (sequelize, dataTypes) => {
-    let alias= "Productos"
+    let alias= "Producto"
     let cols= {
         id: {
             type: dataTypes.INTEGER,
@@ -12,32 +12,37 @@ module.exports= (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             notNull: true
         },
-        email: {
+        imagen_1: {
+            type: dataTypes.BLOB,
+            notNull: true
+        },
+        imagen_2: {
+            type: dataTypes.BLOB,
+            notNull: true
+        },
+        imagen_3: {
+            type: dataTypes.BLOB,
+            notNull: true
+        },
+        categoria: {
             type: dataTypes.STRING,
             notNull: true
         },
-        fecha: {
+        precio: {
             type: dataTypes.STRING,
             notNull: true
         },
-        ciudad: {
-            type: dataTypes.STRING,
-            notNull: true
-        },
-        password: {
-            type: dataTypes.STRING,
-            notNull: true
-        },
-        telefono: {
-            type: dataTypes.STRING,
-            notNull: true
-        },
-        avatar: {
+        descripcion: {
             type: dataTypes.STRING,
             notNull: true
         }
 
     }
+    
+  let config = {
+    tableName: "productos",
+    timestamps: false,
+  };
     const Producto= sequelize.define(alias, cols, config)
 
     return Producto

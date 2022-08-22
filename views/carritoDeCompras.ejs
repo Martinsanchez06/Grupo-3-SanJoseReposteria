@@ -87,6 +87,14 @@
       </div>
     </main>
 
+    <ul>
+      <% for (let i = 0; i < usuarios.length; i++ ) { %>
+      <li>
+        <%=usuarios[i].id%> 
+      </li>
+      <% } %>
+    </ul>
+
     <!-- PIE DE PAGINA -->
 
     <%- include("partials/footer.ejs") %>

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require("../src/database/models"); 
 
 
 const productController = {
@@ -11,7 +12,10 @@ const productController = {
         res.render("productdetail");
     },
     carritoCompras: (req, res) => {
-        res.render("carritoDeCompras")
+        db.Usuario.findAll()
+        .then(function (usuarios) {
+            res.render("carritoDeCompras", { usuarios })
+        })
     },
     create: (req, res) => {
         res.render("createProduct")
@@ -42,7 +46,7 @@ const productController = {
     },
     singleDetail: (req, res) => {
         let productoEncontrado = productos.find(products => products.id === req.params.id);
-         res.render("detail", { "productos": productoEncontrado})
+        res.render("detail", { "productos": productoEncontrado })
     },
     editarFormulario: (req, res) => {
         let productoEncontrado = productos.find(products => products.id === req.params.id);
@@ -58,13 +62,13 @@ const productController = {
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
         }
 
-        res.render('listadoProductos' , { "productos": productos })
+        res.render('listadoProductos', { "productos": productos })
     },
     delete: (req, res) => {
         let id = req.params.id;
         let finalProducts = productos.filter(product => product.id != id);
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-        res.render('listadoProductos' , { "productos": productos })
+        res.render('listadoProductos', { "productos": productos })
     }
 };
 
