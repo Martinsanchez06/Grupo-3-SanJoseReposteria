@@ -26,28 +26,29 @@
                 <img src="/images/IMG-1596.JPG" alt="">
             </figure>
     
-            <h3>Id producto</h3>
+            <h3><%= productos.nombre %></h3>
     
         </div>
         <div class="card-content">
             
-            <h3 class="h3-detail"><%= productos.nombre %></h3>
-    
-            <p class="p-detail">precio: <span><%= productos.precio %></span></p>
+            <h3 class="h3-detail">precio: <%= productos.precio %> </h3>
     
             <p class="p-detail">Tamaño: <span><%= productos.tamaño %></span></p>
 
             <p class="p-detail">descripcion: <span><%= productos.descripcion %></span></p>
 
+            <p class="p-detail">categoria: <span><%= productos.categorias.categoria %></span></p>
+
             <div class="ver-detalle">
 
-                <a class="ver-detalle-a" href="/productos/editarProduct/<%= productos.id %>">Editar</a>
+                <a class="ver-detalle-a" href="/productos/editarProduct/<%= productos.idProductos %>">Editar</a>
+
 
             </div>
             
             <div class="ver-detalle-detail">
 
-                <a class="ver-detalle-a" href="/productos/productdetail">ver detalle del producto</a>
+                <a class="ver-detalle-a" href="/productos/productdetail/<%= productos.idProductos %>">ver detalle del producto</a>
 
             </div>
     
