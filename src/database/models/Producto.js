@@ -1,7 +1,7 @@
 module.exports= (sequelize, dataTypes) => {
     let alias= "Producto"
     let cols= {
-        id: {
+        idProductos: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             notNull: true,
@@ -24,7 +24,7 @@ module.exports= (sequelize, dataTypes) => {
             type: dataTypes.BLOB,
             notNull: true
         },
-        categoria: {
+        categoria_id: {
             type: dataTypes.STRING,
             notNull: true
         },
@@ -35,7 +35,13 @@ module.exports= (sequelize, dataTypes) => {
         descripcion: {
             type: dataTypes.STRING,
             notNull: true
+        },
+        tamaño: {
+            type: dataTypes.STRING,
+            notNull: true
         }
+
+
 
     }
     
@@ -44,6 +50,15 @@ module.exports= (sequelize, dataTypes) => {
     timestamps: false,
   };
     const Producto= sequelize.define(alias, cols, config)
+
+    Producto.associate = function(models){
+        Producto.belongsTo(models.Categoria, {
+            as: 'categorias', 
+            foreignKey: 'categoria_id'
+        })
+
+    }
+
 
     return Producto
 }
