@@ -25,7 +25,11 @@ module.exports= (sequelize, dataTypes) => {
             notNull: true
         },
         categoria_id: {
+<<<<<<< HEAD
             type: dataTypes.INTEGER,
+=======
+            type: dataTypes.STRING,
+>>>>>>> 2d8d0ade72070e807396ee0643f08f3720ee94aa
             notNull: true
         },
         precio: {
@@ -40,6 +44,8 @@ module.exports= (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             notNull: true
         }
+
+
 
     }
     
@@ -57,6 +63,10 @@ module.exports= (sequelize, dataTypes) => {
 
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2d8d0ade72070e807396ee0643f08f3720ee94aa
     return Producto
 }
 
