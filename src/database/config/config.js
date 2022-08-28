@@ -2,21 +2,21 @@
 module.exports= {
   "development": {
     "username": "root",
-    "password": 'mysqljuan',
+    "password": null,
     "database": "san_jose_reposteria",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": 'mysqljuan',
+    "password": null,
     "database": "san_jose_reposteria",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": 'mysqljuan',
+    "password": null,
     "database": "san_jose_reposteria",
     "host": "127.0.0.1",
     "dialect": "mysql"

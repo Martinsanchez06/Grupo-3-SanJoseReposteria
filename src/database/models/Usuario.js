@@ -1,13 +1,18 @@
-module.exports= (sequelize, dataTypes) => {
-    let alias= "Usuario"
-    let cols= {
-        id: {
+module.exports = (sequelize, dataTypes) => {
+    let alias = "Usuario"
+    let cols = {
+        idUsuarios: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             notNull: true,
             unique: true,
             autoIncrement: true
-        }, 
+        },
+        numeroID: {
+            type: dataTypes.STRING,
+            notnull: true
+        }
+        ,
         nombre: {
             type: dataTypes.STRING,
             notNull: true
@@ -16,7 +21,7 @@ module.exports= (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             notNull: true
         },
-        fecha_n: {
+        fechanacimiento: {
             type: dataTypes.STRING,
             notNull: true
         },
@@ -27,10 +32,14 @@ module.exports= (sequelize, dataTypes) => {
         password: {
             type: dataTypes.STRING,
             notNull: true
-        },
-        telefono: {
+        }, 
+        con_password: {
             type: dataTypes.STRING,
             notNull: true
+        },
+        politica :{
+            type: dataTypes.STRING,
+            notnull: true
         },
         avatar: {
             type: dataTypes.STRING,
@@ -42,8 +51,8 @@ module.exports= (sequelize, dataTypes) => {
     let config = {
         tableName: "usuarios",
         timestamps: false,
-      };
-    const Usuario= sequelize.define(alias, cols, config)
+    };
+    const Usuario = sequelize.define(alias, cols, config)
 
     return Usuario
 }

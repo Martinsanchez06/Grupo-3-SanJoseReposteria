@@ -994,24 +994,40 @@ p {
 }
 
 .img-usuario {
-  height: 300px;
-  width: 450px;
+  display:flex;
+  justify-content: center;
   margin-top: 50px;
-  margin-left: 20px;
+  height: 570px;
+  width: 450px;
+  box-shadow: #000000 1px ;
+  margin-left: auto;
+  border-radius: 30px;
+  margin-right: auto;
 }
 
 .nombre-usuario {
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 30px;
+ text-align: center;
+ justify-content: center;
+}
+
+.email-div{
+  margin-top: 50px;
+  display:flex;
+  justify-content: center;
 }
 
 .email-usuario {
+  display:flex;
+  justify-content: center;
   border: 2px solid #3c7d8f;
-  background-color: #60cbe9;
+  background-color: #00a8a8;
+  color: white;
   border-radius: 20px;
   display: inline-block;
   padding: 10px;
-  margin: 50px 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
