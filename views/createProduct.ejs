@@ -83,23 +83,23 @@
 
 					<label for="category">Categoria</label>
 					<select name="categoria" id="category" class="control" required>
-						<option value="tematicas">Temáticas</option>
-						<option value="frias">Frías</option>
-						<option value="caseras">Caseras</option>
-						<option value="especiales">Especiales</option>
-						<option value="postres">Postres</option>
-						<option value="saludables">Saludables</option>
-						<option value="envinadas">Envinadas</option>
-					</select>
-
-				</div>
-
-				<div class="control-form">
-					<label for="description" class="form-label">Descripción:</label>
-					<textarea name="descripcion" id="description" class="area-fieldc"></textarea>
-				</div>
-
-				<div class="button-formc">
+						<% for (let i = 0; i < categorias.length; i++) { %>
+						<% if (categorias[i].idCategorias == productos.categorias_id) {%>
+						
+						<option value="<%=categorias[i].idCategorias%>" selected>
+						<%=categorias[i].categoria%>
+						</option>
+						
+						<% } else { %>
+						
+						<option value="<%=categorias[i].idCategorias%>">
+						<%=categorias[i].categoria%>
+						</option>
+						
+						<% } %>
+						
+						<% } %>
+						</select>
 
 					<button type="submit">Guardar producto</button>
 
