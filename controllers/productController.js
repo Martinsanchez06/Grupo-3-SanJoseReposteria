@@ -17,30 +17,33 @@ const productController = {
             res.render("carritoDeCompras", { usuarios })
         })
     },
-    create: (req, res) => {
-        res.render("createProduct")
-    },
-    guardar: (req, res) => {
+
+create: (req, res) => {
+        let productoEncontrado = db.Producto.findAll()
+        let categoriaDelProducto = db.Categoria.findAll();
+        Promise.all([productoEncontrado, categoriaDelProducto])
+        .then(function([productos, categorias ]){
+        res.render("createProduct", { productos, categorias });
+        })
+        },
+        guardar: (req, res) => {
         db.Producto.create({
-            nombre: req.body.nombre,
-            imagen_1: req.body.imagen1,
-            imagen_2:req.body.imagen2,
-            imagen_3:req.body.imagen3,
-            categoria: req.body.categoria,
-            precio:req.body.precio,
-            descripcion: req.body.descripcion
+        nombre: req.body.nombre,
+        imagen_1: req.body.imagen1,
+        imagen_2:req.body.imagen2,
+        imagen_3:req.body.imagen3,
+        tamaño: req.body.tamaño,
+        categoria_id: req.body.categoria,
+        precio:req.body.precio,
+        descripcion: req.body.descripcion
         })
-
+        
         res.redirect("/productos/lista");
+        console.log(req.body)
+        },
     },
 
-    list: (req, res) => {
-        db.Producto.findAll()
-        .then(function (productos) {
-            res.render("listadoProductos", { productos: productos })
-        })
-            
-    },
+
     singleDetail: (req, res) => {
         db.Producto.findByPk(req.params.id, {
             include : [{association: 'categorias'}]
@@ -63,7 +66,7 @@ const productController = {
             imagen_1: req.body.imagen1,
             imagen_2:req.body.imagen2,
             imagen_3:req.body.imagen3,
-            categoria: req.body.categoria,
+            categoria_id: req.body.categoria, module.exports = productController;,
             precio:req.body.precio,
             descripcion: req.body.descripcion
         }, {
@@ -84,3 +87,5 @@ const productController = {
 };
 
 // module.exports = productController;
+
+
