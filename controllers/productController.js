@@ -18,7 +18,7 @@ const productController = {
         })
     },
 
-create: (req, res) => {
+    create: (req, res) => {
         let productoEncontrado = db.Producto.findAll()
         let categoriaDelProducto = db.Categoria.findAll();
         Promise.all([productoEncontrado, categoriaDelProducto])
@@ -40,10 +40,8 @@ create: (req, res) => {
         
         res.redirect("/productos/lista");
         console.log(req.body)
-        },
     },
-
-
+    
     singleDetail: (req, res) => {
         db.Producto.findByPk(req.params.id, {
             include : [{association: 'categorias'}]
