@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 module.exports = (sequelize, dataTypes) => {
     let alias = "Usuario"
     let cols = {
-=======
-module.exports= (sequelize, dataTypes) => {
-    let alias= "Usuario"
-    let cols= {
->>>>>>> 2d8d0ade72070e807396ee0643f08f3720ee94aa
         idUsuarios: {
             type: dataTypes.INTEGER,
             primaryKey: true,

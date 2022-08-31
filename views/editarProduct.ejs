@@ -94,13 +94,13 @@
 						<% for (let i = 0; i < categorias.length; i++) { %>
 							<% if (categorias[i].idCategorias == productos.categorias_id) {%>
 
-								<option value="<%=categorias[i].id%>" selected>
+								<option value="<%=categorias[i].idCategorias%>" selected>
 									<%=categorias[i].categoria%>
 								</option>
 
 							<% } else { %>
 
-								<option value="<%=categorias[i].id%>">
+								<option value="<%=categorias[i].idCategorias%>">
 									<%=categorias[i].categoria%>
 								</option>
 

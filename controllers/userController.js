@@ -31,7 +31,7 @@ const userController = {
                 fechanacimiento: req.body.fechanacimiento,
                 ciudad: req.body.ciudad,
                 password: bcryptjs.hashSync(req.body.password, 10),
-                con_password: bcryptjs.hashSync(req.body.password, 10),
+                con_password: bcryptjs.hashSync(req.body.con_password, 10),
                 politica:req.body.politica,
                 avatar: req.file.filename
             })
@@ -70,12 +70,12 @@ const userController = {
             fechanacimiento: req.body.fechanacimiento,
             ciudad: req.body.ciudad,
             password:  bcryptjs.hashSync(req.body.password, 10),
-            con_password:  bcryptjs.hashSync(req.body.password, 10),
+            con_password:  bcryptjs.hashSync(req.body.con_password, 10),
             politica:req.body.politica,
         }, {
             where : { idUsuarios : req.params.id}
         })
-
+        console.log(req.body);
         return res.redirect('/user/login')
     },
 
@@ -103,7 +103,7 @@ const userController = {
             if (usuarioParaCrear) {
                 let contraseñaCorrecta = bcryptjs.compareSync(req.body.password, usuarioParaCrear.password)
                 console.log(contraseñaCorrecta)
-                if (!contraseñaCorrecta) {
+                if (contraseñaCorrecta) {
                     req.session.usuarioLogueado = usuarioParaCrear;
                    
                     if (req.body.remember_user) {

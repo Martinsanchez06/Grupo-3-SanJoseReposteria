@@ -1,10 +1,7 @@
 const express = require("express");
-
 const userController = require("../controllers/userController");
 const guestMiddelware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
-
-
 const router = express.Router();
 const path = require("path")
 const multer = require("multer");
