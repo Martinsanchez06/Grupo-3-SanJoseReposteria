@@ -10,5 +10,16 @@
   "con_password": "$2a$10$.ugEWo5.peAeh33pp/mQX.qoLuS12FQ990qd.Kw4um.RxaNY5/ume",
   "politica": "politica",
   "avatar": "usuario1659566440732_img.jpg"
+ },
+ {
+  "id": 2,
+  "numeroID": "100157485",
+  "nombre": "Emmanuel Cadavid",
+  "email": "emmanuel46@gmail.com",
+  "fechanacimiento": "2005-11-22",
+  "ciudad": "Medellin",
+  "password": "$2a$10$O9tN2XqSbzmnT/5LFpDPxu3jKzPG1SaBn/Bmp8q/8ARtZO78wjIby",
+  "con_password": "$2a$10$Uovk5oKnyt6NSMS.He7MH.tmcBOYtFpUoOX5MuWVkqPUbltbkid6K",
+  "avatar": "usuario1659574765340_img.jpg"
  }
 ]

@@ -18,12 +18,14 @@ const productController = {
     },
     guardar: (req, res) => {
         let rutaProducts = path.join(__dirname, '../data/products.json');
+        
         let productoGuardado = {
             nombre: req.body.nombre,
             precio: req.body.precio,
             tamaño: req.body.tamaño,
             descripcion: req.body.descripcion
         };
+        
         let archivoproducto = fs.readFileSync(rutaProducts, { encoding: 'utf-8' });
         let productos;
         if (archivoproducto == '') {
