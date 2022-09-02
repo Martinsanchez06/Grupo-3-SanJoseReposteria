@@ -28,9 +28,9 @@ const productController = {
     guardar: (req, res) => {
         db.Producto.create({
             nombre: req.body.nombre,
-            imagen_1: req.body.imagen1,
-            imagen_2: req.body.imagen2,
-            imagen_3: req.body.imagen3,
+            imagen_1: req.files[0].filename,
+            imagen_2: req.files[1].filename,
+            imagen_3: req.files[2].filename,
             tamaño: req.body.tamanio,
             categoria_id: req.body.categoria,
             precio: req.body.precio,
@@ -67,9 +67,9 @@ const productController = {
     editar: (req, res) => {
         db.Producto.update({
             nombre: req.body.nombre,
-            imagen_1: req.body.imagen1,
-            imagen_2: req.body.imagen2,
-            imagen_3: req.body.imagen3,
+            imagen_1: req.files[0].filename,
+            imagen_2: req.files[1].filename,
+            imagen_3: req.files[2].filename,
             tamaño: req.body.tamanio,
             categoria_id: req.body.categoria,
             precio: req.body.precio,
@@ -80,7 +80,8 @@ const productController = {
             }
         })
 
-
+        
+        console.log(req.body , req.file)
         res.render('listadoProductos', { "productos": productos })
     },
     delete: (req, res) => {

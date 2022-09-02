@@ -72,6 +72,7 @@ const userController = {
             password:  bcryptjs.hashSync(req.body.password, 10),
             con_password:  bcryptjs.hashSync(req.body.con_password, 10),
             politica:req.body.politica,
+            avatar: req.file.filename
         }, {
             where : { idUsuarios : req.params.id}
         })

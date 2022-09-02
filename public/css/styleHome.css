@@ -845,6 +845,20 @@ p {
   justify-content: center;
 }
 
+.button-formc3 {
+  width: 100%;
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  justify-content: center;
+}
+
+.button-formUser {
+  width: 100%;
+  margin-top: 150px;
+  text-align: center;
+}
+
 .button-formc button {
   background-color: #FFA500;
   color: #000000;
@@ -870,10 +884,22 @@ p {
   color: #FFFFFF;
 }
 
-.button-formc2 input {
+.button-formc3 .input-form {
   background-color: #FFA500;
   color: #000000;
   width: 190px;
+  height: 32px;
+  border-radius: 20px;
+  border: none;
+  transition: background-color, 0.5s color, 0.5s;
+}
+
+.button-formUser a {
+  background-color: #FFA500;
+  color: #000000;
+  width: 190px;
+  text-decoration: none;
+  padding: 10px;
   height: 32px;
   border-radius: 20px;
   border: none;
