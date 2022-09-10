@@ -65,7 +65,6 @@ const productController = {
             imagen_2:req.body.imagen2,
             imagen_3:req.body.imagen3,
             categoria_id: req.body.categoria, 
-            module.exports = productController;,
             precio:req.body.precio,
             descripcion: req.body.descripcion
         }, {
