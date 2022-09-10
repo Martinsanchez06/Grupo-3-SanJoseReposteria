@@ -20,6 +20,7 @@ router.get("/lista", productController.list);
 
 router.get("/detail/:id", productController.singleDetail);
 
+
 // ----------AQUI CREAMOS UN PRODUCTO-----------
 
 router.post("/createProduct", productController.guardar);

@@ -4,6 +4,8 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+
 /* ESTILOS DEL HEADER */
 
 .main-header {
@@ -100,7 +102,7 @@ div {
   width: 100%;
   display: flex;
   justify-content: center;
-  
+
 }
 
 .product-contain .product-home {
@@ -987,9 +989,45 @@ p {
     background-color, 0.5s color, 0.5s;
 }
 
-.img-usuario{
-  height: 100px;
-  width: 150px;
+.usuario-content {
+  height: 90vh
+}
+
+.img-usuario {
+  display:flex;
+  justify-content: center;
+  margin-top: 50px;
+  height: 570px;
+  width: 450px;
+  box-shadow: #000000 1px ;
+  margin-left: auto;
+  border-radius: 30px;
+  margin-right: auto;
+}
+
+.nombre-usuario {
+  margin-top: 30px;
+ text-align: center;
+ justify-content: center;
+}
+
+.email-div{
+  margin-top: 50px;
+  display:flex;
+  justify-content: center;
+}
+
+.email-usuario {
+  display:flex;
+  justify-content: center;
+  border: 2px solid #3c7d8f;
+  background-color: #00a8a8;
+  color: white;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -1026,7 +1064,7 @@ p {
   }
 
   .nav-icons {
-    
+
     display: inline-block;
     text-decoration: none;
     color: #00a8a8;
@@ -1054,6 +1092,7 @@ p {
     display: inline-block;
     font-size: 29px;
   }
+
   .fa-search {
     margin-top: 35px;
     margin-right: 10px;
@@ -1116,8 +1155,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+
+
   }
 
   .fa-bars {
@@ -1140,13 +1179,14 @@ p {
 
   .div-product-contain {
     width: 100%;
-    
+
   }
 
   .product-contain {
     display: inline-block;
     width: auto;
   }
+
   .product-contain .product-home {
     margin-left: 1px;
     padding: 5px;
@@ -1274,7 +1314,7 @@ p {
 
 }
 
-@media only screen and (min-width: 460px)  {
+@media only screen and (min-width: 460px) {
 
   .form-create {
     margin-right: 20px;
@@ -1418,13 +1458,14 @@ p {
 
   .div-product-contain {
     width: 100%;
-    
+
   }
 
   .product-contain {
     display: inline-block;
     width: auto;
   }
+
   .product-contain .product-home {
     margin-left: 1px;
     padding: 5px;

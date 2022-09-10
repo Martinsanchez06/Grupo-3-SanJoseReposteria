@@ -56,20 +56,32 @@ router.get("/registro", guestMiddelware, userController.registro);
 
 router.post("/registro", imagenSubida.single('imagenReg'), validaciones, userController.registroProcesado);
 
+// -----AQUI SE LLAMA A LA VISTA DE EDITAR EL USUARIO-----
+
+router.get("/editarUsuario/:id",userController.editarUsuario);
+
+// -----AQUI SE PROCESA LA VISTA DE EDITAR EL USUARIO-----
+
+router.put("/editarUsuario/:id",userController.updateUsuario);
+
 // -----AQUI SE LLAMA A LA VISTA DEL LOGIN-----
 
 router.get("/login", guestMiddelware, userController.login);
 
-// -----AQUI SE LLAMA A LA VISTA DE PROCESAMIENTO DEL LOGIN-----
+// -----AQUI SE PROCESA EL LOGIN------
 
 router.post("/login", validaciones , userController.procesoDeLogin);
 
 //-----AQUI SE LLAMA A LA VISTA DE PERFIL DEL USUARIO----
 
-router.get("/perfil/", authMiddleware, userController.perfil);
+router.get("/perfil", authMiddleware, userController.perfil);
 
 //-----PROCESO DE LOGOUT----
 
 router.get("/logout/", userController.logout);
+
+// ------AQUI ELIMINAMOS UN USUARIO------
+
+router.delete("/perfil", userController.destroy);
 
 module.exports = router;

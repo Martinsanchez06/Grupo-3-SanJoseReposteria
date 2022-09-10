@@ -13,13 +13,14 @@
  },
  {
   "id": 2,
-  "numeroID": "100157485",
-  "nombre": "Emmanuel Cadavid",
-  "email": "emmanuel46@gmail.com",
-  "fechanacimiento": "2005-11-22",
+  "numeroID": "71376843",
+  "nombre": "Jorge Ignacio Guerra Acevedo",
+  "email": "jorge.guerra2907@gmail.com",
+  "fechanacimiento": "1981-07-29",
   "ciudad": "Medellin",
-  "password": "$2a$10$O9tN2XqSbzmnT/5LFpDPxu3jKzPG1SaBn/Bmp8q/8ARtZO78wjIby",
-  "con_password": "$2a$10$Uovk5oKnyt6NSMS.He7MH.tmcBOYtFpUoOX5MuWVkqPUbltbkid6K",
-  "avatar": "usuario1659574765340_img.jpg"
+  "password": "$2a$10$56c2O0PG1sUBh8OISxYq2u7p//N11fX3stMT4e8ZrIrNxDqYLopsK",
+  "con_password": "$2a$10$xTB3pn42ZmHvzy6u3TrPvelQ1WFOj5Qvgv/J.JdMcYeL3kTJcttHK",
+  "politica": "politica",
+  "avatar": "usuario1659567200471_img.jpg"
  }
 ]

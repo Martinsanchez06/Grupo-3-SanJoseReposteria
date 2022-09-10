@@ -19,10 +19,10 @@
     <!-- Header -->
     <%- include("partials/header.ejs") %>
 
-        <section>
+        <section class="usuario-content">
             <div>
 
-                <h1>bienvenido: <%= user.nombre %></h1>
+                <h1 class="nombre-usuario">Bienvenido: <%= user.nombre %></h1>
 
             </div>
             <div>
@@ -30,12 +30,17 @@
                 <img class="img-usuario" src="/images/avatars/<%= user.avatar %>">
 
             </div>
-            <div>
-
-                <p>email: <%= user.email %></p>
+            <div class="email-div">
+                <p class="email-usuario">email: <%= user.email %></p>
             </div>
-            
         </section>
+
+        <form class="form-delete" action="?_method=DELETE" method="POST">
+            <div class="button-formc2">
+                <input type="submit" name="delete" value="ELIMINAR USUARIO">
+            </div>
+        </form>
+        
 
         <!-- Footer -->
         <%- include("partials/footer.ejs") %>
