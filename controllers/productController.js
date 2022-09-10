@@ -80,8 +80,6 @@ const productController = {
                 idProductos: req.params.id,
             }
         })
-
-        
         console.log(req.body , req.file)
         res.render('listadoProductos', { "productos": productos })
     },
