@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const db = require("../src/database/models"); 
+const db = require("../src/database/models");
 
 
 const productController = {
@@ -13,77 +13,84 @@ const productController = {
     },
     carritoCompras: (req, res) => {
         db.Usuario.findAll()
-        .then(function (usuarios) {
-            res.render("carritoDeCompras", { usuarios })
-        })
+            .then(function (usuarios) {
+                res.render("carritoDeCompras", { usuarios })
+            })
     },
 
     create: (req, res) => {
         let productoEncontrado = db.Producto.findAll()
         let categoriaDelProducto = db.Categoria.findAll();
         Promise.all([productoEncontrado, categoriaDelProducto])
-        .then(function([productos, categorias ]){
-        res.render("createProduct", { productos, categorias });
-        })
-        },
-        guardar: (req, res) => {
+            .then(function ([productos, categorias]) {
+                res.render("createProduct", { productos, categorias });
+            })
+    },
+    guardar: (req, res) => {
         db.Producto.create({
-        nombre: req.body.nombre,
-        imagen_1: req.body.imagen1,
-        imagen_2:req.body.imagen2,
-        imagen_3:req.body.imagen3,
-        tamaño: req.body.tamaño,
-        categoria_id: req.body.categoria,
-        precio:req.body.precio,
-        descripcion: req.body.descripcion
+            nombre: req.body.nombre,
+            imagen_1: req.files[0].filename,
+            imagen_2: req.files[1].filename,
+            imagen_3: req.files[2].filename,
+            tamaño: req.body.tamanio,
+            categoria_id: req.body.categoria,
+            precio: req.body.precio,
+            descripcion: req.body.descripcion
         })
         
         res.redirect("/productos/lista");
-        console.log(req.body)
+        console.log(req.body , req.file)
     },
-    
+
+    list: (req, res) => {
+        db.Producto.findAll()
+            .then(function (productos) {
+                res.render("listadoProductos", { productos: productos })
+            })
+
+    },
     singleDetail: (req, res) => {
         db.Producto.findByPk(req.params.id, {
-            include : [{association: 'categorias'}]
+            include: [{ association: 'categorias' }]
         })
-        .then(function (productos) {
-            res.render("detail", { productos })
-        })
+            .then(function (productos) {
+                res.render("detail", { productos })
+            })
     },
     editarFormulario: (req, res) => {
         let productoEncontrado = db.Producto.findByPk(req.params.id)
         let categoriaDelProducto = db.Categoria.findAll();
         Promise.all([productoEncontrado, categoriaDelProducto])
-        .then(function([productos, categorias ]){
-            res.render("editarProduct", { productos, categorias }); 
-        })
+            .then(function ([productos, categorias]) {
+                res.render("editarProduct", { productos, categorias });
+            })
     },
     editar: (req, res) => {
         db.Producto.update({
             nombre: req.body.nombre,
-            imagen_1: req.body.imagen1,
-            imagen_2:req.body.imagen2,
-            imagen_3:req.body.imagen3,
-            categoria_id: req.body.categoria, 
-            precio:req.body.precio,
+            imagen_1: req.files[0].filename,
+            imagen_2: req.files[1].filename,
+            imagen_3: req.files[2].filename,
+            tamaño: req.body.tamanio,
+            categoria_id: req.body.categoria,
+            precio: req.body.precio,
             descripcion: req.body.descripcion
         }, {
-            where : {
+            where: {
                 idProductos: req.params.id,
             }
         })
 
-
+        
+        console.log(req.body , req.file)
         res.render('listadoProductos', { "productos": productos })
     },
     delete: (req, res) => {
-        db.Producto.destroy({ 
-            where : { idProductos: req.params.id }
-         })
+        db.Producto.destroy({
+            where: { idProductos: req.params.id }
+        })
         res.render('listadoProductos', { "productos": productos })
     }
 };
 
-// module.exports = productController;
-
-
+module.exports = productController;
