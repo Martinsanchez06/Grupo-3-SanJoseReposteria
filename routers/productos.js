@@ -4,6 +4,7 @@ const productController = require("../controllers/productController");
 
 const router = express.Router();
 const multer = require("multer");
+const { body } = require("express-validator")
 const path = require("path")
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -17,6 +18,28 @@ const storage = multer.diskStorage({
 })
 
 const imagenSubida = multer({ storage })
+
+const validaciones = [
+    body('nombre').notEmpty().withMessage('Tienes que escribir el nombre del producto'),
+    body('precio').notEmpty().withMessage('Tienes que escribir el precio del producto'),
+    body('tamanio').notEmpty().withMessage('Tienes que escribir el tamaño del producto'),
+    body('descripcion').notEmpty().withMessage('Tienes que escribir la descripcion del producto'),
+    body('imagen').custom((value,{ req }) => { 
+        let file= req.file;
+        let extensionesAceptadas= ['.jpg','.png','.gif'];
+        
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else{
+            let extensionArchivo= path.extname(file.originalname)
+            if (!extensionesAceptadas.includes(extensionArchivo)){
+                throw new Error('Las extensiones de archivo permitidas son .jpg .png .gif') ;
+            }
+    
+        }
+        return true;
+    })
+]
 
 //----------AQUI LLAMAMOS A UNA RUTA---------- 
 
@@ -35,11 +58,11 @@ router.get("/detail/:id", productController.singleDetail);
 
 // ----------AQUI CREAMOS UN PRODUCTO-----------
 
-router.post("/createProduct", imagenSubida.array('imagen', 3), productController.guardar);
+router.post("/createProduct", imagenSubida.array('imagen', 3), validaciones ,productController.guardar);
 
 // ----------AQUI EDITAMOS UN PRODUCTO-----------
 
-router.put("/editarProduct/:id", imagenSubida.array('imagen', 3),  productController.editar);
+router.put("/editarProduct/:id", imagenSubida.array('imagen', 3), validaciones ,productController.editar);
 
 // ----------AQUI ELIMINAMOS UN PRODUCTO-----------
 

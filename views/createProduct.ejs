@@ -34,19 +34,30 @@
 
 			</section>
 
+
+			<%if (locals.errors) {%>
+				<div class="mensaje-error">
+					<%= errors.msg %>
+				</div>
+			<% } %>
+
 			<form class="form-create" action="/productos/createProduct"  method="POST" enctype="multipart/form-data">
 
 				<div class="control-form">
 
 					<label for="name">Nombre del producto:</label>
-					<input type="text" placeholder="Maria Luisa" name="nombre" id="name" class="control" required>
-
+					<input type="text" placeholder="Maria Luisa" name="nombre" id="name" class="control" >
+					<%if (locals.errors && errors.nombre) {%>
+						<div class="mensaje-error">
+							<%= errors.nombre.msg %>
+						</div>
+					<% } %>
 				</div>
 
 				<div class="control-form">
 
 					<label for="price">Precio del producto:</label>
-					<input type="text" placeholder="EJ: $30.000" name="precio" id="price" class="control" required>
+					<input type="text" placeholder="EJ: $30.000" name="precio" id="price" class="control" >
 
 				</div>
 				
@@ -75,14 +86,14 @@
 				<div class="control-form">
 
 					<label for="size">Tamaño del producto:</label>
-					<input type="text" placeholder="EJ: 15" name="tamanio" id="size" class="control" required>
+					<input type="text" placeholder="EJ: 15" name="tamanio" id="size" class="control" >
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="category">Categoria</label>
-					<select name="categoria" id="category" class="control" required>
+					<select name="categoria" id="category" class="control" >
 						<% for (let i = 0; i < categorias.length; i++) { %>
 							<% if (categorias[i].idCategorias == productos.categorias_id) {%>
 
