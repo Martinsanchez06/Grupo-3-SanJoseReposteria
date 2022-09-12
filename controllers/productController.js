@@ -82,9 +82,9 @@ const productController = {
     editar: (req, res) => {
         db.Producto.update({
             nombre: req.body.nombre,
-            imagen_1: req.files ? req.files[0].filename : req.body.oldImagen1,
-            imagen_2: req.files ? req.files[1].filename : req.body.oldImagen2,
-            imagen_3: req.files ? req.files[2].filename : req.body.oldImagen3,
+            imagen_1: req.files[0] ? req.files[0].filename : req.body.oldImagen1,
+            imagen_2: req.files[1] ? req.files[1].filename : req.body.oldImagen2,
+            imagen_3: req.files[2] ? req.files[2].filename : req.body.oldImagen3,
             tamaño: req.body.tamanio,
             categoria_id: req.body.categoria,
             precio: req.body.precio,
