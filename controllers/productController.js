@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator')
 const { request } = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -27,7 +28,7 @@ const productController = {
             })
     },
     guardar: (req, res) => {
-        db.Producto.create({
+        /*db.Producto.create({
             nombre: req.body.nombre,
             imagen_1: req.files[0].filename,
             imagen_2: req.files[1].filename,
@@ -39,7 +40,9 @@ const productController = {
         })
         
         res.redirect("/productos/lista");
-        console.log(req.body , req.file)
+        console.log(req.body , req.file)*/
+        let errors = validationResult(req)
+        res.send(errors)
     },
 
     list: (req, res) => {
