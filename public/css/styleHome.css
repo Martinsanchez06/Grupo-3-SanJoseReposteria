@@ -1029,6 +1029,7 @@ p {
   width: 450px;
   box-shadow: #000000 1px ;
   margin-left: auto;
+  object-fit:cover;
   border-radius: 30px;
   margin-right: auto;
 }
