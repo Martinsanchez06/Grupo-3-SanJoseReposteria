@@ -10,7 +10,12 @@ const db = require("../src/database/models");
 const productController = {
 
     detail: function (req, res) {
-        res.render("productdetail");
+        db.Producto.findByPk(req.params.id, {
+            include: [{ association: 'categorias' }]
+        })
+            .then(function (productos) {
+                res.render("productdetail", { productos })
+            })
     },
     carritoCompras: (req, res) => {
         db.Usuario.findAll()

@@ -43,7 +43,7 @@ const validaciones = [
 
 //----------AQUI LLAMAMOS A UNA RUTA---------- 
 
-router.get("/productdetail", productController.detail);
+router.get("/productdetail/:id", productController.detail);
 
 router.get("/carritoDeCompras", productController.carritoCompras);
 

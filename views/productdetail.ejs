@@ -26,31 +26,27 @@
 
                 <div class="product-name">
 
-                    <h2>Maria luisa</h2>
+                    <h2><%= productos.nombre %> </h2>
 
                 </div>
 
                 <div class="div-big-img">
 
-                    <a href=""><img class="big-img" src="/images/IMG-1417.jpg" alt=""></a>
+                    <a href=""><img class="big-img" src="/images/Productos/<%= productos.imagen_1 %> " alt=""></a>
 
                 </div>
 
                 <div class="div-litle-imgs">
 
-                    <a href=""><img class="litle-img" src="/images/IMG-1420.jpg" alt=""></a>
+                    <a href=""><img class="litle-img" src="/images/Productos/<%= productos.imagen_2 %>" alt=""></a>
 
-                    <a href=""><img class="litle-img" src="/images/IMG-1422.jpg" alt=""></a>
+                    <a href=""><img class="litle-img" src="/images/Productos/<%= productos.imagen_3 %>" alt=""></a>
 
                 </div>
 
                 <div class="div-description">
 
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae placeat optio similique eum
-                        ipsam
-                        cumque! Iure quaerat quis exercitationem nihil maxime quod quos iste, voluptatum possimus
-                        expedita
-                        consequatur nulla quo?</p>
+                    <p><%= productos.descripcion %> </p>
 
                 </div>
 
@@ -172,29 +168,12 @@
 
                 </div>
 
-                <div class="div-add-shoppingcar">
+                                
+                <div class="div-add-button">
 
-                    <div class="amunt-of">
-
-                        <a class="menos" href="#">
-                            -
-                        </a>
-
-                        <input type="text">
-
-                        <a class="mas" href="#">
-                            +
-                        </a>
-                    </div>
-
-                    <div class="div-add-button">
-
-                        <button class="add-button" type="submit">Agregar al Carrito</button>
-
-                    </div>
+                    <button class="add-button" type="submit">Agregar al Carrito</button>
 
                 </div>
-
 
             </section>
 
