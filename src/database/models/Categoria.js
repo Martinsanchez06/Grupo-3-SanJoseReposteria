@@ -22,3 +22,7 @@ module.exports= (sequelize, dataTypes) => {
 
     return Categoria
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2d8d0ade72070e807396ee0643f08f3720ee94aa
