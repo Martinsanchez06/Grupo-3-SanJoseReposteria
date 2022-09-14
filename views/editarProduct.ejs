@@ -42,7 +42,7 @@
 
 			</section>
 
-			<form class="form-create" method="POST" action="?_method=PUT">
+			<form class="form-create" method="POST" action="?_method=PUT" enctype="multipart/form-data">
 
 				<div class="control-form">
 
@@ -62,28 +62,31 @@
 				<div class="control-form">
 
 					<label for="image1">Imagen 1 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="imagen1" id="image1" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen" id="image1" class="control-img">
+					<input type="hidden"  name="oldImagen1"  value="<%= productos.imagen_1%>">
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="image2">Imagen 2 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="imagen2" id="image2" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen" id="image2" class="control-img">
+					<input type="hidden"  name="oldImagen2"  value="<%= productos.imagen_2%>">
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="image3">Imagen 3 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="imagen3" id="image3" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen" id="image3" class="control-img">
+					<input type="hidden"  name="oldImagen3"  value="<%= productos.imagen_3%>">
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="size">Tamaño del producto:</label>
-					<input type="text" value="<%= productos.tamaño%>" name="tamaño" id="size" class="control" required>
+					<input type="text" value="<%= productos.tamaño%>" name="tamanio" id="size" class="control" required>
 
 				</div>
 
@@ -94,13 +97,13 @@
 						<% for (let i = 0; i < categorias.length; i++) { %>
 							<% if (categorias[i].idCategorias == productos.categorias_id) {%>
 
-								<option value="<%=categorias[i].id%>" selected>
+								<option value="<%=categorias[i].idCategorias%>" selected>
 									<%=categorias[i].categoria%>
 								</option>
 
 							<% } else { %>
 
-								<option value="<%=categorias[i].id%>">
+								<option value="<%=categorias[i].idCategorias%>">
 									<%=categorias[i].categoria%>
 								</option>
 
@@ -113,7 +116,7 @@
 
 				<div class="control-form">
 					<label for="description" class="form-label">Descripción:</label>
-					<textarea placeholder="<%= productos.descripcion%>" name="description" id="description" class="area-fieldc"></textarea>
+					<textarea placeholder="<%= productos.descripcion%>" name="descripcion" id="description" class="area-fieldc"></textarea>
 				</div>
 
 				<div class="button-formc">

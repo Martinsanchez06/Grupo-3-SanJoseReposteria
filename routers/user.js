@@ -1,10 +1,7 @@
 const express = require("express");
-
 const userController = require("../controllers/userController");
 const guestMiddelware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
-
-
 const router = express.Router();
 const path = require("path")
 const multer = require("multer");
@@ -16,7 +13,8 @@ const storage = multer.diskStorage({
         cb(null, './public/images/avatars')
     },
     filename: (req, file, cb) => {
-        let filename = 'usuario' + Date.now() + '_img' + path.extname(file.originalname)
+        console.log(file);
+        let filename = file.originalname 
         cb(null, filename)
     }
 })
@@ -58,11 +56,11 @@ router.post("/registro", imagenSubida.single('imagenReg'), validaciones, userCon
 
 // -----AQUI SE LLAMA A LA VISTA DE EDITAR EL USUARIO-----
 
-router.get("/editarUsuario/:id",userController.editarUsuario);
+router.get("/editarUsuario/:id", imagenSubida.single('imagenReg'),userController.editarUsuario);
 
 // -----AQUI SE PROCESA LA VISTA DE EDITAR EL USUARIO-----
 
-router.put("/editarUsuario/:id",userController.updateUsuario);
+router.put("/editarUsuario/:id",imagenSubida.single('imagenReg') ,userController.updateUsuario);
 
 // -----AQUI SE LLAMA A LA VISTA DEL LOGIN-----
 
