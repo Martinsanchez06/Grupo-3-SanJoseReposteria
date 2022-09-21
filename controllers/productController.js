@@ -118,7 +118,7 @@ const productController = {
         db.Producto.findAll({
             include: [{ association: 'categorias' }],
             where: {
-                name: { [Op.like]: `%${req.query.search}%` }
+                nombre: { [Op.like]: `%${req.query.search}%` }
             }
         })
             .then(productos => { res.render("resultadoSearch", { productos }); })
