@@ -85,6 +85,47 @@ div {
   font-family: arial;
 }
 
+.search {
+  margin-right: 30px;
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#check-buscar {
+  display: none;
+}
+
+.container-search {
+  visibility: hidden;
+  width: 20vw;
+  height: 10vh;
+  position: absolute;
+  top:5;
+  right:0;
+  margin-right: 50px;
+  transition: all 500ms ease;
+  transform: translateX(70%);
+  
+}
+.container-search input{
+  width: 70%;
+  height: 45%;
+  position: absolute;
+  top: 47%;
+  right: 30%;
+  border: 20px #3c7d8f;
+}
+#check-buscar:checked ~ .container-search{
+  visibility: visible; 
+  transform: translateX(0%);
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 /* ESTILOS HOME */
 
 .div-img-slider {
