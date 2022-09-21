@@ -62,10 +62,5 @@ router.post("/createProduct", imagenSubida.array('imagen', 3), validaciones ,pro
 
 // ----------AQUI EDITAMOS UN PRODUCTO-----------
 
-router.put("/editarProduct/:id", imagenSubida.array('imagen', 3), validaciones ,productController.editar);
-
-// ----------AQUI ELIMINAMOS UN PRODUCTO-----------
-
-router.delete("/editarProduct/:id", productController.delete);
 
 module.exports = router;

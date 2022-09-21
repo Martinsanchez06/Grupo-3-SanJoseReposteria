@@ -23,6 +23,7 @@ const productController = {
                 res.render("carritoDeCompras", { usuarios })
             })
     },
+
     create: (req, res) => {
         let productoEncontrado = db.Producto.findAll()
         let categoriaDelProducto = db.Categoria.findAll();
