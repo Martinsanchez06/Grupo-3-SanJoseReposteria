@@ -34,13 +34,24 @@
 
 			</section>
 
+
+			<%if (locals.errors) {%>
+				<div class="mensaje-error">
+					<%= errors.msg %>
+				</div>
+			<% } %>
+
 			<form class="form-create" action="/productos/createProduct"  method="POST" enctype="multipart/form-data">
 
 				<div class="control-form">
 
 					<label for="name">Nombre del producto:</label>
 					<input type="text" placeholder="Maria Luisa" name="nombre" id="name" class="control" >
-
+					<%if (locals.errors && errors.nombre) {%>
+						<div class="mensaje-error">
+							<%= errors.nombre.msg %>
+						</div>
+					<% } %>
 				</div>
 
 				<div class="control-form">

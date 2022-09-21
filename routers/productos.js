@@ -23,8 +23,8 @@ const validaciones = [
     body('nombre').notEmpty().withMessage('Tienes que escribir el nombre del producto'),
     body('precio').notEmpty().withMessage('Tienes que escribir el precio del producto'),
     body('tamanio').notEmpty().withMessage('Tienes que escribir el tamaño del producto'),
-    body('descripcion').notEmpty().withMessage('Tienes que escribir la descripción del producto'),
-        body('imagen').custom((value,{ req }) => { 
+    body('descripcion').notEmpty().withMessage('Tienes que escribir la descripcion del producto'),
+    body('imagen').custom((value,{ req }) => { 
         let file= req.file;
         let extensionesAceptadas= ['.jpg','.png','.gif'];
         
@@ -43,7 +43,7 @@ const validaciones = [
 
 //----------AQUI LLAMAMOS A UNA RUTA---------- 
 
-router.get("/productdetail", productController.detail);
+router.get("/productdetail/:id", productController.detail);
 
 router.get("/carritoDeCompras", productController.carritoCompras);
 
@@ -62,10 +62,5 @@ router.post("/createProduct", imagenSubida.array('imagen', 3), validaciones ,pro
 
 // ----------AQUI EDITAMOS UN PRODUCTO-----------
 
-router.put("/editarProduct/:id", imagenSubida.array('imagen', 3), validaciones , productController.editar);
-
-// ----------AQUI ELIMINAMOS UN PRODUCTO-----------
-
-router.delete("/editarProduct/:id", productController.delete);
 
 module.exports = router;

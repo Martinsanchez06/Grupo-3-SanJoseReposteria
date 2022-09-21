@@ -63,21 +63,27 @@ const userController = {
             });
         }
 
-        db.Usuario.update({
-            numeroID: req.body.numeroID,
-            nombre: req.body.nombre,
-            email: req.body.email,
-            fechanacimiento: req.body.fechanacimiento,
-            ciudad: req.body.ciudad,
-            password:  bcryptjs.hashSync(req.body.password, 10),
-            con_password:  bcryptjs.hashSync(req.body.con_password, 10),
-            politica:req.body.politica,
-            avatar: req.file.filename
-        }, {
-            where : { idUsuarios : req.params.id}
-        })
-        console.log(req.body);
-        return res.redirect('/user/login')
+        try {
+            db.Usuario.update({
+                numeroID: req.body.numeroID,
+                nombre: req.body.nombre,
+                email: req.body.email,
+                fechanacimiento: req.body.fechanacimiento,
+                ciudad: req.body.ciudad,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                con_password:  bcryptjs.hashSync(req.body.con_password, 10),
+                politica:req.body.politica,
+                avatar: req.file.filename
+            }, {
+                where : { idUsuarios : req.params.id}
+            })
+            console.log(req.body);
+            res.status(200).redirect('/user/login')
+        } catch (error) {
+            res.status(400).send('Usuario no actualizado, ha ocurrido un ERROR')
+            console.log(error);
+        }
+       
     },
 
     login: (req, res) => {
@@ -97,10 +103,7 @@ const userController = {
             }
         })
         .then(function (usuarioParaCrear){
-            console.log(usuarioParaCrear);
-            console.log(bcryptjs.compareSync(req.body.password, usuarioParaCrear.password))
-            console.log(req.body.password)
-            console.log(usuarioParaCrear.password)
+            
             if (usuarioParaCrear) {
                 let contraseñaCorrecta = bcryptjs.compareSync(req.body.password, usuarioParaCrear.password)
                 console.log(contraseñaCorrecta)
@@ -125,7 +128,7 @@ const userController = {
             return res.render('login', {
                 errors: {
                     email: {
-                        msg: 'Este email no esta registrado'
+                        msg: 'Usuario no valido'
                     }
                 }
             })

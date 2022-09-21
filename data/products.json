@@ -1,67 +1,68 @@
 [
     {
-        "id": "1",
+        "idProductosProductos": "1",
         "nombre": "María Luisa Arequipe",
-        "categoria": "Caseras",
+        "imagen_1": "",
+        "imagen_2": "",
+        "imagen_3": "",
         "precio": "$40.000",
-        "imagen1": "",
-        "imagen2": "",
-        "imagen3": "",
+        "descripcion" : "",
+        "categoria_id": 1,
         "tamaño": "6-8 porciones"
     },
     {
-        "id": "2",
+        "idProductos": "2",
         "nombre": "Limón, lavanda y amapola",
-        "categoria": "Especiales",
+        "imagen_1": "",
+        "imagen_2": "",
+        "imagen_3": "",
         "precio": "$60.000",
-        "imagen1": "",
-        "imagen2": "",
-        "imagen3": "",
+        "descripcion": "",
         "tamaño": "8-10 porciones",
-        "descripcion": ""
+        "categoria_id": 2
     },
     {
-        "id": "3",
+        "idProductos": "3",
         "nombre": "Genovesa de tres leches",
-        "categoria": "Frías",
+        "imagen_1": "",
+        "imagen_2": "",
+        "imagen_3": "",
         "precio": "$60.000",
-        "imagen1": "",
-        "imagen2": "",
-        "imagen3": "",
+        "descripcion": "",
         "tamaño": "8-10 porciones",
-        "descripcion": ""
+        "categoria_id": 3
     },
     {
-        "id": "4",
+        "idProductos": "4",
         "nombre": "Zanahoria con harina de almendras y splenda",
-        "categoria": "Especiales",
+        "imagen_1": "",
+        "imagen_2": "",
+        "imagen_3": "",
         "precio": "$40.000",
-        "imagen1": "",
-        "imagen2": "",
-        "imagen3": "",
+        "descripcion": "",
         "tamaño": "6-8 porciones",
-        "descripcion": ""
+        "categoria_id": 3
     },
     {
-        "id": "5",
-        "nombre": "Envinada Navidad",
-        "categoria": "Envinadas",
+        "idProductos": "5",
+        "nombre": "Envinada NavidProductosad",
+        "imagen_1": "",
+        "imagen_2": "",
+        "imagen_3": "",
         "precio": "$60.000",
-        "imagen1": "",
-        "imagen2": "",
-        "imagen3": "",
+        "descripcion": "",
         "tamaño": "8-10 porciones",
-        "descripcion": ""
+        "categoria_id": 4
     },
     {
-        "id": "6",
+        "idProductos": "6",
         "nombre": "León",
-        "categoria": "Temáticas",
+        "imagen_1": "",
+        "imagen_2": "",
+        "imagen_3": "",
         "precio": "$150.000",
-        "imagen1": "",
-        "imagen2": "",
-        "imagen3": "",
+        "descripcion": "",
         "tamaño": "20 porciones",
-        "descripcion": ""
+        "categoria_id": 5
     }
 ]

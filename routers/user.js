@@ -60,7 +60,7 @@ router.get("/editarUsuario/:id", imagenSubida.single('imagenReg'),userController
 
 // -----AQUI SE PROCESA LA VISTA DE EDITAR EL USUARIO-----
 
-router.put("/editarUsuario/:id",userController.updateUsuario);
+router.put("/editarUsuario/:id",imagenSubida.single('imagenReg') ,userController.updateUsuario);
 
 // -----AQUI SE LLAMA A LA VISTA DEL LOGIN-----
 
