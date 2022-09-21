@@ -1192,7 +1192,7 @@ p {
 
 @media only screen and (min-width: 0px) and (max-width: 894px) {
   .search {
-    display: none;
+    display: block;
   }
 }
 
