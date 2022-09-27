@@ -9,18 +9,18 @@
 
     <ul class="nav-tabs">
       <li><a class="nav-icons" href="/">Inicio</a></li>
-      <li><a class="nav-icons" href="/productos/lista">Productos</a></li>
-      <li><a class="nav-icons" href="/productos/carritoDeCompras">Nuestros de postres</a></li>
-      <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+      <li><a class="nav-icons" href="/productos/lista">Tortas y postres</a></li>
+      <li><a class="nav-icons" href="#contactanos">Contáctanos</a></li>
     </ul>
 
 
     <ul class="nav-tabs2">
       <% if(locals.isLogged) { %>
+        <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
         <li><a class="nav2-link" href="/user/perfil"><i class="fas fa-user-circle"></i></a></li>
         <li><a class="nav-icons" href="/user/logout/">Logout</a></li>
         <% } else { %>
-
+          <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
           <div class="nav-right">
 
             <a href="#" class="hdicon"><i class="fas fa-user-circle"></i></a>
@@ -37,7 +37,6 @@
             </div>
 
           </div>
-          <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
           <li><a class="nav2-link" href='#'><i class="fas fa-bars"></i></a></li>
           <% } %>
     </ul>
