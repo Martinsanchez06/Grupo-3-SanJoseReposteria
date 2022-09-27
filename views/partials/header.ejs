@@ -21,6 +21,17 @@
         <li><a class="nav-icons" href="/user/logout/">Logout</a></li>
         <% } else { %>
           <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+          
+          <div class="search">  
+            <label for="check-buscar"><i class="fas fa-search"></i></label>
+            <input type="checkbox" id="check-buscar">
+            <div class="container-search">
+              <form action="/productos/resultado" method="GET">
+                <input type="search" name="search" id="" value="" placeholder="Buscar">
+                
+              </form>
+            </div>
+          </div>  
           <div class="nav-right">
 
             <a href="#" class="hdicon"><i class="fas fa-user-circle"></i></a>

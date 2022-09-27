@@ -1,24 +1,24 @@
 
 module.exports= {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "san_jose_reposteria",
-    "host": "127.0.0.1",
+    "username": "GNDB5tewrN",
+    "password": "e2hyhkhwn1",
+    "database": "GNDB5tewrN",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "san_jose_reposteria",
-    "host": "127.0.0.1",
+    "username": "GNDB5tewrN",
+    "password": "e2hyhkhwn1",
+    "database": "GNDB5tewrN",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "san_jose_reposteria",
-    "host": "127.0.0.1",
+    "username": "GNDB5tewrN",
+    "password": "e2hyhkhwn1",
+    "database": "GNDB5tewrN",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   }
 }
