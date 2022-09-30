@@ -34,6 +34,23 @@ const productController = {
             })
     },
     guardar: (req, res) => {
+
+        const resultadoValidacion = validationResult(req)
+
+        console.log(resultadoValidacion.mapped());
+
+        if (resultadoValidacion.errors.length > 0) {
+            let productoEncontrado = db.Producto.findAll()
+            let categoriaDelProducto = db.Categoria.findAll();
+            Promise.all([productoEncontrado, categoriaDelProducto])
+                .then(function ([productos, categorias]) {
+                    res.render("createProduct", {
+                        productos, categorias, errors: resultadoValidacion.mapped(),
+                        datosAntiguos: req.body
+                    });
+                })
+        }
+
         let errors = validationResult(req)
         try {
             db.Producto.create({
@@ -55,7 +72,7 @@ const productController = {
                 let categoriaDelProducto = db.Categoria.findAll();
                 Promise.all([productoEncontrado, categoriaDelProducto])
                     .then(function ([productos, categorias]) {
-                        res.render("createProduct", { productos, categorias });
+                        res.render("createProduct", { productos, categorias});
                     })
                 console.log(errors);
             }
@@ -126,4 +143,4 @@ const productController = {
     }
 };
 
-module.exports = productController;
+module.exports = productController; 

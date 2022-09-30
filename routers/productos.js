@@ -23,6 +23,7 @@ const validaciones = [
     body('nombre').notEmpty().withMessage('Tienes que escribir el nombre del producto'),
     body('precio').notEmpty().withMessage('Tienes que escribir el precio del producto'),
     body('tamanio').notEmpty().withMessage('Tienes que escribir el tamaño del producto'),
+    body('categoria').notEmpty().withMessage('Tienes que seleccionar la categoria del producto'),
     body('descripcion').notEmpty().withMessage('Tienes que escribir la descripcion del producto'),
     body('imagen').custom((value,{ req }) => { 
         let file= req.file;
