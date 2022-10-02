@@ -21,9 +21,8 @@
         <li><a class="nav-icons" href="/user/logout/">Logout</a></li>
         <% } else { %>
           <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
-          
           <div class="search">  
-            <label for="check-buscar"><i class="fas fa-search"></i></label>
+            <label for="check-buscar"><a  class="search-link" href=""><i class="fas fa-search"></i></a></label>
             <input type="checkbox" id="check-buscar">
             <div class="container-search">
               <form action="/productos/resultado" method="GET">
@@ -33,7 +32,6 @@
             </div>
           </div>  
           <div class="nav-right">
-
             <a href="#" class="hdicon"><i class="fas fa-user-circle"></i></a>
             <div id="settingsBox" class="settingsBox">
               <div id="costumer-links">
@@ -46,7 +44,6 @@
                 </p>
               </div>
             </div>
-
           </div>
           <li><a class="nav2-link" href='#'><i class="fas fa-bars"></i></a></li>
           <% } %>

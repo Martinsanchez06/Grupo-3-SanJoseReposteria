@@ -964,8 +964,17 @@ p {
   height: 0px;
 }
 
-.form-create {
+#create-errors-div {
+  width: 100%;
+  background-color: rgba(223, 29, 29, 0.2);
+  border-radius: 5px;
+  padding: 30px;
+  color: red;
+  margin-bottom: 10px;
+}
 
+
+.form-create {
   width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -1278,6 +1287,9 @@ p {
     display: inline-block;
     font-size: 29px;
   }
+  .fa-search a {
+    text-decoration: none;
+  }
 
   .fa-bars {
     display: none;
@@ -1316,6 +1328,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .search-link {
+    text-decoration: none;
   }
 
   .fa-bars {
@@ -1369,6 +1385,20 @@ p {
   /* LOGIN TABLET */
 
   /* PRODUCT DETAIL TABLET VIEW */
+
+  .product-detail {
+    display: flex;
+    
+  }
+
+  /*.item-right, .item-left {
+    flex:auto;
+  }*/
+
+  .item-right {
+    padding-right: 50%;
+    padding-top: 10%;
+  }
 
   .contain-mainPD {
     width: 100%;
