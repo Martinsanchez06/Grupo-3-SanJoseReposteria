@@ -41,21 +41,24 @@
 				</form>
 
 			</section>
+			
+			<form id="createProductForm" class="form-create" method="POST" action="?_method=PUT" enctype="multipart/form-data">
 
-			<form class="form-create" method="POST" action="?_method=PUT" enctype="multipart/form-data">
+				<div id="create-errors-div" hidden>
+					
+				</div>
 
 				<div class="control-form">
 
 					<label for="name">Nombre del producto:</label>
-					<input type="text" value="<%= productos.nombre%> " name="nombre" id="name" class="control" required>
+					<input type="text" value="<%= productos.nombre%> " name="nombre" id="name" class="control">
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="price">Precio del producto:</label>
-					<input type="text" value="<%= productos.precio%> " name="precio" id="price" class="control"
-						required>
+					<input type="text" value="<%= productos.precio%> " name="precio" id="price" class="control">
 
 				</div>
 
@@ -86,7 +89,7 @@
 				<div class="control-form">
 
 					<label for="size">Tamaño del producto:</label>
-					<input type="text" value="<%= productos.tamaño%>" name="tamanio" id="size" class="control" required>
+					<input type="text" value="<%= productos.tamaño%>" name="tamanio" id="size" class="control">
 
 				</div>
 
@@ -134,8 +137,10 @@
 
 		</div>
 
+		<script src="/js/editarProductValidator.js" ></script>
 
 		<%- include("partials/footer.ejs") %>
+
 
 </body>
 
