@@ -979,7 +979,6 @@ p {
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 30px;
-
 }
 
 .add-button {
@@ -1444,16 +1443,17 @@ p {
 
   /* PRODUCT DETAIL TABLET VIEW */
 
-  .product-detail {
+  /*.product-detail {
     display: flex;
     
-  }
+  }*/
 
   /*.item-right, .item-left {
     flex:auto;
   }*/
 
   .item-right {
+    /*width: 50%;*/
     padding-right: 50%;
     padding-top: 10%;
   }
@@ -1963,6 +1963,126 @@ p {
 
   #costumer-links p {
     padding: 0%;
+  }
+
+  /*PRODUCT DETAIL*/
+
+  .product-detail {
+    display: flex;
+    
+  }
+
+  .item-right {
+    width: 50%;
+    padding-right: 50%;
+    padding-top: 10%;
+  }
+
+  .contain-mainPD {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+  }
+
+  .div-big-img a {
+    width: 50px;
+  }
+
+  .div-big-img a .big-img {
+    position: relative;
+    width: 500px;
+
+  }
+
+  .div-litle-imgs {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+
+  .div-litle-imgs img {
+    max-width: 460px;
+  }
+
+
+
+  .sizes {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 70px;
+    border-color: #fae1cf;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 12px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .amunt-of {
+    flex-grow: 0.3;
+    padding-left: 20px;
+  }
+
+  .amunt-of .menos {
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: 12px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .amunt-of .mas {
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: 14px;
+    text-decoration: none;
+  }
+
+
+  .amunt-of input {
+    height: 30px;
+    width: 70px;
+    position: relative;
+    top: 10px;
+    border-radius: 20px;
+    border-width: 1px;
+  }
+
+  .div-add-button {
+    align-self: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+
+  .add-button {
+    background-color: #FFA500;
+    color: #000000;
+    width: 170px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 30px;
+    font-size: 16px;
+    border: none;
+    transition:
+      background-color, 0.5s color, 0.5s;
+  }
+
+  .add-button:hover {
+    background-color: #8CC0DE;
+    color: #FFFFFF;
   }
 
 
