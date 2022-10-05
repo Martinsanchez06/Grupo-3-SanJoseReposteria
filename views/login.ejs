@@ -33,11 +33,13 @@
 
 
                     <form action="/user/login" method="POST" class="info-login">
+                        <div id="create-errors-div" hidden>
 
+                        </div>
                         <div class="control-form">
 
                             <label for="email">Correo Electrónico:</label>
-                            <input type="email" placeholder="example@example.com" name="email" id="email"
+                            <input type="text" placeholder="example@example.com" name="email" id="email"
                                 class="control">
                             <%if (locals.errors && errors.email) {%>
                                 <div class="mensaje-error">
@@ -93,7 +95,7 @@
         <!-- PIE DE PAGINA -->
 
         </section>
-
+        <script src="/js/loginValidation.js"></script>
         <%- include("partials/footer.ejs") %>
 
 </body>
