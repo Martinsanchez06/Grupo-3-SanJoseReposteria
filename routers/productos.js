@@ -55,6 +55,7 @@ router.get("/lista", productController.list);
 
 router.get("/detail/:id", productController.singleDetail);
 
+router.get("/resultado", productController.search);
 
 // ----------AQUI CREAMOS UN PRODUCTO-----------
 

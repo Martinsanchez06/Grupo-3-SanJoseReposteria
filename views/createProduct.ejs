@@ -39,9 +39,13 @@
 				<div class="mensaje-error">
 					<%= errors.msg %>
 				</div>
-			<% } %>
+			<% } %>	
 
-			<form class="form-create" action="/productos/createProduct"  method="POST" enctype="multipart/form-data">
+			<form  id="createProductForm" class="form-create" action="/productos/createProduct"  method="POST" enctype="multipart/form-data">
+
+				<div id="create-errors-div" hidden>
+					
+				</div>
 
 				<div class="control-form">
 
@@ -65,21 +69,21 @@
 				<div class="control-form">
 
 					<label for="image1">Imagenes del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="imagen" multiple id="image1" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen1" id="image1" class="control-img">
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="image2">Imagen 2 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="imagen" id="image2" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen2" id="image2" class="control-img">
 
 				</div>
 
 				<div class="control-form">
 
 					<label for="image3">Imagen 3 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="imagen" id="image3" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen3" id="image3" class="control-img">
 
 				</div>
 
@@ -137,6 +141,8 @@
 
 
 		</div>
+
+		<script src="/js/createProductValidation.js"></script>
 
 
 		<%- include("partials/footer.ejs") %>

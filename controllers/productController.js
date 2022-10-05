@@ -5,6 +5,7 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require("../src/database/models");
+const Op = db.Sequelize.Op;
 
 
 const productController = {
@@ -23,6 +24,7 @@ const productController = {
                 res.render("carritoDeCompras", { usuarios })
             })
     },
+
     create: (req, res) => {
         let productoEncontrado = db.Producto.findAll()
         let categoriaDelProducto = db.Categoria.findAll();
@@ -55,7 +57,7 @@ const productController = {
                     .then(function ([productos, categorias]) {
                         res.render("createProduct", { productos, categorias });
                     })
-                    console.log(errors);
+                console.log(errors);
             }
         }
 
@@ -101,15 +103,26 @@ const productController = {
         })
         console.log(req.body, req.files)
         db.Producto.findAll()
-        .then(function (productos) {
-            res.render("listadoProductos", { productos: productos })
-        })
+            .then(function (productos) {
+                res.render("listadoProductos", { productos: productos })
+            })
     },
     delete: (req, res) => {
         db.Producto.destroy({
             where: { idProductos: req.params.id }
         })
         res.render('listadoProductos', { "productos": productos })
+    },
+    search: (req, res) => {
+
+        db.Producto.findAll({
+            include: [{ association: 'categorias' }],
+            where: {
+                nombre: { [Op.like]: `%${req.query.search}%` }
+            }
+        })
+            .then(productos => { res.render("resultadoSearch", { productos }); })
+            .catch(error => res.send(error))
     }
 };
 

@@ -1,33 +1,55 @@
 <header class="main-header">
   <nav class="navbar-main">
     <div>
-      <a href="/"> 
-         <img class="img-header" src="/images/Logo San José para pared2.png" alt="Imagen del logo">
+      <a href="/">
+        <img class="img-header" src="/images/Logo San José para pared2.png" alt="Imagen del logo">
       </a>
 
     </div>
 
     <ul class="nav-tabs">
       <li><a class="nav-icons" href="/">Inicio</a></li>
-      <li><a class="nav-icons" href="/productos/lista">Productos</a></li>
-      <li><a class="nav-icons" href="/productos/carritoDeCompras">Nuestros de postres</a></li>
-      <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+      <li><a class="nav-icons" href="/productos/lista">Tortas y postres</a></li>
+      <li><a class="nav-icons" href="#contactanos">Contáctanos</a></li>
     </ul>
 
 
     <ul class="nav-tabs2">
       <% if(locals.isLogged) { %>
-      <li><a class="nav2-link" href="/user/perfil"><i class="fas fa-user-circle"></i></a></li>
-      <li><a class="nav-icons" href="/user/logout/">Logout</a></li>
-      <% } else { %>
-        
-      <li><a class="nav-icons" href="/user/login">Login</a></li>
-      <li><a class="nav-icons" href="/user/registro">Registro</a></li>
-      <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
-      <li><a class="nav2-link" href='#'><i class="fas fa-bars"></i></a></li>
-      <% } %>
+        <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+        <li><a class="nav2-link" href="/user/perfil"><i class="fas fa-user-circle"></i></a></li>
+        <li><a class="nav-icons" href="/user/logout/">Logout</a></li>
+        <% } else { %>
+          <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+          <div class="search">  
+            <label for="check-buscar"><a  class="search-link" href=""><i class="fas fa-search"></i></a></label>
+            <input type="checkbox" id="check-buscar">
+            <div class="container-search">
+              <form action="/productos/resultado" method="GET">
+                <input type="search" name="search" id="" value="" placeholder="Buscar">
+                
+              </form>
+            </div>
+          </div>  
+          <div class="nav-right">
+            <a href="#" class="hdicon"><i class="fas fa-user-circle"></i></a>
+            <div id="settingsBox" class="settingsBox">
+              <div id="costumer-links">
+                <p>
+                  <a href="/user/login" class="btn-test">Login</a>
+                </p>
+                <p class="text-center">
+                  Usuario Nuevo?
+                  <a href="/user/registro" class="register ctLink">Registrate ahora</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <li><a class="nav2-link" href='#'><i class="fas fa-bars"></i></a></li>
+          <% } %>
     </ul>
   </nav>
+  <script src="/js/headerStyles.js"></script>
   <!--<div class="search">
     <input type="search" name="search" id="search-header" placeholder="Busca aqui tu postre" autocomplete="off">
   </div>-->
