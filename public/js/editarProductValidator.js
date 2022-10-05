@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         if (errorsArray.length === 0) {
             createProductForm.submit();
         } else {
-            const errosDiv = document.querySelector("#create-errors-div");
-            errosDiv.innerHTML = "";
+            const errorsDiv = document.querySelector("#errors-div");
+            errorsDiv.innerHTML = "";
             errorsArray.forEach(error => {
-                errosDiv.hidden = false;
-                errosDiv.innerHTML += `<p class="p-error">-${ error }</p>`
+                errorsDiv.hidden = false;
+                errorsDiv.innerHTML += `<p class="p-error">-${ error }</p>`
             })
         }
     })

@@ -748,6 +748,10 @@ p {
   display: block;
 }
 
+.info-login {
+  height: auto;
+}
+
 .control {
   border-radius: 13px;
   border: 1px solid #707070;
@@ -1018,7 +1022,7 @@ p {
   height: 0px;
 }
 
-#create-errors-div {
+#errors-div {
   width: 100%;
   background-color: rgba(223, 29, 29, 0.2);
   border-radius: 5px;
@@ -1742,7 +1746,7 @@ p {
     border-style: groove;
     border-radius: 20px;
     border-color: #e4f0f3;
-    height: 860px;
+    height: auto;
   }
 
   .div-desktopR {
@@ -1774,7 +1778,6 @@ p {
     border-style: groove;
     border-radius: 20px;
     border-color: #e4f0f3;
-    height: 75vh;
   }
 
   .div-desktop .ingreso {
