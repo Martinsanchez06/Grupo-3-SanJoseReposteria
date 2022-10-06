@@ -54,6 +54,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         }
 
+        if (policyInput.checked == false) {
+            errors.push(`El campo ${ policyInput.name} debe estar verificado`);
+        }
+
         if (errors.length === 0) {
             registerForm.submit();
         } else {
