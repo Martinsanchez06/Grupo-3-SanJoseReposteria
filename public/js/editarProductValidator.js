@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
-    const createProductForm = document.querySelector("#createProductForm");
+    const editProductForm = document.querySelector("#editProductForm");
     const nameInput = document.getElementById("name");
     const priceInput = document.getElementById("price");
     const image1 = document.getElementById("image1");
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     let allowedExtentions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-    createProductForm.addEventListener("submit", (event) => {
+    editProductForm.addEventListener("submit", (event) => {
         const errorsArray = [];
         event.preventDefault();
         /*Array.from(createProductForm.elements).forEach(element => {
