@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //const db = require("../../src/database/models"); 
     const loginForm = document.querySelector(".info-login");
     const emailInput = document.querySelector("#email");
+    const PasswordInput = document.querySelector("#password");
 
     const validRegex = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
     //const emailExist = db.Usuario.findOne({ where: { email: emailInput.value } });
@@ -18,6 +19,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
             if (!emailInput.value.match(validRegex)) {
                 errors.push(`El campo ${emailInput.name} debe contener un email válido`);
             }
+        }
+
+        if (PasswordInput.value === "") {
+            errors.push(`El campo ${ PasswordInput.name} debe estar diligenciado`);
         }
 
         /*if (emailInput.value !== emailExist) {
