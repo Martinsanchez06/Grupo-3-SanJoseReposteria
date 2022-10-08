@@ -11,11 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let menuBox = document.querySelector(".menuBox");
     let menuBoxButton = document.querySelector(".popOutButton");
 
-    ProfileIcon.addEventListener("click", () => {
-
-        settingsBox.classList.toggle("active");
-    });
-
     searchIcon.addEventListener("click", () => {
         searchInput.classList.toggle("active-search");
     });
@@ -28,7 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBoxButton.addEventListener("click" , () => {
         menuBox.classList.remove("active2");
 
-    })
+    });
+
+    ProfileIcon.addEventListener("click", () => {
+
+        settingsBox.classList.toggle("active");
+    });
 
 
 

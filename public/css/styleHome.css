@@ -178,6 +178,13 @@
   display: flex;
 }
 
+.fa-user-circle {
+  margin-right: 0px;
+  color: #343233;
+  display: inline-block;
+  font-size: 29px;
+}
+
 .fa-bars,
 .fa-search,
 .fa-shopping-cart,
