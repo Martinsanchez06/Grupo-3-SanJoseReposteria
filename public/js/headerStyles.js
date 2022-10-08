@@ -4,12 +4,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     let settingsBox = document.querySelector(".settingsBox");
-    let icon = document.querySelector(".hdicon");
+    let ProfileIcon = document.querySelector(".hdicon");
+    let searchIcon = document.getElementById("search-icon");
+    let searchInput = document.getElementById("input-search");
+    let bars = document.querySelector(".bars");
+    let menuBox = document.querySelector(".menuBox");
+    let menuBoxButton = document.querySelector(".popOutButton");
 
-    icon.addEventListener("click", () => {
+    ProfileIcon.addEventListener("click", () => {
 
         settingsBox.classList.toggle("active");
     });
+
+    searchIcon.addEventListener("click", () => {
+        searchInput.classList.toggle("active-search");
+    });
+
+    bars.addEventListener("click", () => {
+
+        menuBox.classList.add("active2");
+    });
+
+    menuBoxButton.addEventListener("click" , () => {
+        menuBox.classList.remove("active2");
+
+    })
+
+
 
     
 

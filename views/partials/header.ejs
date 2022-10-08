@@ -22,11 +22,10 @@
         <% } else { %>
           <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
           <div class="search">  
-            <label for="check-buscar"><a  class="search-link" href=""><i class="fas fa-search"></i></a></label>
-            <input type="checkbox" id="check-buscar">
+            <a  class="search-link" href="#"><i id="search-icon" class="fas fa-search"></i></a>
             <div class="container-search">
               <form action="/productos/resultado" method="GET">
-                <input type="search" name="search" id="" value="" placeholder="Buscar">
+                <input type="search" name="search"  class="input-search" id="input-search" value="" placeholder="Buscar">
                 
               </form>
             </div>
@@ -45,7 +44,27 @@
               </div>
             </div>
           </div>
-          <li><a class="nav2-link" href='#'><i class="fas fa-bars"></i></a></li>
+          <li><a class="nav2-link bars" href='#'><i class="fas fa-bars"></i></a></li>
+          <div id="menuBox" class="menuBox">
+            <div id="menuBoxLinks">
+                <div class="rightSideMenu">
+                    <a href="#" class="popOutButton"><i class="fas fa-window-close"></i></a>
+                </div>
+                <div class="leftSideMenu">
+                    <ul class="boxLinksUl">
+                        <li>
+                            <a href="/">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="/productos/lista">productos</a>
+                        </li>
+                        <li>
+                            <a href="#contactanos">contactanos</a>
+                        </li>  
+                    </ul>  
+                </div>
+            </div>
+        </div>
           <% } %>
     </ul>
   </nav>

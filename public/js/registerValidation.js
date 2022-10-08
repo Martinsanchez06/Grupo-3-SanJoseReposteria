@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const cityInput = document.getElementById("ciudad");
     const policyInput = document.getElementById("politica");
 
-    let allDocumentFields = [numberInput, nameInput, imageInput, emailInput, dateInput, cityInput, passwordInput, conPasswordInput]
+    let allDocumentFields = [numberInput, nameInput, imageInput, emailInput, dateInput, cityInput, passwordInput, conPasswordInput];
     let allowedExtentions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
     const validRegex = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
 

@@ -41,7 +41,35 @@
   transition: all .5s ease-in-out;
 }
 
+.input-search {
+  font-size: 13px;
+  border-radius: 20px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 20px;
+  width: 300px;
+  position: absolute;
+  top: 13%;
+  right: 15px;
+  z-index: 99;
+}
+
+#input-search {
+  color: #000;
+  text-align: left;
+  background-color: #fff;
+  height: 35px;
+  box-shadow: 0 0 15px #0000001a;
+  transition: all .5s ease-in-out;
+}
+
 .active {
+  visibility: visible;
+  opacity: 1;
+  top: 16%;
+}
+
+.active-search {
   visibility: visible;
   opacity: 1;
   top: 16%;
@@ -196,11 +224,11 @@ div {
   justify-content: center;
   align-items: center;
 }
-#check-buscar {
+/*#check-buscar {
   display: none;
-}
+}*/
 
-.container-search {
+/*.container-search {
   visibility: hidden;
   width: 20vw;
   position: absolute;
@@ -210,8 +238,8 @@ div {
   transition: all 500ms ease;
   transform: translateX(70%);
   
-}
-.container-search input{
+}*/
+/*.container-search input{
   width: 70%;
   height: 45%;
   position: absolute;
@@ -223,12 +251,72 @@ div {
   visibility: visible; 
   transform: translateX(0%);
   animation: fadeIn 2s;
-}
+}*/
 
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+.menuBox {
+  font-size: 13px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  position: absolute;
+  top: 1%;
+  right: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#menuBox {
+  color: #000;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 0 15px #0000001a;
+  transition: all .5s ease-in-out;
+}
+
+.active2 {
+  visibility: visible;
+  opacity: 1;
+  top: 0%; 
+}
+
+#menuBoxLinks {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightSideMenu {
+  text-align: right;
+  font-size: 15px;
+
+}
+.fa-window-close {
+  color: #343233;
+}
+
+.boxLinksUl {
+  list-style: none;
+  
+}
+
+.boxLinksUl li {
+  margin-top: 12px;
+  
+}
+
+.boxLinksUl a {
+  text-decoration: none;
+  color: #343233;
+}
+
 /* ESTILOS HOME */
 
 .div-img-slider {
@@ -1354,9 +1442,9 @@ p {
 }
 
 @media only screen and (min-width: 0px) and (max-width: 894px) {
-  .search {
+  /*.search {
     display: block;
-  }
+  }*/
 
   .img-header {
     width: 90px;
@@ -1952,6 +2040,10 @@ p {
     background-color: #8CC0DE;
     color: #FFFFFF;
     border-color: #8CC0DE;
+  }
+
+  .menuBox {
+    display: block;
   }
 
   .text-center {
