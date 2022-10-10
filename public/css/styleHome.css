@@ -1568,11 +1568,11 @@ p {
     width: 50px;
   }
 
-  .div-big-img a .big-img {
-    /*position: relative;
-    width: 300px;*/
+  /* .div-big-img a .big-img {
+    position: relative;
+    width: 300px;
 
-  }
+  } */
 
   .div-litle-imgs {
     width: 100%;
@@ -2113,12 +2113,12 @@ p {
   .div-big-img a {
     width: 50px;
   }
-
+/* 
   .div-big-img a .big-img {
-    /*position: relative;
-    width: 300px;*/
+    position: relative;
+    width: 300px;
 
-  }
+  } */
 
   .div-litle-imgs {
     width: 100%;
