@@ -25,15 +25,12 @@ const userController = {
         }
         try {
             db.Usuario.create({
-                numeroID: req.body.numeroID,
-                nombre: req.body.nombre,
-                email: req.body.email,
-                fechanacimiento: req.body.fechanacimiento,
-                ciudad: req.body.ciudad,
+                ...req.body,
                 password: bcryptjs.hashSync(req.body.password, 10),
                 con_password: bcryptjs.hashSync(req.body.con_password, 10),
                 politica:req.body.politica,
-                avatar: req.file.filename
+                avatar: req.file.filename,
+                rolDeUsuario: 2
             })
             res.status(200).redirect('/user/login')
         } catch (error) {
@@ -87,8 +84,6 @@ const userController = {
     },
 
     login: (req, res) => {
-        console.log(req.cookies);
-        console.log(req.cookies.testing);
         db.Usuario.findAll()
         .then(function(usuarios){
             res.render("login", { usuarios }); 
@@ -106,7 +101,6 @@ const userController = {
             
             if (usuarioParaCrear) {
                 let contraseñaCorrecta = bcryptjs.compareSync(req.body.password, usuarioParaCrear.password)
-                console.log(contraseñaCorrecta)
                 if (contraseñaCorrecta) {
                     req.session.usuarioLogueado = usuarioParaCrear;
                    
@@ -144,7 +138,7 @@ const userController = {
             where: { email: emailEquis },
         })
         .then(function (usuarios) {
-            console.log(usuarios)
+            
             res.render("perfilUsuario", {
                 user: usuarios
             })
