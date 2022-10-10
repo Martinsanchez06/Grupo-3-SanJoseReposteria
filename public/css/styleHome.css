@@ -94,6 +94,7 @@
   line-height: 1;
   white-space: normal;
   transition: all .3s ease-in-out;
+  margin-bottom: 10px;
   font-size: 13px;
   padding: 10px 24px;
   white-space: nowrap;
