@@ -36,7 +36,9 @@
 
 
                     <form action="/user/registro" method="POST" class="Form-registro" enctype="multipart/form-data">
-
+                        <div id="errors-div" hidden>
+					
+                        </div>
                         <div class="control-form">
 
                             <label for="numero-identificacion">Numero de identificación:</label>
@@ -78,7 +80,7 @@
                         <div class="control-form">
 
                             <label for="image1">Sube tu imagen</label>
-                            <input class="control-img" type="file" name="imagenReg" >
+                            <input id="imagen" class="control-img" type="file" name="imagenReg" >
                             <% if (locals.errors && errors.imagenReg) { %>
                               <div class="mensaje-error">
                                <%= errors.imagenReg.msg %>
@@ -92,7 +94,7 @@
                         <div class="control-form">
 
                             <label for="email">Correo Electrónico:</label>
-                            <input type="email" 
+                            <input type="text" 
                             placeholder="example@example.com" 
                             name="email" 
                             id="email"
@@ -203,7 +205,7 @@
         </section>
 
         <!-- PIE DE PAGINA -->
-
+        <script src="/js/registerValidation.js"></script>
         <%- include("partials/footer.ejs") %>
 
 </body>
