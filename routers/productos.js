@@ -1,7 +1,7 @@
 const express = require("express");
 
 const productController = require("../controllers/productController");
-
+const userMiddleware = require("../middlewares/userMiddleware");
 const router = express.Router();
 const multer = require("multer");
 const { body } = require("express-validator")
@@ -48,11 +48,13 @@ router.get("/productdetail/:id", productController.detail);
 
 router.get("/carritoDeCompras", productController.carritoCompras);
 
-router.get("/createProduct", productController.create);
+router.get("/createProduct", userMiddleware, productController.create);
 
-router.get("/editarProduct/:id", productController.editarFormulario);
+router.get("/editarProduct/:id", userMiddleware, productController.editarFormulario);
 
 router.get("/lista", productController.list);
+
+// router.get("/listaAdmin", productController.listAdmin);
 
 router.get("/detail/:id", productController.singleDetail);
 

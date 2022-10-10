@@ -1217,6 +1217,12 @@ p {
   margin-right: auto;
 }
 
+/* ------OPCIONES ADMIN------ */
+
+.mainAdmin {
+  min-height: 100vh;
+}
+
 
 
 /* ----- MEDIA QUERIES-----*/

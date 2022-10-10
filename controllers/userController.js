@@ -144,6 +144,13 @@ const userController = {
             })
         })
     },
+    vistaAdmin: (req, res) => {
+        if(req.session.usuarioLogueado.rolDeUsuario === 1){
+            res.render("opcionesDeAdmin")
+        } else {
+            res.send('Acceso no autorizado')
+        }
+    },
     logout: (req, res) => {
         res.clearCookie("userEmail");
         req.session.destroy();
