@@ -21,177 +21,127 @@
         <!-- Main -->
 
         <div class="contain-mainPD">
-
             <section class="product-detail">
-
                 <div class="item-left">
-
-                    
-
-                    <div class="div-big-img">
-
+                    <div class="products-imgs">
+                        <div class="img-display">
+                            <div class="img-showcase">
+                                <img  src="/images/Productos/<%= productos.imagen_1 %> " alt="cake">
+                                <img  src="/images/Productos/<%= productos.imagen_2 %>" alt="cake">
+                                <img  src="/images/Productos/<%= productos.imagen_3 %>" alt="cake">
+                            </div>
+                        </div>
+                        <div class="img-select">
+                            <div class="img-item">
+                                <a href="#" data-id="1">
+                                    <img  src="/images/Productos/<%= productos.imagen_1 %> " alt="cake">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="2">
+                                    <img  src="/images/Productos/<%= productos.imagen_2 %> " alt="cake">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="3">
+                                    <img  src="/images/Productos/<%= productos.imagen_3 %> " alt="cake">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="div-big-img">
                         <a href=""><img class="big-img" src="/images/Productos/<%= productos.imagen_1 %> " alt=""></a>
-
                     </div>
-
                     <div class="div-litle-imgs">
-
                         <a href=""><img class="litle-img" src="/images/Productos/<%= productos.imagen_2 %>" alt=""></a>
-
                         <a href=""><img class="litle-img" src="/images/Productos/<%= productos.imagen_3 %>" alt=""></a>
-
-                    </div>
-
+                    </div>-->
                 </div>
-
                 <div class="item-right">
-
                     <div class="product-name">
-
                         <h2>
                             <%= productos.nombre %>
                         </h2>
 
                     </div>
-
                     <div class="div-description">
-
                         <p>
                             <%= productos.descripcion %>
                         </p>
-
                     </div>
-
                     <div class="sizes">
-
                         <div class="circles-container">
-
                             <ul class="ul-circle">
-
                                 <li class="li-cakesize">Pequeño</li>
-
                                 <li class="li-circle">
-
                                     <div class="circle">
-
                                         <a class="a-portion" href="#">
-
                                             <span>
-
                                                 <span>4</span>
                                                 <br>
                                                 <span>Porciones</span>
-
                                             </span>
                                         </a>
-
                                     </div>
-
                                 </li>
-
                                 <li class="li-price">
-
                                     <span>
-
                                         <span>$20.000</span>
-
                                     </span>
-
                                 </li>
                             </ul>
-
                         </div>
-
                         <div class="circles-container">
-
                             <ul class="ul-circle">
-
                                 <li class="li-cakesize">Mediano</li>
-
                                 <li class="li-circle">
-
                                     <div class="circle">
-
                                         <a class="a-portion" href="#">
-
                                             <span>
-
                                                 <span>6 - 8</span>
                                                 <br>
                                                 <span>Porciones</span>
-
                                             </span>
                                         </a>
-
                                     </div>
-
                                 </li>
-
                                 <li class="li-price">
-
                                     <span>
-
                                         <span>$35.000</span>
-
                                     </span>
-
                                 </li>
                             </ul>
-
                         </div>
-
                         <div class="circles-container">
-
                             <ul class="ul-circle">
-
                                 <li class="li-cakesize">Grande</li>
-
                                 <li class="li-circle">
-
                                     <div class="circle">
-
                                         <a class="a-portion" href="#">
-
                                             <span>
-
                                                 <span>10 - 12</span>
                                                 <br>
                                                 <span>Porciones</span>
-
                                             </span>
                                         </a>
-
                                     </div>
-
                                 </li>
-
                                 <li class="li-price">
-
                                     <span>
-
                                         <span>$55.000</span>
-
                                     </span>
-
                                 </li>
                             </ul>
-
                         </div>
-
                     </div>
-
-
                     <div class="div-add-button">
-
                         <button class="add-button" type="submit">Agregar al Carrito</button>
-
                     </div>
-
                 </div>
-
             </section>
-
         </div>
+
+        <script src="/js/productDetailStyles.js"></script>
         <!-- PIE DE PAGINA -->
 
         <%- include("partials/footer.ejs") %>
