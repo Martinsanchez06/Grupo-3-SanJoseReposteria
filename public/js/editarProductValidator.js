@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
 
         if (errorsArray.length === 0) {
-            createProductForm.submit();
+            editProductForm.submit();
         } else {
             const errorsDiv = document.querySelector("#errors-div");
             errorsDiv.innerHTML = "";
