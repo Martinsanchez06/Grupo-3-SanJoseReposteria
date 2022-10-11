@@ -1987,16 +1987,12 @@ p {
     align-items: center;
   }
 
-  .fas {
-    color: #005239;
-  }
-
   .nav-icons {
     text-decoration: none;
     display: inline-block;
     list-style-type: none;
     font-size: 19px;
-    color: #005239;
+    color: #343233;
     padding: 6px;
     margin: 0px 15px 0px 15px;
   }
