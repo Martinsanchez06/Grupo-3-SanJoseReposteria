@@ -4,6 +4,7 @@ const cookies = require("cookie-parser");
 const rutasMain = require("./routers/main");
 const rutasProductos = require("./routers/productos");
 const rutasUser = require("./routers/user");
+const apiProductsRouter = require("./routers/api/apiProductsRouter");
 const path = require("path");
 const methodOverride = require("method-override");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
@@ -33,6 +34,10 @@ app.use(session({
 
 app.use(cookies());
 app.use(userLoggedMiddleware);
+
+//---------RUTAS API-----------
+
+app.use("/api", apiProductsRouter);
 
 // --------RUTAS A USAR--------
 
