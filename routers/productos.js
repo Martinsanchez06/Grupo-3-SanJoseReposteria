@@ -1,7 +1,7 @@
 const express = require("express");
 
 const productController = require("../controllers/productController");
-
+const userMiddleware = require("../middlewares/userMiddleware");
 const router = express.Router();
 const multer = require("multer");
 const { body } = require("express-validator")
@@ -23,6 +23,7 @@ const validaciones = [
     body('nombre').notEmpty().withMessage('Tienes que escribir el nombre del producto'),
     body('precio').notEmpty().withMessage('Tienes que escribir el precio del producto'),
     body('tamanio').notEmpty().withMessage('Tienes que escribir el tamaño del producto'),
+    body('categoria').notEmpty().withMessage('Tienes que seleccionar la categoria del producto'),
     body('descripcion').notEmpty().withMessage('Tienes que escribir la descripcion del producto'),
     body('imagen').custom((value,{ req }) => { 
         let file= req.file;
@@ -47,11 +48,13 @@ router.get("/productdetail/:id", productController.detail);
 
 router.get("/carritoDeCompras", productController.carritoCompras);
 
-router.get("/createProduct", productController.create);
+router.get("/createProduct", userMiddleware, productController.create);
 
-router.get("/editarProduct/:id", productController.editarFormulario);
+router.get("/editarProduct/:id", userMiddleware, productController.editarFormulario);
 
 router.get("/lista", productController.list);
+
+// router.get("/listaAdmin", productController.listAdmin);
 
 router.get("/detail/:id", productController.singleDetail);
 

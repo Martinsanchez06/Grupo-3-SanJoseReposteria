@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/4fa28797ee.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styleHome.css">
     <link rel="icon" type="image/x-icon" href="/images/Logo San José para pared2.png">
     <title>listado de productos</title>
@@ -16,27 +15,22 @@
 </head>
 
 <body>
-    <!--Header-->
+
+    <!-- Header -->
     <%- include("partials/header.ejs") %>
 
-    <!--Main-->
-        <% if (locals.usuarioAdmin) { %>
-            
-            <% productos.forEach(productos => { %>
-                <%- include("product.ejs", {productos : productos}) %>
-            <% }) %> 
+        <!-- Main -->
+        <main class="mainAdmin">
+            <h1>Bienvenido a las opciones de administrador</h1>
 
-        <% } else { %>
-
-        <% productos.forEach(productos => { %>
-            <%- include("productoUsuario.ejs", {productos : productos}) %>
-        <% }) %> 
-
-        <% } %> 
+            <a href="/productos/lista">Lista de productos</a>
+        </main>
 
 
-    <!--Footer-->
-    <%- include("partials/footer.ejs") %>
+        <!-- Footer -->
+        <%- include("partials/footer.ejs") %>
+
+
 
 </body>
 

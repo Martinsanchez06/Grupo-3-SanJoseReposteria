@@ -62,36 +62,60 @@
 
 					<label for="price">Precio del producto:</label>
 					<input type="text" placeholder="EJ: $30.000" name="precio" id="price" class="control" >
-
+					<%if (locals.errors && errors.precio) {%>
+						<div class="mensaje-error">
+							<%= errors.precio.msg %>
+						</div>
+					<% } %>
 				</div>
 				
 
 				<div class="control-form">
 
 					<label for="image1">Imagenes del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="imagen1" id="image1" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen" multiple id="image1" class="control-img">
+					<% if (locals.errors && errors.imagen) { %>
+						<div class="mensaje-error">
+						 <%= errors.imagen.msg %>
+						</div>
 
+					  <% } %>
 				</div>
 
 				<div class="control-form">
 
 					<label for="image2">Imagen 2 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="imagen2" id="image2" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen" id="image2" class="control-img">
+					<% if (locals.errors && errors.imagen) { %>
+						<div class="mensaje-error">
+						 <%= errors.imagen.msg %>
+						</div>
 
+					  <% } %>
 				</div>
 
 				<div class="control-form">
 
 					<label for="image3">Imagen 3 del producto:</label>
-					<input type="file" placeholder="Jose Sanchez" name="imagen3" id="image3" class="control-img">
+					<input type="file" placeholder="Jose Sanchez" name="imagen" id="image3" class="control-img">
+					<% if (locals.errors && errors.imagen) { %>
+						<div class="mensaje-error">
+						 <%= errors.imagen.msg %>
+						</div>
 
+					  <% } %>
 				</div>
 
 				<div class="control-form">
 
 					<label for="size">Tamaño del producto:</label>
 					<input type="text" placeholder="EJ: 15" name="tamanio" id="size" class="control" >
+					<% if (locals.errors && errors.tamanio) { %>
+						<div class="mensaje-error">
+						 <%= errors.tamanio.msg %>
+						</div>
 
+					  <% } %>
 				</div>
 
 				<div class="control-form">
@@ -115,12 +139,18 @@
 
 						<% } %>
 					</select>
-
+					
 				</div>
 
 				<div class="control-form">
 					<label for="description" class="form-label">Descripción:</label>
 					<textarea name="descripcion" id="description" class="area-fieldc"></textarea>
+					<% if (locals.errors && errors.descripcion) { %>
+						<div class="mensaje-error">
+						 <%= errors.descripcion.msg %>
+						</div>
+
+					  <% } %>
 				</div>
 
 				<div class="button-formc">

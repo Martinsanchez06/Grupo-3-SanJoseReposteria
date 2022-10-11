@@ -15,7 +15,7 @@
 
 
     <ul class="nav-tabs2">
-      <% if(locals.isLogged) { %>
+      <% if (locals.isLogged && locals.usuarioAdmin) { %>
         <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
         <div class="search">
           <a class="search-link" href="#"><i id="search-icon" class="fas fa-search"></i></a>
@@ -32,6 +32,9 @@
             <div id="costumer-links">
               <p>
                 <a href="/user/perfil" class="btn-test">Mi cuenta</a>
+              </p>
+              <p>
+                <a href="/user/opcionesAdmin" class="btn-test">Opciones admin</a>
               </p>
               <p class="text-center">
                 <a href="/user/logout/" class="register ctLink">Salir</a>

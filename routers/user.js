@@ -82,4 +82,8 @@ router.get("/logout/", userController.logout);
 
 router.delete("/perfil", userController.destroy);
 
+// ------AQUI SE LLAMA LA VISTA DE OPCIONES DE ADMIN------
+
+router.get("/opcionesAdmin", userController.vistaAdmin)
+
 module.exports = router;

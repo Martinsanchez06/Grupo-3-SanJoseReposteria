@@ -94,6 +94,7 @@
   line-height: 1;
   white-space: normal;
   transition: all .3s ease-in-out;
+  margin-bottom: 10px;
   font-size: 13px;
   padding: 10px 24px;
   white-space: nowrap;
@@ -1420,6 +1421,12 @@ p {
   margin-right: auto;
 }
 
+/* ------OPCIONES ADMIN------ */
+
+.mainAdmin {
+  min-height: 100vh;
+}
+
 
 
 /* ----- MEDIA QUERIES-----*/
@@ -1475,8 +1482,6 @@ p {
   }
 
   .fa-search {
-    /*margin-top: 35px;*/
-    margin-right: 10px;
     color: #343233;
     display: inline-block;
     font-size: 29px;
@@ -1606,11 +1611,11 @@ p {
     width: 50px;
   }
 
-  .div-big-img a .big-img {
-    /*position: relative;
-    width: 300px;*/
+  /* .div-big-img a .big-img {
+    position: relative;
+    width: 300px;
 
-  }
+  } */
 
   .div-litle-imgs {
     width: 100%;
@@ -1969,14 +1974,18 @@ p {
     align-items: center;
   }
 
+  .fas {
+    color: #005239;
+  }
+
   .nav-icons {
     text-decoration: none;
     display: inline-block;
     list-style-type: none;
     font-size: 19px;
-    color: #000000;
+    color: #005239;
     padding: 6px;
-    margin: 0px 7px 0px 7px;
+    margin: 0px 15px 0px 15px;
   }
 
   .nav-icons:hover {
@@ -1985,7 +1994,6 @@ p {
 
 
   .nav-right {
-    width: 15%;
     display: flex;
     justify-content: space-around;
     font-size: 30px;
@@ -1994,7 +2002,6 @@ p {
   .fa-shopping-cart {
     display: inline-flex;
     position: relative;
-    color: #343233;
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -2003,6 +2010,10 @@ p {
 
   .nav2-link {
     text-decoration: none;
+  }
+
+  .fa-user-circle, .fa-search {
+    margin-left: 25px;
   }
 
   .fa-bars {
@@ -2066,6 +2077,7 @@ p {
     text-transform: uppercase;
     line-height: 1;
     white-space: normal;
+    margin-bottom: 10px;
     transition: all .3s ease-in-out;
     font-size: 13px;
     padding: 10px 24px;
@@ -2144,12 +2156,12 @@ p {
   .div-big-img a {
     width: 50px;
   }
-
+/* 
   .div-big-img a .big-img {
-    /*position: relative;
-    width: 300px;*/
+    position: relative;
+    width: 300px;
 
-  }
+  } */
 
   .div-litle-imgs {
     width: 100%;
