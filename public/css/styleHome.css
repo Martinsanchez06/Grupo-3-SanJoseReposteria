@@ -1762,10 +1762,16 @@ p {
 /* ----- PRODUCT MEDIA QUERY ----- */
 
 @media only screen and (min-width: 0px) and (max-width: 492px) {
-  .card-content {
-    display: none;
+  .card{
+    display: flex;
+    flex-direction: column;
   }
-
+  
+  .card-content{
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .card-left {
     margin: auto;
     width: 70vw;
@@ -1780,8 +1786,9 @@ p {
 }
 
 @media only screen and (min-width: 492px) and (max-width: 718px) {
-  .card-content {
-    display: none;
+  .card{
+    display: flex;
+    flex-direction: column;
   }
 
   .card-left {
@@ -1795,6 +1802,12 @@ p {
     height: 75%;
     margin-bottom: 30px;
     margin-top: 30px;
+  }
+
+  .card-content{
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
