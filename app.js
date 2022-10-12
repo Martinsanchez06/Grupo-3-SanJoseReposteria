@@ -5,6 +5,7 @@ const rutasMain = require("./routers/main");
 const rutasProductos = require("./routers/productos");
 const rutasUser = require("./routers/user");
 const apiProductsRouter = require("./routers/api/apiProductsRouter");
+const apiUsuariosRouter= require("./routers/api/apiUsuariosRouter")
 const path = require("path");
 const methodOverride = require("method-override");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
@@ -38,6 +39,7 @@ app.use(userLoggedMiddleware);
 //---------RUTAS API-----------
 
 app.use("/api", apiProductsRouter);
+app.use("/api", apiUsuariosRouter);
 
 // --------RUTAS A USAR--------
 
