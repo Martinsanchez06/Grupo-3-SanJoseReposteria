@@ -35,6 +35,42 @@ const apiUsuariosController = {
             console.log(error);
         }
     },
+
+    getUsuariosDetalle: async (req, res) => {
+        try {
+            const usuario = await db.Usuario.findOne({
+                where: { idUsuarios: req.params.id }
+            });
+
+            const datosUsuarios = {
+                id: usuario.idUsuarios,
+                numeroId: usuario.numeroID,
+                nombre: usuario.nombre,
+                email: usuario.email,
+                fechaNac: usuario.fechanacimiento,
+                ciudad: usuario.ciudad,
+            };
+
+            const avatarUser = {
+                avatar: `http://localhost:3000/images/avatars/${ usuario.avatar}`,
+            }
+
+            if (usuario) {
+                res.status(200).json({
+                    "data": datosUsuarios,
+                    "avatarUrl": avatarUser,
+                    "status": 200,
+                    "msg": "Todo Correcto",
+                    "endPoint": "/api/usuarios/:id",
+                })
+            } else {
+                res.status(500).json({ "msg": "500- Ocurrio un error" });
+            }
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
     
 };
 

@@ -4,7 +4,6 @@ const apiUsuariosController = require("../../controllers/api/apiUsuariosControll
 
 
 router.get("/usuarios", apiUsuariosController.getAllUsuarios);
-
-
+router.get("/usuarios/:id", apiUsuariosController.getUsuariosDetalle);
 
 module.exports = router;
