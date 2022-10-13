@@ -13,7 +13,7 @@ const apiUsuariosController = {
                     id: usuario.idUsuarios,
                     name: usuario.nombre,
                     email: usuario.email,
-                    detail: `http://localhost:3000/api/usuarios/${ usuario.idUsuarios }`
+                    detail: `https://san-jose-reposteria.herokuapp.com/api/usuarios/${ usuario.idUsuarios }`
                 }
             });
 
@@ -35,7 +35,6 @@ const apiUsuariosController = {
             console.log(error);
         }
     },
-
     getUsuariosDetalle: async (req, res) => {
         try {
             const usuario = await db.Usuario.findOne({
@@ -52,7 +51,7 @@ const apiUsuariosController = {
             };
 
             const avatarUser = {
-                avatar: `http://localhost:3000/images/avatars/${ usuario.avatar}`,
+                avatar: `https://san-jose-reposteria.herokuapp.com/images/avatars/${ usuario.avatar}`,
             }
 
             if (usuario) {
