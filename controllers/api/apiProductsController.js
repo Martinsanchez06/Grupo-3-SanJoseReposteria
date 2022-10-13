@@ -15,8 +15,8 @@ const apiProductsController = {
                     name: product.nombre,
                     description: product.descripcion,
                     category: product.categoria_id,
-                    detail: `http://localhost:3000/productos/productdetail/${product.idProductos}`,
-                    allProductDetails: `http://localhost:3000/api/productDetail/${ product.idProductos }`
+                    detail: `https://san-jose-reposteria.herokuapp.com/productos/productdetail/${ product.idProductos }`,
+                    allProductDetails: `https://san-jose-reposteria.herokuapp.com/api/productDetail/${ product.idProductos }`
                 }
             });
 
@@ -55,9 +55,9 @@ const apiProductsController = {
             };
 
             const imageUrl = {
-                image_1: `http://localhost:3000/images/Productos/${ product.imagen_1}`,
-                image_2: `http://localhost:3000/images/Productos/${ product.imagen_2}`,
-                image_3: `http://localhost:3000/images/Productos/${ product.imagen_3}`
+                image_1: `https://san-jose-reposteria.herokuapp.com/images/Productos/${ product.imagen_1}`,
+                image_2: `https://san-jose-reposteria.herokuapp.com/images/Productos/${ product.imagen_2}`,
+                image_3: `https://san-jose-reposteria.herokuapp.com/images/Productos/${ product.imagen_3}`
             }
 
             const ProductRelation = ["categorias"];
