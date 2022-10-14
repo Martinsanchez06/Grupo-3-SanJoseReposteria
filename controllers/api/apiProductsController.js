@@ -6,8 +6,24 @@ const apiProductsController = {
 
         try {
             const productsFromDB = await db.Producto.findAll({ include: { association: "categorias" } });
+            
+            const categoriasFromDB = await db.Categoria.findAll({
+                include : { 
+                    all: true,
+                    nested: true 
+                }
+            });
 
             const totalProducts = productsFromDB.length;
+
+            
+            const totalCategorias = categoriasFromDB.map(categoria => {
+                const totalDeProductos = productsFromDB.filter(producto => producto.categoria_id === categoria.idCategorias)
+                return {
+                    categoria: categoria.categoria,
+                    productos: totalDeProductos.length,
+                }
+            })
 
             const productsDetail = productsFromDB.map(product => {
                 return {
@@ -23,6 +39,7 @@ const apiProductsController = {
             if (productsFromDB) {
                 res.status(200).json({
                     "count": totalProducts,
+                    "countByCategory": totalCategorias,
                     "data": productsDetail,
                     "status": 200,
                     "msg": "Melo",
