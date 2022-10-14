@@ -13,7 +13,8 @@ const apiUsuariosController = {
                     id: usuario.idUsuarios,
                     name: usuario.nombre,
                     email: usuario.email,
-                    detail: `https://san-jose-reposteria.herokuapp.com/api/usuarios/${ usuario.idUsuarios }`
+                    detail: `https://san-jose-reposteria.herokuapp.com/api/usuarios/${ usuario.idUsuarios }`,
+                    avatar: `https://san-jose-reposteria.herokuapp.com/images/avatars/${ usuario.avatar}`
                 }
             });
 
