@@ -94,7 +94,6 @@
   line-height: 1;
   white-space: normal;
   transition: all .3s ease-in-out;
-  margin-bottom: 10px;
   font-size: 13px;
   padding: 10px 24px;
   white-space: nowrap;
@@ -127,6 +126,7 @@
   text-align: center !important;
   font-size: 12px;
   margin-top: 8px;
+  margin-bottom: 10px;
 }
 
 #costumer-links p {
@@ -394,6 +394,24 @@ div {
 .btn-agregar:hover {
   background-color: #8CC0DE;
   color: #FFFFFF;
+}
+
+.ctLink {
+  text-decoration: none;
+  color: #000;
+  transition: .7s;
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctLink:hover{
+  padding: 8px;
+  margin-top: -10px;
+  background-color: #3c7d8f;
+  color: #fff;
+  border-radius:20px;
 }
 
 .section-nuestrac {

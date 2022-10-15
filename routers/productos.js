@@ -54,8 +54,6 @@ router.get("/editarProduct/:id", userMiddleware, productController.editarFormula
 
 router.get("/lista", productController.list);
 
-router.get("/listaAdmin", userMiddleware , productController.listAdmin);
-
 router.get("/detail/:id", productController.singleDetail);
 
 router.get("/resultado", productController.search);

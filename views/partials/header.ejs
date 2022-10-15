@@ -9,12 +9,8 @@
 
     <ul class="nav-tabs">
       <li><a class="nav-icons" href="/">Inicio</a></li>
-      <% if (locals.usuarioAdmin) { %>
-        <li><a class="nav-icons" href="/productos/listaAdmin">Tortas y postres Admin</a></li>
-        <% } else { %>
-          <li><a class="nav-icons" href="/productos/lista">Tortas y postres</a></li>
-          <% } %>
-            <li><a class="nav-icons" href="#contactanos">Contáctanos</a></li>
+      <li><a class="nav-icons" href="/productos/lista">Tortas y postres</a></li>
+      <li><a class="nav-icons" href="#contactanos">Contáctanos</a></li>
     </ul>
 
 
@@ -41,7 +37,7 @@
                 <a href="/user/opcionesAdmin" class="btn-test">Opciones admin</a>
               </p>
               <p class="text-center">
-                <a href="/user/logout/" class="register ctLink">Salir</a>
+                <a href="/user/logout/" class="register ctLink">Cerrar sesion</a>
               </p>
             </div>
           </div>
@@ -86,7 +82,7 @@
                   <a href="/user/perfil" class="btn-test">Mi cuenta</a>
                 </p>
                 <p class="text-center">
-                  <a href="/user/logout/" class="register ctLink">Salir</a>
+                  <a href="/user/logout/" class="register ctLink">Cerrar sesion</a>
                 </p>
               </div>
             </div>
@@ -133,9 +129,9 @@
                   <p>
                     <a href="/user/login" class="btn-test">Login</a>
                   </p>
-                  <p class="text-center">
-                    Usuario Nuevo?
-                    <a href="/user/registro" class="register ctLink">Registrate ahora</a>
+                  <p>
+                    <p class="text-center">Usuario Nuevo?</p> 
+                    <a href="/user/registro" class="text-center register ctLink">Registrate ahora</a>
                   </p>
                 </div>
               </div>

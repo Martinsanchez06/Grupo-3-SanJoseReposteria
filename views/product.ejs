@@ -1,29 +1,26 @@
--admin<article class="card-admin">
-    <div class="card-left-admin">
+<article class="card">
+    <div class="card-up">
         <figure>
             <img src="/images/Productos/<%= productos.imagen_1 %>" alt="">
         </figure>
-
-        <h3><%= productos.idProductos %></h3>
-
     </div>
-    <div class="card-content-admin">
+    <div class="card-content">
         
-        <h3 class="h3-product-admin"><%= productos.nombre %></h3>
+        <h3 class="h3-product"><%= productos.nombre %></h3>
 
-        <p class="p-product-admin">precio: <span><%= productos.precio %></span></p>
+        <p class="p-product">precio: <span><%= productos.precio %></span></p>
 
-        <p class="p-product-admin">Tamaño: <span><%= productos.tamaño %></span></p>
+        <p class="p-product">Tamaño: <span><%= productos.tamaño %></span></p>
 
-        <div class="ver-detalle-admin">
+        <div class="ver-detalle">
 
-            <a class="ver-detalle-a-admin" href="/productos/editarProduct/<%= productos.idProductos %>">Editar</a>
+            <a class="ver-detalle" href="/productos/editarProduct/<%= productos.idProductos %>">Editar</a>
 
 
         </div>
 
-        <div class="ver-detalle-admin">
-            <a class="ver-detalle-a-admin" href="/productos/detail/<%= productos.idProductos %>">Ver detalle</a>
+        <div class="ver-detalle">
+            <a class="ver-detalle" href="/productos/detail/<%= productos.idProductos %>">Ver detalle</a>
         </div> 
     </div>
 

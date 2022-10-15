@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("partials/head.ejs") %> 
+<%- include("partials/head.ejs", {title: 'Lista de productos' }) %>
 
-<body>
-    <!--Header-->
-    <%- include("partials/header.ejs") %>
+    <body>
+        <!--Header-->
+        <%- include("partials/header.ejs") %>
 
-    <!--Main-->
-    <div class="listaUsuario">
-        <% productos.forEach(productos => { %>
-            <%- include("productoUsuario.ejs", {productos : productos}) %>
-        <% }) %> 
-    </div>
+            <!--Main-->
+            <div class="lista">
+                <% if (locals.usuarioAdmin) { %>
+                    <% productos.forEach(productos=> { %>
+                        <%- include("product.ejs", {productos : productos}) %>
+                            <% }) %>
+                                <% } else { %>
+                                    <% productos.forEach(productos=> { %>
+                                        <%- include("productoUsuario.ejs", {productos : productos}) %>
+                                            <% }) %>
+                                                <% } %>
+            </div>
 
 
-    <!--Footer-->
-    <%- include("partials/footer.ejs") %>
+            <!--Footer-->
+            <%- include("partials/footer.ejs") %>
 
-</body>
+    </body>
 
 </html>
