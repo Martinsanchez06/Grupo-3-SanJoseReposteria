@@ -337,11 +337,48 @@ div {
   height: 25vh;
 }
 
+.anterior, .siguiente {
+  position:absolute;
+  width: 50px;
+	height: 50px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	color: #3c7d8f;
+	opacity: 50%;
+  font-size: 2em;
+  border-radius: 10%;
+  background: none;
+}
+
+.anterior{
+  left: 0%;
+  z-index: 1;
+}
+
+.siguiente{
+  right: 0%;
+}
+
+.anterior:hover,
+.siguiente:hover {
+	opacity: 100%;
+}
+
+.div-product-contain {
+  display: flex;
+  justify-content: space-between ;
+  position: relative;
+  
+}
 .product-contain {
   margin-top: 20px;
-  width: 100%;
+  width: 200px;
   display: flex;
   justify-content: center;
+  margin: 20px;
 
 }
 
@@ -357,6 +394,11 @@ div {
   border-radius: 20px;
   border-color: #e4f0f3;
   height: 100%;
+}
+
+.product-home {
+  width: 100px;
+  
 }
 
 .div-img-home {
@@ -576,6 +618,12 @@ button {
 
 .contain-main {
   min-height: 90vh;
+  position: relative;
+}
+
+.contain-main-home {
+  min-height: 90vh;
+  position: relative;
 }
 
 /* ESTILOS DE MAIN DE CARRITO DE COMPRAS */
@@ -1442,6 +1490,8 @@ p {
   .product-contain {
     display: inline-block;
     width: auto;
+    display: flex;
+    justify-content: center;
   }
 
   .product-contain .product-home {
@@ -1698,6 +1748,8 @@ p {
   .product-contain {
     display: inline-block;
     width: auto;
+    display: flex;
+    justify-content: center;
   }
 
   .product-contain .product-home {
@@ -1754,6 +1806,15 @@ p {
     min-height: 90vh;
     margin-top: 100px;
     margin-bottom: 100px;
+  }
+
+  .contain-main-home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+    margin-top: 100px;
+    margin-bottom: 0px;
   }
 
   .div-desktop {
