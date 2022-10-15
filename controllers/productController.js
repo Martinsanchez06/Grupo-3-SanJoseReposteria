@@ -87,13 +87,13 @@ const productController = {
             })
 
     },
-    // listAdmin: (req, res) => {
-    //     db.Producto.findAll()
-    //         .then(function (productos) {
-    //             res.render("listadoProductos", { productos: productos })
-    //         })
+    listAdmin: (req, res) => {
+        db.Producto.findAll()
+            .then(function (productos) {
+                res.render("listadoProductosAdmin", { productos: productos })
+            })
 
-    // },
+    },
     singleDetail: (req, res) => {
         db.Producto.findByPk(req.params.id, {
             include: [{ association: 'categorias' }]

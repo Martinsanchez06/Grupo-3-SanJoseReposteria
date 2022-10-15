@@ -20,10 +20,11 @@
     <%- include("partials/header.ejs") %>
 
     <!--Main-->
-
-        <% productos.forEach(productos => { %>
-            <%- include("productoUsuario.ejs", {productos : productos}) %>
-        <% }) %> 
+        
+            
+            <% productos.forEach(productos => { %>
+                <%- include("product.ejs", {productos : productos}) %>
+            <% }) %> 
 
 
 

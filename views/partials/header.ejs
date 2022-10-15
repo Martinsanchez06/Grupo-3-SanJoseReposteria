@@ -9,8 +9,12 @@
 
     <ul class="nav-tabs">
       <li><a class="nav-icons" href="/">Inicio</a></li>
-      <li><a class="nav-icons" href="/productos/lista">Tortas y postres</a></li>
-      <li><a class="nav-icons" href="#contactanos">Contáctanos</a></li>
+      <% if (locals.usuarioAdmin) { %>
+        <li><a class="nav-icons" href="/productos/listaAdmin">Tortas y postres Admin</a></li>
+        <% } else { %>
+          <li><a class="nav-icons" href="/productos/lista">Tortas y postres</a></li>
+          <% } %>
+            <li><a class="nav-icons" href="#contactanos">Contáctanos</a></li>
     </ul>
 
 
@@ -63,7 +67,7 @@
             </div>
           </div>
         </div>
-        <% } else { %>
+        <% } else if (locals.isLogged) { %>
           <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
           <div class="search">
             <a class="search-link" href="#"><i id="search-icon" class="fas fa-search"></i></a>
@@ -79,11 +83,10 @@
             <div id="settingsBox" class="settingsBox">
               <div id="costumer-links">
                 <p>
-                  <a href="/user/login" class="btn-test">Login</a>
+                  <a href="/user/perfil" class="btn-test">Mi cuenta</a>
                 </p>
                 <p class="text-center">
-                  Usuario Nuevo?
-                  <a href="/user/registro" class="register ctLink">Registrate ahora</a>
+                  <a href="/user/logout/" class="register ctLink">Salir</a>
                 </p>
               </div>
             </div>
@@ -109,7 +112,56 @@
               </div>
             </div>
           </div>
-          <% } %>
+
+          <% } else { %>
+
+            <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+            <div class="search">
+              <a class="search-link" href="#"><i id="search-icon" class="fas fa-search"></i></a>
+              <div class="container-search">
+                <form action="/productos/resultado" method="GET">
+                  <input type="search" name="search" class="input-search" id="input-search" value=""
+                    placeholder="Buscar">
+
+                </form>
+              </div>
+            </div>
+            <div class="nav-right">
+              <a href="#" class="hdicon"><i class="fas fa-user-circle"></i></a>
+              <div id="settingsBox" class="settingsBox">
+                <div id="costumer-links">
+                  <p>
+                    <a href="/user/login" class="btn-test">Login</a>
+                  </p>
+                  <p class="text-center">
+                    Usuario Nuevo?
+                    <a href="/user/registro" class="register ctLink">Registrate ahora</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <li><a class="nav2-link bars" href='#'><i class="fas fa-bars"></i></a></li>
+            <div id="menuBox" class="menuBox">
+              <div id="menuBoxLinks">
+                <div class="rightSideMenu">
+                  <a href="#" class="popOutButton"><i class="fas fa-window-close"></i></a>
+                </div>
+                <div class="leftSideMenu">
+                  <ul class="boxLinksUl">
+                    <li>
+                      <a href="/">Inicio</a>
+                    </li>
+                    <li>
+                      <a href="/productos/lista">productos</a>
+                    </li>
+                    <li>
+                      <a href="#contactanos">contactanos</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <% } %>
     </ul>
   </nav>
   <script src="/js/headerStyles.js"></script>
