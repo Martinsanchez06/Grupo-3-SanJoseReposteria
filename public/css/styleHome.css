@@ -562,60 +562,6 @@ button {
 
 /* ESTILOS DE MAIN DE CARRITO DE COMPRAS */
 
-/*@media only screen and (min-width: 834px) {
-
-  .producto-content {
-    display: flex;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 20px;
-
-  }
-
- /* .div-img-producto-carrito-de-compras {
-    display: flex;
-    margin-right: 15px;
-    margin-left: 5%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    height: 435px;
-  }
-*/
-
-  /*.card-left {
-    display: flex;
-    margin-right: 15px;
-    margin-left: 5%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    padding: 1% 1%;
-    background-color: #00a8a8;
-    color: white;
-    text-align: center;
-  
-    border-radius: 25px;
-  }
-  
-  .card-left figure {
-    height: 39vh;
-    width: 210px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: white;
-  }
-  
-  .card-left figure img {
-    width: 100%;
-  }
-*/
-
-
-
 .main-carrito-de-compras {
   border: solid 2px rgb(236, 236, 236);
   background-color: #f1f1f1ad;
@@ -1271,88 +1217,7 @@ p {
 
 
 
-/* PARCIAL DE LISTADO DE PRODUCTOS */
 
-.card {
-  display: flex;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 20px;
-}
-
-.card-left {
-  display: flex;
-  margin-right: 15px;
-  margin-left: 5%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  padding: 1% 1%;
-  background-color: #00a8a8;
-  color: white;
-  text-align: center;
-
-  border-radius: 25px;
-}
-
-.card-left figure {
-  height: 39vh;
-  width: 210px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: white;
-}
-
-.card-left figure img {
-  width: 100%;
-}
-
-.card-content {
-  width: 70%;
-  padding: 1rem;
-  background-color: #E6E6E6;
-  border-radius: 25px;
-  margin-right: 5%;
-}
-
-.ver-detalle {
-  background-color: #3c7d8f;
-  color: #ffffff;
-  text-decoration: none;
-  width: 100px;
-  height: 27px;
-  margin-top: 16px;
-  margin-left: 15px;
-  border-radius: 6px;
-  border: none;
-  text-align: center;
-  transition:
-    background-color, 0.5s color, 0.5s;
-}
-
-.ver-detalle-a {
-  background-color: #3c7d8f;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  width: 80px;
-  height: 30px;
-  margin-top: 80px;
-  border-radius: 6px;
-  border: none;
-  transition:
-    background-color, 0.5s color, 0.5s;
-}
-
-.h3-product {
-  margin-left: 15px;
-}
-
-.p-product {
-  margin-top: 8px;
-}
 
 /* ----- DETAIL ----- */
 
@@ -1801,57 +1666,6 @@ p {
   }
 }
 
-/* ----- PRODUCT MEDIA QUERY ----- */
-
-@media only screen and (min-width: 0px) and (max-width: 492px) {
-  .card{
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-content{
-    margin-top:20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .card-left {
-    margin: auto;
-    width: 70vw;
-    height: 40vh;
-  }
-
-  .card-left figure {
-    width: 70%;
-    height: 80%;
-    margin-bottom: 15px;
-  }
-}
-
-@media only screen and (min-width: 492px) and (max-width: 718px) {
-  .card{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card-left {
-    margin: auto;
-    width: 60vw;
-    height: 50vh;
-  }
-
-  .card-left figure {
-    width: 70%;
-    height: 75%;
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-
-  .card-content{
-    margin-top:20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 /* -Containes 1100 px- */
 @media only screen and (min-width: 768px) {
