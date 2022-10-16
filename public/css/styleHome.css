@@ -114,6 +114,8 @@
 .btn-test {
   transition:
     background-color, 0.5s color, 0.5s;
+    margin-bottom: 10px;
+
 }
 
 .btn-test:hover {
@@ -1318,8 +1320,8 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  height: 570px;
-  width: 450px;
+  height: 70vh;
+  width: 70vw;
   box-shadow: #000000 1px;
   margin-left: auto;
   object-fit: cover;
@@ -1668,6 +1670,10 @@ p {
     justify-content: space-between;
   }
 
+  .img-usuario {
+    width: 30vw;
+  }
+
   .div-img-footer {
     display: flex;
     margin-left: 2%;
@@ -1979,7 +1985,6 @@ p {
     text-transform: uppercase;
     line-height: 1;
     white-space: normal;
-    margin-bottom: 10px;
     transition: all .3s ease-in-out;
     font-size: 13px;
     padding: 10px 24px;
