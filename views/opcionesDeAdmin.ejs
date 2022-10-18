@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("partials/head.ejs", {title: 'Opciones de admin'}) %> 
+<%- include("partials/head.ejs", {title: 'Opciones de admin' }) %>
 
 
-<body>
+    <body>
 
-    <!-- Header -->
-    <%- include("partials/header.ejs") %>
+        <!-- Header -->
+        <%- include("partials/header.ejs") %>
 
-        <!-- Main -->
-        <main class="mainAdmin">
-            <h1>Bienvenido a las opciones de administrador</h1>
+            <!-- Main -->
+            <main class="mainAdmin">
+                <h1>Bienvenido a las opciones de administrador</h1>
 
-            <a href="/productos/lista">Lista de productos</a>
-        </main>
-
-
-        <!-- Footer -->
-        <%- include("partials/footer.ejs") %>
+                <a href="/productos/lista">Lista de productos</a> 
+                <a href="/productos/createProduct">Creación de productos</a>
+            </main>
 
 
+            <!-- Footer -->
+            <%- include("partials/footer.ejs") %>
 
-</body>
+
+
+    </body>
 
 </html>
