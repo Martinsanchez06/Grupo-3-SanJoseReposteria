@@ -72,7 +72,7 @@ const productController = {
                 let categoriaDelProducto = db.Categoria.findAll();
                 Promise.all([productoEncontrado, categoriaDelProducto])
                     .then(function ([productos, categorias]) {
-                        res.render("createProduct", { productos, categorias});
+                        res.render("createProduct", { productos, categorias });
                     })
                 console.log(errors);
             }
@@ -125,10 +125,18 @@ const productController = {
             })
     },
     delete: (req, res) => {
-        db.Producto.destroy({
-            where: { idProductos: req.params.id }
-        })
-        res.render('listadoProductos', { "productos": productos })
+        try {
+            db.Producto.destroy({
+                where: { idProductos: req.params.id }
+            })
+            .then(function (productos) {
+                res.render("listadoProductos", { productos: productos })
+                console.log(req.params.id);
+            })
+        } catch (error) {
+
+        }
+
     },
     search: (req, res) => {
 
