@@ -30,6 +30,7 @@ const apiProductsController = {
                     id: product.idProductos,
                     name: product.nombre,
                     description: product.descripcion,
+                    imagen: product.imagen_1,
                     category: product.categoria_id,
                     detail: `https://san-jose-reposteria.herokuapp.com/productos/productdetail/${ product.idProductos }`,
                     allProductDetails: `https://san-jose-reposteria.herokuapp.com/api/productDetail/${ product.idProductos }`
