@@ -29,7 +29,6 @@ const apiProductsController = {
                 return {
                     id: product.idProductos,
                     name: product.nombre,
-                    imagen: product.imagen_1,
                     description: product.descripcion,
                     category: product.categoria_id,
                     detail: `https://san-jose-reposteria.herokuapp.com/productos/productdetail/${ product.idProductos }`,
@@ -66,6 +65,7 @@ const apiProductsController = {
             const productData = {
                 id: product.idProductos,
                 name: product.nombre,
+                imagen: product.imagen_1,
                 category: product.categoria_id,
                 price: product.precio,
                 description: product.descripcion,
