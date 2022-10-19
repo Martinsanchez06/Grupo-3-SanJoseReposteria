@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("partials/head.ejs", {title: 'Perfil de usuario'}) %> 
+<%- include("partials/head.ejs", {title: 'Perfil de usuario' }) %>
 
 
-<body>
-    <!-- Header -->
-    <%- include("partials/header.ejs") %>
+    <body>
+        <!-- Header -->
+        <%- include("partials/header.ejs") %>
+            <div class="content">
+                <section class="usuario-content">
+                    <div>
 
-        <section class="usuario-content">
-            <div>
+                        <h1 class="nombre-usuario">Bienvenido: <%= user.nombre %>
+                        </h1>
 
-                <h1 class="nombre-usuario">Bienvenido: <%= user.nombre %></h1>
+                    </div>
+                    <div>
 
+                        <img class="img-usuario" src="/images/avatars/<%= user.avatar %>">
+
+                    </div>
+                    <div class="email-div">
+                        <p class="email-usuario">email: <%= user.email %>
+                        </p>
+                    </div>
+                </section>
+                <% if (locals.isLogged && locals.usuarioAdmin) { %>
+
+                    <div class="button-formUser">
+                        <a href="editarUsuario/<%= user.idUsuarios %>">EDITAR USUARIO</a>
+                    </div>
+
+                    <form class="form-delete" action="?_method=DELETE" method="POST">
+                        <div class="button-formc3">
+                            <input class="input-form" type="submit" name="delete" value="ELIMINAR USUARIO">
+                        </div>
+                        <% } %>
+                    </form>
             </div>
-            <div>
 
-                <img class="img-usuario" src="/images/avatars/<%= user.avatar %>">
 
-            </div>
-            <div class="email-div">
-                <p class="email-usuario">email: <%= user.email %></p>
-            </div>
-        </section>
+            <!-- Footer -->
+            <%- include("partials/footer.ejs") %>
 
-        <div class="button-formUser">
-            <a href="editarUsuario/<%= user.idUsuarios %>">EDITAR USUARIO</a>
-        </div>
-
-        <form class="form-delete" action="?_method=DELETE" method="POST">
-            <div class="button-formc3">
-                <input class ="input-form"type="submit" name="delete" value="ELIMINAR USUARIO">
-            </div>
-        </form>
-        
-
-        <!-- Footer -->
-        <%- include("partials/footer.ejs") %>
-
-</body>
+    </body>
 
 </html>
