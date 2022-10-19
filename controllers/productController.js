@@ -19,9 +19,9 @@ const productController = {
             })
     },
     carritoCompras: (req, res) => {
-        db.Usuario.findAll()
-            .then(function (usuarios) {
-                res.render("carritoDeCompras", { usuarios })
+        db.Producto.findAll()
+            .then(function (productos) {
+                res.render("carritoDeCompras", { productos })
             })
     },
 

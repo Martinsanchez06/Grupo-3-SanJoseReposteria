@@ -670,95 +670,9 @@ button {
 
 /* ESTILOS DE MAIN DE CARRITO DE COMPRAS */
 
-.main-carrito-de-compras {
-  border: solid 2px rgb(236, 236, 236);
-  background-color: #f1f1f1ad;
-  min-height: 90vh;
-  border-radius: 20px;
-  width: 90%;
-  margin: 16px auto;
-  margin-bottom: 20px;
-  padding-left: 3px;
-  padding-bottom: 10px;
-}
-
-.producto-content {
-  border-radius: 8px;
-  margin: 20px auto;
-  width: 95%;
-}
-
-.h3-carrito-de-compras-1 {
-  padding-top: 15px;
-}
-
-.h3-carrito-de-compras {
-  border-radius: 15px;
-  justify-content: center;
-  height: 26px;
-  font-weight: 20px;
-  margin: auto;
-  color: #2c2c2c;
-  width: 93%;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.titles-carrito-de-compras {
-  display: flex;
-  justify-content: space-around;
-}
-
-p {
-  padding-left: 15px;
-}
-
-
-.p1-carrito-de-compras {
-  font-weight: bold;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.p2-carrito-de-compras,
-.p3-carrito-de-compras {
-  font-weight: bold;
-}
-
-.div-img-producto-carrito-de-compras {
-  margin: 10px auto;
-  width: 80%;
-  height: 435px;
-}
-
-
-.img-producto-carrito-de-compras {
-  border-radius: 3px;
-  height: 100%;
-  width: 100%;
-}
-
-
-
-.descripcion-producto-carrito-de-compras {
-  margin: 10px 15px;
-  width: 390px;
-}
-
-.p-precio {
-  margin: 10px 0px;
-}
-
-.btn-CDC {
-  border: solid 1px #0886a5;
-  color: #f3f3f3;
-  margin: 10px;
-  width: 200px;
-  margin: 10px;
-  height: 30px;
-  border-radius: 10px;
-  background-color: #0886a5;
-  font-weight: bold;
+.ver-detalle-carrito {
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer-main-carrito-de-compras {
