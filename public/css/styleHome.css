@@ -1535,7 +1535,7 @@ p {
 
   .item-right {
     /*width: 50%;*/
-    padding-right: 50%;
+    /*padding-right: 50%;*/
     padding-top: 10%;
   }
 
@@ -2048,7 +2048,7 @@ p {
   .item-right {
     align-items: flex-start;
     width: 50%;
-    padding-right: 50%;
+    /*padding-right: 50%;*/
     padding-left: 30px;
     padding-top: 35px;
   }

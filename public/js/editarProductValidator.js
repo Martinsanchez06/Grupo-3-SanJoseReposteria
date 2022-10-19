@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const categorySelect = document.getElementById("category");
     const descriptionInput = document.getElementById("description");
 
-    let allDocumentFields = [nameInput, priceInput, image1, image2, image3, sizeInput, categorySelect, descriptionInput];
+    let allDocumentFields = [nameInput, priceInput, sizeInput, categorySelect, descriptionInput];
 
     let imageFields = [image1, image2, image3];
 
@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         }
 
-        imageFields.forEach(element => {
+        /*imageFields.forEach(element => {
             if (element.value) {
                 if (!allowedExtentions.exec(element.value)) {
                     errorsArray.push(`El campo ${element.name} debe tener una extensión válida como: .jpg, .jpeg, .png o .gif`);
     
                 }
             }
-        });
+        });*/
 
         if (descriptionInput.value) {
             if (descriptionInput.value.length < 20) {
