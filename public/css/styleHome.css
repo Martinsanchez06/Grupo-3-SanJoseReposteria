@@ -1376,21 +1376,27 @@ p {
 }
 
 .mainAdmin div {
-  margin-top: 20px;
+  margin-top: 50px;
 }
+
+#adminList {
+  height: 70px;
+}
+
 
 .mainAdmin .adminList {
   background-color: #3c7d8f;
   color: #ffffff;
-  width: 300px;
-  height: 70px;
+  font-size: 30px;
+  padding: 10px;
+  text-decoration: none;
   text-align: center;
-  font-size: 15px;
-  border-radius: 20px;
+  border-radius: 30px;
   border: none;
   transition:
     background-color, 0.5s color, 0.5s;
 }
+
 
 .adminList:hover {
   background-color: #8CC0DE;
@@ -1400,11 +1406,11 @@ p {
 .mainAdmin .adminCreate {
   background-color: #3c7d8f;
   color: #ffffff;
-  width: 300px;
-  height: 200px;
+  font-size: 30px;
+  padding: 10px;
+  text-decoration: none;
   text-align: center;
-  font-size: 15px;
-  border-radius: 20px;
+  border-radius: 30px;
   border: none;
   transition:
     background-color, 0.5s color, 0.5s;
