@@ -1187,7 +1187,7 @@ button {
   transition: background-color, 0.5s color, 0.5s;
 }
 
-.button-formc2 button {
+.button-formc2 input {
   background-color: #FFA500;
   color: #000000;
   width: 200px;
