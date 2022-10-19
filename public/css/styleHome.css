@@ -118,7 +118,7 @@
 .btn-test {
   transition:
     background-color, 0.5s color, 0.5s;
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
 }
 
@@ -180,6 +180,7 @@
 .nav-right .hdicon {
   align-items: center;
 }
+
 .nav-tabs2 li {
   align-items: center;
   display: flex;
@@ -249,11 +250,12 @@ div {
 }
 .search {
   /*margin-right: 30px;*/
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 /*#check-buscar {
   display: none;
 }*/
@@ -284,8 +286,13 @@ div {
 }*/
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .menuBox {
@@ -314,7 +321,7 @@ div {
 .active2 {
   visibility: visible;
   opacity: 1;
-  top: 0%; 
+  top: 0%;
 }
 
 #menuBoxLinks {
@@ -328,18 +335,19 @@ div {
   font-size: 15px;
 
 }
+
 .fa-window-close {
   color: #343233;
 }
 
 .boxLinksUl {
   list-style: none;
-  
+
 }
 
 .boxLinksUl li {
   margin-top: 12px;
-  
+
 }
 
 .boxLinksUl a {
@@ -358,42 +366,44 @@ div {
   height: 25vh;
 }
 
-.anterior, .siguiente {
-  position:absolute;
+.anterior,
+.siguiente {
+  position: absolute;
   width: 50px;
-	height: 50px;
-	border: none;
-	top: calc(50% - 35px);
-	cursor: pointer;
-	line-height: 30px;
-	text-align: center;
-	color: #3c7d8f;
-	opacity: 50%;
+  height: 50px;
+  border: none;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  color: #3c7d8f;
+  opacity: 50%;
   font-size: 2em;
   border-radius: 10%;
   background: none;
 }
 
-.anterior{
+.anterior {
   left: 0%;
   z-index: 1;
 }
 
-.siguiente{
+.siguiente {
   right: 0%;
 }
 
 .anterior:hover,
 .siguiente:hover {
-	opacity: 100%;
+  opacity: 100%;
 }
 
 .div-product-contain {
   display: flex;
-  justify-content: space-between ;
+  justify-content: space-between;
   position: relative;
-  
+
 }
+
 .product-contain {
   margin-top: 20px;
   width: 200px;
@@ -419,7 +429,7 @@ div {
 
 .product-home {
   width: 100px;
-  
+
 }
 
 .div-img-home {
@@ -478,12 +488,12 @@ a.btn-agregar{
   margin-right: auto;
 }
 
-.ctLink:hover{
+.ctLink:hover {
   padding: 8px;
   margin-top: -10px;
   background-color: #3c7d8f;
   color: #fff;
-  border-radius:20px;
+  border-radius: 20px;
 }
 
 .section-nuestrac {
@@ -998,7 +1008,7 @@ p {
 .img-showcase {
   display: flex;
   width: 100%;
-  transition: all 0.5s ease; 
+  transition: all 0.5s ease;
 }
 
 .img-showcase img {
@@ -1387,7 +1397,56 @@ p {
 
 .mainAdmin {
   min-height: 100vh;
+  text-align: center;
 }
+
+.mainAdmin div {
+  margin-top: 50px;
+}
+
+#adminList {
+  height: 70px;
+}
+
+
+.mainAdmin .adminList {
+  background-color: #3c7d8f;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 30px;
+  border: none;
+  transition:
+    background-color, 0.5s color, 0.5s;
+}
+
+
+.adminList:hover {
+  background-color: #8CC0DE;
+  color: #FFFFFF;
+}
+
+.mainAdmin .adminCreate {
+  background-color: #3c7d8f;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 30px;
+  border: none;
+  transition:
+    background-color, 0.5s color, 0.5s;
+}
+
+.adminCreate:hover {
+  background-color: #8CC0DE;
+  color: #FFFFFF;
+}
+
+
 
 
 
@@ -1434,7 +1493,7 @@ p {
     width: 30%;
   }*/
 
-  
+
 
   .fa-user-circle {
     margin-right: 10px;
@@ -1448,6 +1507,7 @@ p {
     display: inline-block;
     font-size: 29px;
   }
+
   .fa-search a {
     text-decoration: none;
   }
@@ -1949,7 +2009,8 @@ p {
     text-decoration: none;
   }
 
-  .fa-user-circle, .fa-search {
+  .fa-user-circle,
+  .fa-search {
     margin-left: 25px;
   }
 
@@ -2067,7 +2128,7 @@ p {
 
   .product-detail {
     display: flex;
-    
+
   }
 
   .item-right {
@@ -2092,7 +2153,8 @@ p {
   .div-big-img a {
     width: 50px;
   }
-/* 
+
+  /* 
   .div-big-img a .big-img {
     position: relative;
     width: 300px;

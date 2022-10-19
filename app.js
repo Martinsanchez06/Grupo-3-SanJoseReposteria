@@ -1,6 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const cookies = require("cookie-parser");
+const cors = require("cors")
 const rutasMain = require("./routers/main");
 const rutasProductos = require("./routers/productos");
 const rutasUser = require("./routers/user");
@@ -22,7 +23,7 @@ app.listen(port, () =>{
 });
 
 // --------MIDLEWARES--------
-
+app.use(cors())
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
