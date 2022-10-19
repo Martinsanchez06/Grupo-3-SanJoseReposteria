@@ -125,17 +125,17 @@ const productController = {
             })
     },
     delete: (req, res) => {
-        try {
-            db.Producto.destroy({
-                where: { idProductos: req.params.id }
-            })
-            .then(function (productos) {
-                res.render("listadoProductos", { productos: productos })
-                console.log(req.params.id);
-            })
-        } catch (error) {
 
-        }
+        db.Producto.destroy({
+            where: {
+                idProductos: req.params.id
+            }
+        })
+        db.Producto.findAll()
+            .then(function (productos) {
+                return  res.render("listadoProductos", { productos })
+            })
+
 
     },
     search: (req, res) => {
