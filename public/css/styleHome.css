@@ -1215,6 +1215,11 @@ button {
   transition: background-color, 0.5s color, 0.5s;
 }
 
+.img-card-up{
+  height: 20%;
+  object-fit: cover;
+}
+
 .button-formc3 .input-form:hover {
   background-color: #8CC0DE;
   color: #FFFFFF;
