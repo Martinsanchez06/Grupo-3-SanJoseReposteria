@@ -30,21 +30,6 @@
     background-color: rgb(239, 239, 239);
     border: 1px solid rgb(0, 255, 221);
 }
-
-.card-up {
-    margin-top: 10px;
-    background-color: #00a8a8;
-    width: 300px;
-    border-radius: 20px;
-    padding: 1rem;
-}
-
-.card-up figure img {
-    border-radius: 20px;
-    width: 100%;
-
-}
-
 .card-content {
     text-align: center;
     padding: 20px;
@@ -53,6 +38,15 @@
 
 .card-content p{
  margin-top: 15px;
+}
+
+
+.card-up figure img {
+    border-radius: 20px;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+
 }
 
 /* Boton de ver detalle */
@@ -129,6 +123,8 @@
 .card-up figure img {
     border-radius: 20px;
     width: 100%;
+    height: 60vh;
+    object-fit: cover;
 
 }
 
