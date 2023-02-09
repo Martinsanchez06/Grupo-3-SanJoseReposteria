@@ -1,5 +1,5 @@
-const { validationResult } = require('express-validator')
-const User = require("../models/User")
+const { validationResult } = require('express-validator');
+const User = require("../models/User");
 const bcryptjs = require('bcryptjs');
 const { clearCookie } = require('express/lib/response');
 const db = require("../src/database/models"); 
@@ -101,7 +101,7 @@ const userController = {
             
             if (usuarioParaCrear) {
                 let contraseñaCorrecta = bcryptjs.compareSync(req.body.password, usuarioParaCrear.password)
-                if (contraseñaCorrecta) {
+                 if (contraseñaCorrecta) {
                     req.session.usuarioLogueado = usuarioParaCrear;
                    
                     if (req.body.remember_user) {

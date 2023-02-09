@@ -49,7 +49,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             notNull: true
         }
-
     }
 
     let config = {
