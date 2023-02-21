@@ -40,16 +40,17 @@
 }
 
 
+
 .card-up figure img {
     width: 100%;
     height: 40vh;
     object-fit: cover;
-
 }
 
 /* Boton de ver detalle */
 
-.ver-detalle {
+.ver-detalle {  
+    width: 100%;
     border-radius: 10px;
     text-decoration: none;
     background-color: #0091AA;

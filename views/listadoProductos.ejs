@@ -11,13 +11,13 @@
             <div class="lista">
                 <% if (locals.usuarioAdmin) { %>
                     <% productos.forEach(productos=> { %>
-                        <%- include("product.ejs", {productos : productos}) %>
-                            <% }) %>
-                                <% } else { %>
-                                    <% productos.forEach(productos=> { %>
-                                        <%- include("productoUsuario.ejs", {productos : productos}) %>
-                                            <% }) %>
-                                                <% } %>
+                    <%- include("product.ejs", {productos : productos}) %>
+                    <% }) %>
+                <% } else { %>
+                    <% productos.forEach(productos=> { %>
+                    <%- include("productoUsuario.ejs", {productos : productos}) %>
+                    <% }) %>
+                <% } %>
             </div>
 
 
