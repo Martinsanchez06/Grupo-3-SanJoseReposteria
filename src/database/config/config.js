@@ -1,21 +1,21 @@
 module.exports = {
   "development": {
     "username": "freedb_mainUser",
-    "password": "4sbgP8EHUPzfTN!",
+    "password": "7QfH4G#HHdaJ?Vc",
     "database": "freedb_san_jose_reposteria",
     "host": "sql.freedb.tech",
     "dialect": "mysql"
   },
   "test": {
     "username": "freedb_mainUser",
-    "password": "4sbgP8EHUPzfTN!",
+    "password": "7QfH4G#HHdaJ?Vc",
     "database": "freedb_san_jose_reposteria",
     "host": "sql.freedb.tech",
     "dialect": "mysql"
   },
   "production": {
     "username": "freedb_mainUser",
-    "password": "4sbgP8EHUPzfTN!",
+    "password": "7QfH4G#HHdaJ?Vc",
     "database": "freedb_san_jose_reposteria",
     "host": "sql.freedb.tech",
     "dialect": "mysql"
