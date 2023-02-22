@@ -11,19 +11,19 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema mydb
 -- -----------------------------------------------------
 -- -----------------------------------------------------
--- Schema freedb_san_jose_reposteria
+-- Schema san_jose_reposteria
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema freedb_san_jose_reposteria
+-- Schema san_jose_reposteria
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `freedb_san_jose_reposteria` DEFAULT CHARACTER SET utf8 ;
-USE `freedb_san_jose_reposteria` ;
+CREATE SCHEMA IF NOT EXISTS `san_jose_reposteria` DEFAULT CHARACTER SET utf8 ;
+USE `san_jose_reposteria` ;
 
 -- -----------------------------------------------------
--- Table `freedb_san_jose_reposteria`.`categorias`
+-- Table `san_jose_reposteria`.`categorias`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `freedb_san_jose_reposteria`.`categorias` (
+CREATE TABLE IF NOT EXISTS `san_jose_reposteria`.`categorias` (
   `idCategorias` INT(11) NOT NULL,
   `categoria` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idCategorias`))
@@ -32,9 +32,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `freedb_san_jose_reposteria`.`productos`
+-- Table `san_jose_reposteria`.`productos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `freedb_san_jose_reposteria`.`productos` (
+CREATE TABLE IF NOT EXISTS `san_jose_reposteria`.`productos` (
   `idProductos` INT(10) NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
   `imagen_1` VARCHAR(200) NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `freedb_san_jose_reposteria`.`productos` (
   INDEX `categoria_id` (`categoria_id` ASC) VISIBLE,
   CONSTRAINT `categoria_id`
     FOREIGN KEY (`categoria_id`)
-    REFERENCES `freedb_san_jose_reposteria`.`categorias` (`idCategorias`)
+    REFERENCES `san_jose_reposteria`.`categorias` (`idCategorias`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -57,9 +57,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `freedb_san_jose_reposteria`.`usuarios`
+-- Table `san_jose_reposteria`.`usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `freedb_san_jose_reposteria`.`usuarios` (
+CREATE TABLE IF NOT EXISTS `san_jose_reposteria`.`usuarios` (
   `idUsuarios` INT(11) NOT NULL AUTO_INCREMENT,
   `numeroID` VARCHAR(200) NOT NULL,
   `nombre` VARCHAR(200) NOT NULL,
