@@ -33,7 +33,7 @@ module.exports= (sequelize, dataTypes) => {
             notNull: true
         },
         descripcion: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(200),
             notNull: true
         },
         tamaño: {

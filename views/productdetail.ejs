@@ -1,141 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("partials/head.ejs", {title: 'Producto'}) %> 
+<%- include("partials/head.ejs", {title: 'Producto' }) %>
+  <script src="glider.js"></script>
 
-
-<body>
+  <body>
 
     <%- include("partials/header.ejs") %>
 
-        <!-- Main -->
+      <!-- Main -->
 
-        <div class="contain-mainPD">
-            <section class="product-detail">
-                <div class="item-left">
-                    <div class="products-imgs">
-                        <div class="img-display">
-                            <div class="img-showcase">
-                                <img  src="/images/Productos/<%= productos.imagen_1 %> " alt="cake">
-                                <img  src="/images/Productos/<%= productos.imagen_2 %>" alt="cake">
-                                <img  src="/images/Productos/<%= productos.imagen_3 %>" alt="cake">
-                            </div>
-                        </div>
-                        <div class="img-select">
-                            <div class="img-item">
-                                <a href="#" data-id="1">
-                                    <img  src="/images/Productos/<%= productos.imagen_1 %> " alt="cake">
-                                </a>
-                            </div>
-                            <div class="img-item">
-                                <a href="#" data-id="2">
-                                    <img  src="/images/Productos/<%= productos.imagen_2 %> " alt="cake">
-                                </a>
-                            </div>
-                            <div class="img-item">
-                                <a href="#" data-id="3">
-                                    <img  src="/images/Productos/<%= productos.imagen_3 %> " alt="cake">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="div-big-img">
-                        <a href=""><img class="big-img" src="/images/Productos/<%= productos.imagen_1 %> " alt=""></a>
+      <div class="justify-content-center contain-mainPD">
+        <section class="justify-content-center product-detail">
+          <div class="item-left">
+            <div class="products-imgs">
+              <div class="img-display">
+                <div class="img-showcase">
+                  <img src="/images/Productos/<%= productByPk.imagen_1 %> " alt="cake">
+                  <img src="/images/Productos/<%= productByPk.imagen_2 %>" alt="cake">
+                  <img src="/images/Productos/<%= productByPk.imagen_3 %>" alt="cake">
+                </div>
+              </div>
+              <div class="img-select">
+                <div class="img-item">
+                  <a href="#" data-id="1">
+                    <img src="/images/Productos/<%= productByPk.imagen_1 %> " alt="cake">
+                  </a>
+                </div>
+                <div class="img-item">
+                  <a href="#" data-id="2">
+                    <img src="/images/Productos/<%= productByPk.imagen_2 %> " alt="cake">
+                  </a>
+                </div>
+                <div class="img-item">
+                  <a href="#" data-id="3">
+                    <img src="/images/Productos/<%= productByPk.imagen_3 %> " alt="cake">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--<div class="div-big-img">
+                        <a href=""><img class="big-img" src="/images/Productos/<%= productByPk.imagen_1 %> " alt=""></a>
                     </div>
                     <div class="div-litle-imgs">
-                        <a href=""><img class="litle-img" src="/images/Productos/<%= productos.imagen_2 %>" alt=""></a>
-                        <a href=""><img class="litle-img" src="/images/Productos/<%= productos.imagen_3 %>" alt=""></a>
+                        <a href=""><img class="litle-img" src="/images/Productos/<%= productByPk.imagen_2 %>" alt=""></a>
+                        <a href=""><img class="litle-img" src="/images/Productos/<%= productByPk.imagen_3 %>" alt=""></a>
                     </div>-->
-                </div>
-                <div class="item-right">
-                    <div class="product-name">
-                        <h2>
-                            <%= productos.nombre %>
-                        </h2>
+          </div>
+          <div class="item-right">
+            <div class="product-name">
+              <h2 class="display-3">
+                <%= productByPk.nombre %>
+              </h2>
 
+            </div>
+            <div class=" div-description">
+              <p class="d-block">
+                <%= productByPk.descripcion %>
+              </p>
+            </div>
+            <div class="sizes">
+              <div class="circles-container">
+                <ul class="mb-0 p-0 ul-circle">
+                  <li class="li-cakesize">Pequeño</li>
+                  <li class="li-circle">
+                    <div class="circle">
+                      <a class="a-portion" href="#">
+                        <span>
+                          <span>4</span>
+                          <br>
+                          <span>Porciones</span>
+                        </span>
+                      </a>
                     </div>
-                    <div class="div-description">
-                        <p>
-                            <%= productos.descripcion %>
-                        </p>
+                  </li>
+                  <li class="li-price">
+                    <span>
+                      <span>$20.000</span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="circles-container">
+                <ul class="mb-0 p-0 ul-circle">
+                  <li class="li-cakesize">Mediano</li>
+                  <li class="li-circle">
+                    <div class="circle">
+                      <a class="a-portion" href="#">
+                        <span>
+                          <span>6 - 8</span>
+                          <br>
+                          <span>Porciones</span>
+                        </span>
+                      </a>
                     </div>
-                    <div class="sizes">
-                        <div class="circles-container">
-                            <ul class="ul-circle">
-                                <li class="li-cakesize">Pequeño</li>
-                                <li class="li-circle">
-                                    <div class="circle">
-                                        <a class="a-portion" href="#">
-                                            <span>
-                                                <span>4</span>
-                                                <br>
-                                                <span>Porciones</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="li-price">
-                                    <span>
-                                        <span>$20.000</span>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="circles-container">
-                            <ul class="ul-circle">
-                                <li class="li-cakesize">Mediano</li>
-                                <li class="li-circle">
-                                    <div class="circle">
-                                        <a class="a-portion" href="#">
-                                            <span>
-                                                <span>6 - 8</span>
-                                                <br>
-                                                <span>Porciones</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="li-price">
-                                    <span>
-                                        <span>$35.000</span>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="circles-container">
-                            <ul class="ul-circle">
-                                <li class="li-cakesize">Grande</li>
-                                <li class="li-circle">
-                                    <div class="circle">
-                                        <a class="a-portion" href="#">
-                                            <span>
-                                                <span>10 - 12</span>
-                                                <br>
-                                                <span>Porciones</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="li-price">
-                                    <span>
-                                        <span>$55.000</span>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
+                  </li>
+                  <li class="li-price">
+                    <span>
+                      <span>$35.000</span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="circles-container">
+                <ul class="mb-0 p-0 ul-circle">
+                  <li class="li-cakesize">Grande</li>
+                  <li class="li-circle">
+                    <div class="circle">
+                      <a class="a-portion" href="#">
+                        <span>
+                          <span>10 - 12</span>
+                          <br>
+                          <span>Porciones</span>
+                        </span>
+                      </a>
                     </div>
-                    <div class="div-add-button">
-                        <button class="add-button" type="submit">Agregar al Carrito</button>
+                  </li>
+                  <li class="li-price">
+                    <span>
+                      <span>$55.000</span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-100 div-add-button">
+              <button class="w-100 add-button" type="submit">AGREGAR AL CARRITO</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Slider -->
+      
+
+      <!--<div class="container text-center my-3">
+        <div class="row mx-auto my-auto justify-content-center">
+          <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <% products.forEach((product, i)=> { %>
+                <div class="carousel-item carousel-i ">
+                  <div class="col-md-3">
+                    <div class="card m-0">
+                      <div class="card-img">
+                        <img src="/images/Productos/<%= product.imagen_1 %>" class="img-fluid">
+                      </div>
+                      <div class="card-img-overlay">
+                        <%= product.idProductos %>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </section>
+                <% }); %>
+                  <div class="carousel-item active">
+                    <div class="col-md-3">
+                      <div class="card m-0">
+                        <div class="card-img">
+                          <img src="https://via.placeholder.com/700x500.png/CB997E/333333?text=1" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">Slide 1</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-img">
+                          <img src="https://via.placeholder.com/700x500.png/DDBEA9/333333?text=2" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">Slide 2</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-img">
+                          <img src="https://via.placeholder.com/700x500.png/FFE8D6/333333?text=3" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">Slide 3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-img">
+                          <img src="https://via.placeholder.com/700x500.png/B7B7A4/333333?text=4" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">Slide 4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-img">
+                          <img src="https://via.placeholder.com/700x500.png/A5A58D/333333?text=5" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">Slide 5</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-img">
+                          <img src="https://via.placeholder.com/700x500.png/6B705C/eeeeee?text=6" class="img-fluid">
+                        </div>
+                        <div class="card-img-overlay">Slide 6</div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+          </div>
         </div>
+      </div>-->
+      <div class="w-100 mt-5">
+        <h3 class="text-center display-5">Recomendados</h3>
+      </div>
+      <section class="d-flex justify-content-center mb-2">
+        <div class="contain-slider">
+        <button class="anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="div-product-contain">
+          <% products.forEach(product=> { %>
+            <div class="product-box">
+              <!-- Img container -->
+              <div class="p-img-container">
+                <div class="p-img">
+                  <a href="/productos/productdetail/<%= product.idProductos %>">
+                    <img class="p-img-front" src="/images/Productos/<%= product.imagen_1 %>" alt="product Img">
+                    <img class="p-img-back" src="/images/Productos/<%= product.imagen_2 %>" alt="product Img">
+                  </a>
+                </div>
+              </div>
+              <!-- Text -->
+              <div class="p-box-text">
+                <!-- Category -->
+                <div class="product-category">
+                  <span><%= product.categorias.categoria %></span>
+                </div>
+                <!-- Title -->
+                <a href="#" class="product-title">
+                  <%= product.nombre %>
+                </a>
+                <div class="price-buy">
+                  <span class="p-price">
+                    $<%= product.precio %>
+                  </span>
+                  <a href="#" class="p-buy-btn text-decoration-none"><i class="slider-cart fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          <% }) %>
 
-        <script src="/js/productDetailStyles.js"></script>
-        <!-- PIE DE PAGINA -->
+        </div>
+        <button class="siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+      <div role="tablist" class="indicadores mb-5"></div>
+      
 
-        <%- include("partials/footer.ejs") %>
+      
+      <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+      <script src="/js/productDetailStyles.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+      <!-- PIE DE PAGINA -->
 
-</body>
+      <%- include("partials/footer.ejs") %>
+
+  </body>
 
 </html>

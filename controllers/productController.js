@@ -11,12 +11,26 @@ const Op = db.Sequelize.Op;
 const productController = {
 
     detail: function (req, res) {
-        db.Producto.findByPk(req.params.id, {
+        const productByPk =  db.Producto.findByPk(req.params.id, {
             include: [{ association: 'categorias' }]
+        });
+
+        const allProducts = db.Producto.findAll(
+            {
+                include: [{ association: 'categorias' }],
+                where: {
+                    idProductos: {
+                        [Op.ne]: req.params.id
+                    }
+                }
+                
+            },
+            
+        );
+        Promise.all([productByPk, allProducts])
+        .then(function ([productByPk, products]) {
+            res.render("productdetail", { productByPk, products });
         })
-            .then(function (productos) {
-                res.render("productdetail", { productos })
-            })
     },
     carritoCompras: (req, res) => {
         db.Producto.findAll()
