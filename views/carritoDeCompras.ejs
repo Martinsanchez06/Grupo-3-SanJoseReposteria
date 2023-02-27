@@ -12,22 +12,57 @@
     <!-- MAIN -->
     <main>
       
-      <% if (locals.usuarioAdmin) { %>
-        <% productos.forEach(productos=> { %>
-            <%- include("product.ejs", {productos : productos}) %>
-                <% }) %>
-                    <% } else { %>
-                        <% productos.forEach(productos=> { %>
-                            <%- include("productCarrito.ejs", {productos : productos}) %>
-                                <% }) %>
-                                    <% } %>
+      <section class="d-flex w-100 cart-section-container">
+        <div class=" mt-2 d-flex flex-column align-items-center cart-list cart-inner-container">
+          <% let subTotal = 0 %>
+        <% if (!locals.usuarioAdmin) { %>
+          <% productos.forEach(productos=> { %>
+            <div class="d-flex justify-content-between mb-2 p-2 align-items-center">
+              <div class="w-100 d-flex align-items-center ">
+                <div class="cart-image-container me-2">
+                  <a class="w-100" href="#">
+                    <img class="w-100" src="/images/Productos/<%= productos.imagen_1 %>" alt="">
+                  </a>
+                </div>
+                <div class="w-75 cart-name-container">
+                  <p class="mb-0"><strong><%= productos.nombre %></strong></p>
+                </div>
+              </div>
+              <div class="w-100 d-flex justify-content-center align-items-center quantity-container">
+                <span>Cantidad</span>
+                <span class="d-flex quantity-input"><input class="rounded-pill" type="number" min="0" value="1"></span>
+              </div>
+              <div class="">
+                <p class="mb-0"><strong>$<%= productos.precio %></strong></p>
+              </div>
+              <div class="p-3 delete-btn-cart">
+                <button><i class="text-danger fa-solid fa-trash delete-from-cart"></i></button>
+              </div>
+            </div>
+          <% }) %>
+        <% } else { %>
+          <% productos.forEach(productos=> { %>
+          <% }) %>
+        <% } %>
+        </div>
+        <aside class="p-2 cart-aside">
+          <div class="w-100 p-3 shadow">
+            <span class="w-50 text-start">SUBTOTAL</span>
+            <span class="w-50 text-end">$<%= subTotal %></span>
+            <div class="w-100">
+              <p class="text-center">Gastos de envio y descuentos calculados al momento de pagar</p>
+              <button class="btn rounded-pill btn-success w-100">IR A PAGAR</button>
+            </div>
+          </div>
+        </aside>
+      </section>
 
-      <div class="footer-main-carrito-de-compras">
+      <!--<div class="footer-main-carrito-de-compras">
         <p class="h3-subtotal">SUBTOTAL</p>
         <p class="p-subtotal">$0</p>
         <p class="h3-total">TOTAL DE TU COMPRA</p>
         <P class="p-total">$0</P>
-      </div>
+      </div>-->
     </main>
 
 
