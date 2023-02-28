@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             responsive: [
                {
                   //
-                  breakpoint: 800,
+                  breakpoint: 600,
                   settings: {
                     // Set to `auto` and provide item width to adjust to viewport
                     slidesToShow: 2,
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   }
                 },{
                   //
-                  breakpoint: 1100,
+                  breakpoint: 1024,
                   settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,

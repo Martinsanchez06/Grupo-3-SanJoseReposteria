@@ -1,19 +1,26 @@
 <div class="product-contain">
 
-    <div class="product-home">
+    <div class="shadow product-home">
         
       <div>
-        <h3 class="h3-product-name"><%= productos.nombre %></h4>
-          <div class="div-img-home"><br>
+        
+          <div class="div-img-home p-2">
   
-          <img class="img-product-home" src="/images/Productos/<%= productos.imagen_1 %>"
+          <a href="/productos/productdetail/<%= productos.idProductos %>">
+            <img class="img-product-home" src="/images/Productos/<%= productos.imagen_1 %>"
             alt="Imagen de torta">
+          </a>
   
           </div>
       </div>
       <div class="slide-text">
-        <h4 class="h4-product">Tamaño: <%= productos.tamaño %></h4>
-        <h4 class="h4-product">Precio: <%= productos.precio %></h4>
+        <h4 class="slider-product-name">
+          <a class="" href="/productos/productdetail/<%= productos.idProductos %>">
+            <%= productos.nombre %>
+          </a>
+        </h4>
+        <p class="mb-0 "><%= productos.categorias.categoria %></p>
+        <h4 class="h4-product">$<%= productos.precio %></h4>
       </div>
 
       
@@ -21,8 +28,11 @@
     
 
       <div class="div-btn-agregar">
+        <button class="btn-add-cart">
+          <span class="inner-add">AGREGAR AL ACARRITO<i class="fas fa-shopping-cart"></i>
+          </span>
+        </button>
 
-        <a class="btn-agregar" href="/productos/productdetail/<%= productos.idProductos %>"><i class="fas fa-check-circle"></i> Ver Detalle</a>
 
       </div>
 
