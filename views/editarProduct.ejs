@@ -10,29 +10,13 @@
 
 		<div class="contain-main">
 
-
-			<section class="create-section">
-
-				
-
+			<form id="editProductForm" class="form-create" method="POST" action="?_method=PUT" enctype="multipart/form-data">
 
 				<div class="h2-div">
 
-					<h2>Estas editando el producto: <%= productos.nombre%><h2>
-
-					<img class="img-createProduct" src="/images/Logo San José para pared2.png" alt="Imagen del logo">
+					<h2 class="display-5 text-center">Editando: <%= productos.nombre%><h2>
 
 				</div>
-
-				<form class="form-delete" action="?_method=DELETE" method="POST" enctype="multipart/form-data">
-					<div class="button-formc2">
-						<input type="submit" name="delete" value="ELIMINAR PRODUCTO">
-					</div>
-				</form>
-
-			</section>
-			
-			<form id="editProductForm" class="form-create" method="POST" action="?_method=PUT" enctype="multipart/form-data">
 
 				<div id="errors-div" hidden>
 					
@@ -114,7 +98,9 @@
 
 				<div class="button-formc">
 
-					<button type="submit">EDITAR PRODUCTO</button>
+					<button type="submit">
+						<span>EDITAR PRODUCTO</span>
+					</button>
 
 				</div>
 
