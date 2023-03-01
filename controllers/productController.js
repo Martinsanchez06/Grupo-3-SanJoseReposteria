@@ -160,8 +160,10 @@ const productController = {
                 nombre: { [Op.like]: `%${req.query.search}%` }
             }
         })
-            .then(productos => { res.render("resultadoSearch", { productos }); })
-            .catch(error => res.send(error))
+            .then(productos => { 
+                res.render("listadoProductos", { productos });
+            })
+            .catch(error => res.send(error));
     }
 };
 
