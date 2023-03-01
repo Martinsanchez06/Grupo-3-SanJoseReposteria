@@ -1,19 +1,18 @@
 <article class="card">
-    <div class="card-up">
+    <div class="card-inner">
         <figure>
-            <img class="img-card-up" src="/images/Productos/<%= productos.imagen_1 %>" alt="">
+            <a href="/productos/productdetail/<%= productos.idProductos %>"><img class="img-card-up" src="/images/Productos/<%= productos.imagen_1 %>" alt="<%= productos.nombre %>"></a>
         </figure>
     </div>
     <div class="card-content">
         
-        <h3 class="h3-product"><%= productos.nombre %></h3>
-
-        <p class="p-product">precio: <span><%= productos.precio %></span></p>
-
-        <p class="p-product">Tamaño: <span><%= productos.tamaño %></span></p>
-
-        <div class="ver-detalle">
-            <a class="ver-detalle" href="/productos/productdetail/<%= productos.idProductos %>">ver producto</a>
+        <h3 class="card-title mt-0"><a class="text-decoration-none" href="/productos/productdetail/<%= productos.idProductos %>"><%= productos.nombre %></a></h3>
+        <p class="p-product"><span><%= productos.categorias.categoria %></span></p>
+        <p class="p-product">$<span><%= productos.precio %></span></p>
+        <div class="w-100">
+            <button class="w-100 card-add-cart">
+                <span>AGREGAR AL CARRITO</span>
+            </button>
         </div> 
     </div>
 

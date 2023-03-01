@@ -95,7 +95,9 @@ const productController = {
     },
 
     list: (req, res) => {
-        db.Producto.findAll()
+        db.Producto.findAll({
+            include: [{ association: 'categorias' }]
+        })
             .then(function (productos) {
                 res.render("listadoProductos", { productos: productos })
             })
