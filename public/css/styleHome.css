@@ -1512,10 +1512,10 @@ button {
 
 
 .form-create {
+  padding: 20px;
   width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-right: 30px;
 }
 
 .area-fieldc {
@@ -1552,13 +1552,37 @@ button {
 }
 
 .button-formc button {
-  background-color: #FFA500;
-  color: #000000;
-  width: 190px;
-  height: 32px;
-  border-radius: 20px;
+  --button_radius: 1em;
+  --button_color: #3c7d8f;
+  --button_outline_color: #1e424c;
+  font-size: 17px;
+  font-weight: bold;
+  width: 100%;
   border: none;
-  transition: background-color, 0.5s color, 0.5s;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button-formc button span {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.button-formc button:hover span {
+  transform: translateY(-0.33em);
+}
+
+.button-formc button:active span {
+  transform: translateY(0);
 }
 
 .button-formc2 input {
@@ -1569,11 +1593,6 @@ button {
   border-radius: 20px;
   border: none;
   transition: background-color, 0.5s color, 0.5s;
-}
-
-.button-formc button:hover {
-  background-color: #8CC0DE;
-  color: #FFFFFF;
 }
 
 .button-formc3 .input-form {
@@ -1894,10 +1913,6 @@ button {
   }
 
   /**/
-  .form-create {
-    margin-right: 20px;
-  }
-
   .img-createProduct {
     margin-top: 15%;
     width: 60%;
@@ -2415,6 +2430,18 @@ button {
   #costumer-links p {
     padding: 0%;
   }
+
+  /* Create product form styles start*/
+  .form-create {
+    background-color: #ffffff;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-style: groove;
+    border-radius: 8px;
+    border-color: #e4f0f3;
+  }
+  /* Create product form styles close */
 
   /* Product detail styles start */
 
