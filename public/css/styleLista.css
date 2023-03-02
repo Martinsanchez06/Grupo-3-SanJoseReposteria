@@ -3,12 +3,12 @@
 .lista {
     display: grid;
     grid-template-columns: 50% 50%;
-    
+
 }
 
 /* Card de cada producto */
 
-.card{
+.card {
     margin: 10px;
     display: flex;
     padding-bottom: 10px;
@@ -25,31 +25,218 @@
     margin-right: auto;
 }
 
-.card:hover{ 
+.card:hover {
     transform: scale(1.02);
     background-color: rgb(239, 239, 239);
 }
+
 .card-content {
     text-align: center;
     padding: 20px;
     border-radius: 5px;
 }
 
-.card-content p{
- margin-top: 15px;
+.card-price {
+    margin-top: 12px;
+    font-size: x-large;
 }
 
-
-
-.card-up figure img {
-    width: 100%;
-    height: 40vh;
-    object-fit: cover;
+.card-inner {
+    margin-top: 0px;
+    width: auto;
+    background-color: transparent;
+    border-radius: 0px;
+    padding: 0px;
 }
 
-/* Boton de ver detalle */
+.card-inner figure img {
+    border-top-right-radius: 0.375rem;
+    border-top-left-radius: 0.375rem;
+}
 
-.ver-detalle {  
+.card-title a {
+    color: black;
+    transition: color 2s;
+}
+
+.card-title a:hover {
+    color: #333333;
+    opacity: 0.7;
+    transition: all ease 0.3s;
+}
+
+/* Add to cart button start */
+.card-add-cart {
+    --button_radius: 1em;
+    --button_color: #3c7d8f;
+    --button_outline_color: #1e424c;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.card-add-cart span {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.card-add-cart:hover span {
+    transform: translateY(-0.33em);
+}
+
+.card-add-cart:active span {
+    transform: translateY(0);
+}
+
+/* Add to cart button start */
+
+/* Styles card for admin start */
+.card-edit-btn {
+    --button_radius: 0.7em;
+    --button_color: #0593ff;
+    --button_outline_color: #0d3757;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+.card-edit-btn a {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    background: var(--button_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.card-edit-btn:hover a {
+    transform: translateY(-0.33em);
+}
+
+.card-edit-btn:active a {
+    transform: translateY(0);
+}
+
+.card-delete-btn {
+    --button_radius: 0.7em;
+    --button_color: #dc3545;
+    --button_outline_color: #5e161d;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+.card-delete-btn span {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    background: var(--button_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.card-delete-btn:hover span {
+    transform: translateY(-0.33em);
+}
+
+.card-delete-btn:active span {
+    transform: translateY(0);
+}
+
+.delete-modal {
+    z-index: 99;
+}
+
+.modal-close-btn {
+    --button_radius: 0.7em;
+    --button_color: #6c757d;
+    --button_outline_color: #3e4348;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.modal-close-btn span {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    background: var(--button_color);
+    transform: translateY(-0.2em);
+    padding: 0.75em 1.5em;
+    transition: transform 0.1s ease;
+}
+
+.modal-close-btn:hover span {
+    transform: translateY(-0.33em);
+}
+
+.modal-close-btn:active span {
+    transform: translateY(0);
+}
+
+.modal-delete-btn {
+    --button_radius: 0.7em;
+    --button_color: #dc3545;
+    --button_outline_color: #5e161d;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.modal-delete-btn span {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    background: var(--button_color);
+    transform: translateY(-0.2em);
+    padding: 0.75em 1.5em;
+    transition: transform 0.1s ease;
+}
+
+.modal-delete-btn:hover span {
+    transform: translateY(-0.33em);
+}
+
+.modal-delete-btn:active span {
+    transform: translateY(0);
+}
+
+.modal-body-inner p {
+    font-size: x-large;
+}
+
+/* Styles card for admin close */
+
+
+.ver-detalle {
     width: 100%;
     border-radius: 10px;
     text-decoration: none;
@@ -61,87 +248,84 @@
 @media only screen and (min-width: 0px) and (max-width: 638px) {
     .lista {
         display: grid;
-        grid-template-columns:100%;
+        grid-template-columns: 100%;
         margin-left: auto;
         margin-right: auto;
-        
+
     }
 }
+
 @media only screen and (min-width: 939px) and (max-width: 1259px) {
     .lista {
         display: grid;
         grid-template-columns: 33% 33% 33%;
         margin-left: auto;
         margin-right: auto;
-        
+
     }
 }
 
 @media only screen and (min-width: 1260px) {
-/* LISTADO Y PRODUCT PARA USUARIOS Y NO USUARIOS */
+    /* LISTADO Y PRODUCT PARA USUARIOS Y NO USUARIOS */
 
-.lista {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    
-}
+    .lista {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
 
-/* Card de cada producto */
+    }
 
-.card{
-    margin: 10px;
-    display: flex;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 1s;
-}
+    /* Card de cada producto */
 
-.cardDetail {
-    width: 40vw;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .card {
+        margin: 10px;
+        display: flex;
+        padding-bottom: 10px;
+        border-radius: 5px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+    }
 
-.card:hover{ 
-    transform: scale(1.02);
-    background-color: rgb(239, 239, 239);
-}
+    .cardDetail {
+        width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.card-up {
-    margin-top: 10px;
-    background-color: #ffffff;
-    width: 300px;
-    border-radius: 20px;
-    padding: 1rem;
-}
+    .card:hover {
+        transform: scale(1.02);
+        background-color: rgb(239, 239, 239);
+    }
 
-.card-up figure img {
-    width: 100%;
-    height: 40vh;
-    object-fit: cover;
+    .card-up {
+        margin-top: 10px;
+        background-color: #ffffff;
+        width: 300px;
+        border-radius: 20px;
+        padding: 1rem;
+    }
 
-}
+    .card-up figure img {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
 
-.card-content {
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-}
+    }
 
-.card-content p{
- margin-top: 15px;
-}
+    .card-content {
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+    }
 
-/* Boton de ver detalle */
+    /* Boton de ver detalle */
 
-.ver-detalle {
-    border-radius: 10px;
-    text-decoration: none;
-    background-color: #0091AA;
-    color: #fff;
-    margin-top: 15px;
-}
+    .ver-detalle {
+        border-radius: 10px;
+        text-decoration: none;
+        background-color: #0091AA;
+        color: #fff;
+        margin-top: 15px;
+    }
 }

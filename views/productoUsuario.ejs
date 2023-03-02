@@ -7,8 +7,8 @@
     <div class="card-content">
         
         <h3 class="card-title mt-0"><a class="text-decoration-none" href="/productos/productdetail/<%= productos.idProductos %>"><%= productos.nombre %></a></h3>
-        <p class="p-product"><span><%= productos.categorias.categoria %></span></p>
-        <p class="p-product">$<span><%= productos.precio %></span></p>
+        <p class="text-muted mb-0 card-category"><span><%= productos.categorias.categoria %></span></p>
+        <p class="p-product mb-0 card-price">$<span><%= productos.precio %></span></p>
         <div class="w-100">
             <button class="w-100 card-add-cart">
                 <span>AGREGAR AL CARRITO</span>

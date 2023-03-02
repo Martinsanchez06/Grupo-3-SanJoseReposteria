@@ -1,29 +1,53 @@
 <article class="card">
     <div class="card-inner">
         <figure>
-            <img class="img-card-up" src="/images/Productos/<%= productos.imagen_1 %>" alt="">
+            <a href="/productos/productdetail/<%= productos.idProductos %>"><img class="img-card-up" src="/images/Productos/<%= productos.imagen_1 %>" alt="<%= productos.nombre %>"></a>
         </figure>
     </div>
     <div class="card-content">
         
-        <h3 class="h3-product"><%= productos.nombre %></h3>
-
-        <p class="p-product">precio: <span><%= productos.precio %></span></p>
-
-        <p class="p-product">Tamaño: <span><%= productos.tamaño %></span></p>
-
-        <div class="ver-detalle">
-
-            <a class="ver-detalle" href="/productos/editarProduct/<%= productos.idProductos %>">Editar</a>
-
-
-        </div>
-
+        <h3 class="card-title mt-0"><a class="text-decoration-none" href="/productos/productdetail/<%= productos.idProductos %>"><%= productos.nombre %></a></h3>
+        <p class="text-muted mb-0 card-category"><span><%= productos.categorias.categoria %></span></p>
+        <p class="p-product mb-0 card-price">$<span><%= productos.precio %></span></p>
         <div class="w-100">
+            
             <button class="w-100 card-add-cart">
-                <span> AGREGAR AL CARRITO</span>
+                <span>AGREGAR AL CARRITO</span>
+            </button>
+            <button class="w-100 card-edit-btn">
+                <a class="w-100 text-decoration-none text-light" href="/productos/editarProduct/<%= productos.idProductos %>">EDITAR</a>
+            </button>
+            <button type="button" class="w-100 card-delete-btn" data-bs-toggle="modal" data-bs-target="#delete-modal-<%= productos.idProductos %>">
+                <span>ELIMINAR</span>
             </button>
         </div> 
     </div>
-
 </article>
+<!-- Modal -->
+<div class="modal fade position-absolute delete-modal" id="delete-modal-<%= productos.idProductos %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Estas seguro de que quieres eliminar este producto?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center modal-body-inner">
+            <h3><%= productos.nombre %></h3>
+            <p class=""><strong>Categoria:</strong><%= productos.categorias.categoria %></p>
+            <p>$<%= productos.precio %></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <form class="d-flex justify-content-center" action="" method="POST">
+            <button type="button" class="modal-close-btn me-2" data-bs-dismiss="modal">
+                <span>CANCELAR</span>
+            </button>
+            <button type="button" value="<%= productos.idProductos %>" name="delete-btn-list" class="w-100 modal-delete-btn">
+                <span>ELIMINAR</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
