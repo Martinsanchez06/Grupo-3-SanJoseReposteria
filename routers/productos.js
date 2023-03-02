@@ -69,5 +69,6 @@ router.put("/editarProduct/:id", imagenSubida.array('imagen', 3), validaciones ,
 // ----------AQUI ELIMINAMOS UN PRODUCTO-----------
 
 router.delete("/editarProduct/:id", productController.delete);
+router.post("/deleteFromList", productController.deleteByBtnValue);
 
 module.exports = router;

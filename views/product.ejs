@@ -39,11 +39,11 @@
           </div>
         </div>
         <div class="modal-footer">
-          <form class="d-flex justify-content-center" action="" method="POST">
+          <form class="d-flex justify-content-center" action="/productos/deleteFromList" method="post">
             <button type="button" class="modal-close-btn me-2" data-bs-dismiss="modal">
                 <span>CANCELAR</span>
             </button>
-            <button type="button" value="<%= productos.idProductos %>" name="delete-btn-list" class="w-100 modal-delete-btn">
+            <button type="submit" value="<%= productos.idProductos %>" name="deleteBtnList" class="w-100 modal-delete-btn">
                 <span>ELIMINAR</span>
             </button>
           </form>

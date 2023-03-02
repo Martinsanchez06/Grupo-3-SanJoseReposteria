@@ -154,6 +154,21 @@ const productController = {
 
 
     },
+    // Eliminar producto desde valor de botton
+    deleteByBtnValue: (req, res) => {
+        let btnValue = req.body.deleteBtnList;
+        console.log(btnValue);
+        db.Producto.destroy({
+            where: {
+                idProductos: btnValue
+            }
+        }).then(
+            res.redirect("/productos/lista")
+        ).catch((error) => {
+            res.send(error);
+            console.log(error);
+        })
+    },
     search: (req, res) => {
 
         db.Producto.findAll({
