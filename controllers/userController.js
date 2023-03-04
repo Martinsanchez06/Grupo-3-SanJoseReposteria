@@ -169,6 +169,21 @@ const userController = {
         req.session.destroy();
         return res.redirect("/")
     },
+    // Requests buttons value and delete the user
+    deleteByBtnValue: (req, res) => {
+        let btnValue = req.body.deleteBtnList;
+        console.log(btnValue);
+        db.Usuario.destroy({
+            where: {
+                idUsuarios: btnValue
+            }
+        }).then(
+            res.redirect("/user/opcionesAdmin")
+        ).catch((error) => {
+            res.send(error);
+            console.log(error);
+        })
+    },
     destroy: (req, res) => {
         try {
             db.Usuario.destroy({

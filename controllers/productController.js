@@ -163,7 +163,7 @@ const productController = {
                 idProductos: btnValue
             }
         }).then(
-            res.redirect("/productos/lista")
+            res.redirect("user/opcionesAdmin")
         ).catch((error) => {
             res.send(error);
             console.log(error);

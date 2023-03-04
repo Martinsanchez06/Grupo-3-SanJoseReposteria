@@ -6,7 +6,8 @@ const router = express.Router();
 const path = require("path")
 const multer = require("multer");
 
-const { body } = require("express-validator")
+const { body } = require("express-validator");
+const { Router } = require("express");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -77,6 +78,10 @@ router.get("/perfil", authMiddleware, userController.perfil);
 //-----PROCESO DE LOGOUT----
 
 router.get("/logout/", userController.logout);
+
+// ------AQUI ELIMINAMOS UN USUARIO POR MEDIO DE VALOR DE BOTON------
+
+router.post("/deleteFromList", userController.deleteByBtnValue);
 
 // ------AQUI ELIMINAMOS UN USUARIO------
 

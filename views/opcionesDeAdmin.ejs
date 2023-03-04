@@ -23,20 +23,20 @@
                             </button>
                         </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center p-2 ">
+                    <div class="d-flex  p-2 admin-lists-container">
                         <div class="w-100">
                             <div>
                                 <h3 class="display-6">Lista de productos</h3>
                             </div>
                             <div class="table-responsive-sm table-responsive-container">
-                                <table class="table">
+                                <table class="table table-sm">
                                 <thead>
                                     <tr>
                                         <th class="col p-col-1">#</th>
                                         <th class="col p-col-2">Imagen</th>
                                         <th class="col p-col-3">Nombre</th>
                                         <th class="col p-col-4">Categoria</th>
-                                        <th class="col p-col-5">Max prociones</th>
+                                        <th class="col p-col-5">prociones</th>
                                         <th class="col p-col-6">Precio</th>
                                         <th class="col p-col-7">Editar</th>
                                         <th class="col p-col-8">Eliminar</th>
@@ -46,22 +46,50 @@
                                     <% products.forEach(product => { %>
                                         <tr>
                                             <th class="p-col-1"><%= product.idProductos %></th>
-                                            <th class="p-col-2"><span><img class="w-100" src="/images/productos/<%= product.imagen_1 %>" alt="Product image"></span></th>
+                                            <th class="p-col-2"><span><img class="" src="/images/productos/<%= product.imagen_1 %>" alt="Product image"></span></th>
                                             <th class="p-col-3"><%= product.nombre %></th>
                                             <th class="p-col-4"><%= product.categorias.categoria %></th>
                                             <th class="p-col-5"><%= product.tamaño %></th>
                                             <th class="p-col-6"><%= product.precio %></th>
                                             <th class="p-col-7">
                                                 <button class="p-edit-btn">
-                                                    <a href="">EDIT</a>
+                                                    <a href="/productos/editarProduct/<%= product.idProductos %>">EDIT</a>
                                                 </button>
                                             </th>
                                             <th class="p-col-8">
-                                                <button class="p-delete-btn">
+                                                <button class="p-delete-btn" data-bs-toggle="modal" data-bs-target="#delete-product-modal-<%= product.idProductos %>">
                                                     <span>ELIMINAR</span>
                                                 </button>
                                             </th>
                                         </tr>
+                                        <!-- Product delete modal -->
+                                        <div class="modal fade position-absolute delete-modal" id="delete-product-modal-<%= product.idProductos %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">¿Estas seguro de que quieres eliminar este producto?</h1>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <div class="text-center modal-body-inner">
+                                                    <h3><%= product.nombre %></h3>
+                                                    <p class=""><strong>Categoria:</strong><%= product.categorias.categoria %></p>
+                                                    <p>$<%= product.precio %></p>
+                                                  </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <form class="d-flex justify-content-center" action="/productos/deleteFromList" method="post">
+                                                    <button type="button" class="w-100 modal-close-btn me-2" data-bs-dismiss="modal">
+                                                        <span>CANCELAR</span>
+                                                    </button>
+                                                    <button type="submit" value="<%= product.idProductos %>" name="deleteBtnList" class="w-100 modal-delete-btn">
+                                                        <span>ELIMINAR</span>
+                                                    </button>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
                                     <% }) %>
                                 </tbody>
                             </table>
@@ -72,7 +100,7 @@
                                 <h3 class="display-6">Lista de usuarios</h3>
                             </div>
                             <div class="table-responsive-sm table-responsive-container">
-                                <table class="table">
+                                <table class="table table-sm">
                                     <thead>
                                         <tr>
                                             <th class="col u-col-1">#</th>
@@ -80,29 +108,59 @@
                                             <th class="col u-col-3">Nombre</th>
                                             <th class="col u-col-4">Email</th>
                                             <th class="col u-col-5">Ciudad</th>
-                                            <th class="col u-col-6">Editae</th>
-                                            <th class="col u-col-7">Eliminar</th>
+                                            <th class="col u-col-6">Eliminar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <% users.forEach(user => { %>
                                             <tr>
                                                 <th class="u-col-1"><%= user.idUsuarios %></th>
-                                                <th class="u-col-2"><span><img class="w-100" src="/images/avatars/<%= user.avatar %>" alt="User profile photo"></span></th>
+                                                <th class="u-col-2"><span><img class="" src="/images/avatars/<%= user.avatar %>" alt="User profile photo"></span></th>
                                                 <th class="u-col-3"><%= user.nombre %></th>
                                                 <th class="u-col-4"><%= user.email %></th>
                                                 <th class="u-col-5"><%= user.ciudad %></th>
                                                 <th class="u-col-6">
-                                                    <button class="p-edit-btn">
-                                                        <a href="">EDIT</a>
-                                                    </button>
-                                                </th>
-                                                <th class="u-col-7">
-                                                    <button class="p-delete-btn">
+                                                    <button class="p-delete-btn" data-bs-toggle="modal" data-bs-target="#delete-user-modal-<%= user.idUsuarios %>">
                                                         <span>ELIMINAR</span>
                                                     </button>
                                                 </th>
                                             </tr>
+                                            <!-- User delete modal -->
+                                            <div class="modal fade position-absolute delete-modal" id="delete-user-modal-<%= user.idUsuarios %>"
+                                                tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">¿Estas seguro de que quieres eliminar este usuario?
+                                                            </h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="text-center modal-body-inner">
+                                                                <h3>
+                                                                    <%= user.nombre %>
+                                                                </h3>
+                                                                <p class=""><strong>Email:</strong>
+                                                                    <%= user.email %>
+                                                                </p>
+                                                                <p><strong>Ciudad:</strong><%= user.ciudad %>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <form class="d-flex justify-content-center" action="/user/deleteFromList" method="post">
+                                                                <button type="button" class="w-100 modal-close-btn me-2" data-bs-dismiss="modal">
+                                                                    <span>CANCELAR</span>
+                                                                </button>
+                                                                <button type="submit" value="<%= user.idUsuarios %>" name="deleteBtnList"
+                                                                    class="w-100 modal-delete-btn">
+                                                                    <span>ELIMINAR</span>
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         <% }) %>    
                                     </tbody>
                                 </table>
@@ -111,13 +169,13 @@
                     </div>
                 </section>
             </main>
+            
 
 
             <!-- Footer -->
             <%- include("partials/footer.ejs") %>
-
-
-
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
 
 </html>

@@ -1725,6 +1725,9 @@ button {
 .admin-inner-one h1 {
   font-family: 'Courgette', cursive;
 }
+.admin-lists-container {
+  flex-direction: column;
+}
 .adminCreate {
   --button_radius: 1em;
   --button_color: #3c7d8f;
@@ -2157,6 +2160,76 @@ button {
 
 
   /* Shopping cart styles close */
+  /* */
+  
+  .table-responsive-container {
+    padding: 30px;
+  }
+  .p-edit-btn {
+    --button_radius: 1em;
+    --button_color: #0593ff;
+    --button_outline_color: #0d3757;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    align-self: center;
+  }
+  .p-edit-btn a {
+    display: block;
+    text-decoration: none; 
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.60em 1em;
+    background: var(--button_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  .p-edit-btn:hover a {
+    transform: translateY(-0.33em);
+  }
+  .p-edit-btn:active a {
+    transform: translateY(0);
+  }
+  .p-delete-btn {
+    --button_radius: 1em;
+    --button_color: #dc3545;
+    --button_outline_color: #5e161d;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+  }
+  .p-delete-btn span {
+    display: block;
+    text-decoration: none; 
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.60em 0.3em;
+    background: var(--button_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  .p-delete-btn:hover span {
+    transform: translateY(-0.33em);
+  }
+  .p-delete-btn:active span {
+    transform: translateY(0);
+  }
   
 }
 
