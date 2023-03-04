@@ -144,12 +144,25 @@ const userController = {
             })
         })
     },
-    vistaAdmin: (req, res) => {
-        if(req.session.usuarioLogueado.rolDeUsuario === 1){
-            res.render("opcionesDeAdmin")
-        } else {
-            res.send('Acceso no autorizado')
-        }
+    vistaAdmin: async (req, res) => {
+        try {
+            if(req.session.usuarioLogueado) {
+                if(req.session.usuarioLogueado.rolDeUsuario === 1) {
+                    const products = await db.Producto.findAll({
+                        include: [{ association: 'categorias' }]
+                    });
+                    const users = await db.Usuario.findAll();
+                    res.render("opcionesDeAdmin", { products, users });
+                } else if (req.session.usuarioLogueado.rolDeUsuario !== 1) {
+                    res.redirect("/");
+                }
+            } else {
+                res.status(400).send("No encontrado")
+            }
+        } catch (error) {
+            console.log(error);
+            res.status(500).send("Erro en el servidor")
+        }    
     },
     logout: (req, res) => {
         res.clearCookie("userEmail");

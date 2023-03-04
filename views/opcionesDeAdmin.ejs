@@ -11,13 +11,105 @@
 
             <!-- Main -->
             <main class="mainAdmin">
-                <h1>Bienvenido a las opciones de administrador</h1>
-                <div>
-                    <a  class="adminList"  id="adminList" href="/productos/lista">Lista de productos</a> 
-                </div>
-                <div>
-                    <a  class="adminCreate" id="adminCreate" href="/productos/createProduct">Creación de productos</a>
-                </div>
+                <section class="d-flex admin-settings-container">
+                    <div class="mb-3 mt-3 p-2 admin-inner-one">
+                        <h1 class="display-5">Opciones de administrador</h1>
+                        <!--<div>
+                            <a class="adminList" id="adminList" href="/productos/lista">Lista de productos</a>
+                        </div>-->
+                        <div class="mt-2">
+                            <button class="adminCreate"">
+                                <a id="adminCreate" href="/productos/createProduct">CREAR PRODUCTO</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center p-2 ">
+                        <div class="w-100">
+                            <div>
+                                <h3 class="display-6">Lista de productos</h3>
+                            </div>
+                            <div class="table-responsive-sm table-responsive-container">
+                                <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="col p-col-1">#</th>
+                                        <th class="col p-col-2">Imagen</th>
+                                        <th class="col p-col-3">Nombre</th>
+                                        <th class="col p-col-4">Categoria</th>
+                                        <th class="col p-col-5">Max prociones</th>
+                                        <th class="col p-col-6">Precio</th>
+                                        <th class="col p-col-7">Editar</th>
+                                        <th class="col p-col-8">Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% products.forEach(product => { %>
+                                        <tr>
+                                            <th class="p-col-1"><%= product.idProductos %></th>
+                                            <th class="p-col-2"><span><img class="w-100" src="/images/productos/<%= product.imagen_1 %>" alt="Product image"></span></th>
+                                            <th class="p-col-3"><%= product.nombre %></th>
+                                            <th class="p-col-4"><%= product.categorias.categoria %></th>
+                                            <th class="p-col-5"><%= product.tamaño %></th>
+                                            <th class="p-col-6"><%= product.precio %></th>
+                                            <th class="p-col-7">
+                                                <button class="p-edit-btn">
+                                                    <a href="">EDIT</a>
+                                                </button>
+                                            </th>
+                                            <th class="p-col-8">
+                                                <button class="p-delete-btn">
+                                                    <span>ELIMINAR</span>
+                                                </button>
+                                            </th>
+                                        </tr>
+                                    <% }) %>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <div>
+                                <h3 class="display-6">Lista de usuarios</h3>
+                            </div>
+                            <div class="table-responsive-sm table-responsive-container">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="col u-col-1">#</th>
+                                            <th class="col u-col-2">Avatar</th>
+                                            <th class="col u-col-3">Nombre</th>
+                                            <th class="col u-col-4">Email</th>
+                                            <th class="col u-col-5">Ciudad</th>
+                                            <th class="col u-col-6">Editae</th>
+                                            <th class="col u-col-7">Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% users.forEach(user => { %>
+                                            <tr>
+                                                <th class="u-col-1"><%= user.idUsuarios %></th>
+                                                <th class="u-col-2"><span><img class="w-100" src="/images/avatars/<%= user.avatar %>" alt="User profile photo"></span></th>
+                                                <th class="u-col-3"><%= user.nombre %></th>
+                                                <th class="u-col-4"><%= user.email %></th>
+                                                <th class="u-col-5"><%= user.ciudad %></th>
+                                                <th class="u-col-6">
+                                                    <button class="p-edit-btn">
+                                                        <a href="">EDIT</a>
+                                                    </button>
+                                                </th>
+                                                <th class="u-col-7">
+                                                    <button class="p-delete-btn">
+                                                        <span>ELIMINAR</span>
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                        <% }) %>    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
 
 

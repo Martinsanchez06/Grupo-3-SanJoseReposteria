@@ -1706,58 +1706,129 @@ button {
   margin-right: auto;
 }
 
-/* ------OPCIONES ADMIN------ */
+/* Admin options view styles start */
 
 .mainAdmin {
   min-height: 100vh;
   text-align: center;
 }
-
-.mainAdmin div {
-  margin-top: 50px;
+.admin-settings-container {
+  flex-direction: column;
 }
-
-#adminList {
-  height: 70px;
+.admin-inner-one {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-
-
-.mainAdmin .adminList {
-  background-color: #3c7d8f;
-  color: #ffffff;
-  font-size: 30px;
-  padding: 10px;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 30px;
+.admin-inner-one h1 {
+  font-family: 'Courgette', cursive;
+}
+.adminCreate {
+  --button_radius: 1em;
+  --button_color: #3c7d8f;
+  --button_outline_color: #1e424c;
+  font-size: 17px;
+  font-weight: bold;
+  width: 100%;
   border: none;
-  transition:
-    background-color, 0.5s color, 0.5s;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
 }
-
-
-.adminList:hover {
-  background-color: #8CC0DE;
-  color: #FFFFFF;
-}
-
-.mainAdmin .adminCreate {
-  background-color: #3c7d8f;
-  color: #ffffff;
-  font-size: 30px;
-  padding: 10px;
-  text-decoration: none;
+.adminCreate a {
+  display: block;
+  text-decoration: none; 
+  color: white;
   text-align: center;
-  border-radius: 30px;
-  border: none;
-  transition:
-    background-color, 0.5s color, 0.5s;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
 }
 
-.adminCreate:hover {
-  background-color: #8CC0DE;
-  color: #FFFFFF;
+.adminCreate:hover a {
+  transform: translateY(-0.33em);
 }
+.adminCreate:active a {
+  transform: translateY(0);
+}
+.table-responsive-container span img {
+  height: 50px;
+}
+
+.p-edit-btn {
+  --button_radius: 1em;
+  --button_color: #0593ff;
+  --button_outline_color: #0d3757;
+  font-size: 10px;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  align-self: center;
+}
+.p-edit-btn a {
+  display: block;
+  text-decoration: none; 
+  color: white;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.50em 1em;
+  background: var(--button_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.p-edit-btn:hover a {
+  transform: translateY(-0.33em);
+}
+.p-edit-btn:active a {
+  transform: translateY(0);
+}
+.p-delete-btn {
+  --button_radius: 1em;
+  --button_color: #dc3545;
+  --button_outline_color: #5e161d;
+  font-size: 10px;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+.p-delete-btn span {
+  display: block;
+  text-decoration: none; 
+  color: white;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.50em 1em;
+  background: var(--button_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.p-delete-btn:hover span {
+  transform: translateY(-0.33em);
+}
+.p-delete-btn:active span {
+  transform: translateY(0);
+}
+
+
+/* Admin options view styles close */
 
 @media only screen and (min-width: 460px) {
 
