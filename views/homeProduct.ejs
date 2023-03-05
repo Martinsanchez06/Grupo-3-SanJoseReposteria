@@ -1,16 +1,11 @@
 <div class="product-contain">
-
-    <div class="shadow product-home">
-        
+    <div class="shadow product-home">  
       <div>
-        
           <div class="div-img-home p-2">
-  
           <a href="/productos/productdetail/<%= productos.idProductos %>">
             <img class="img-product-home" src="/images/Productos/<%= productos.imagen_1 %>"
             alt="Imagen de torta">
           </a>
-  
           </div>
       </div>
       <div class="slide-text">
@@ -22,20 +17,11 @@
         <p class="mb-0 "><%= productos.categorias.categoria %></p>
         <h4 class="h4-product">$<%= productos.precio %></h4>
       </div>
-
-      
-      
-    
-
       <div class="div-btn-agregar">
         <button class="btn-add-cart shopping-add">
           <span class="inner-add" data-id="<%= productos.idProductos %>">AGREGAR AL ACARRITO<i class="fas fa-shopping-cart"></i>
           </span>
         </button>
-
-
       </div>
-
     </div>
-
   </div>
