@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+/* View title start */
+.view-title {
+  background-color: #ffffff;
+}
+/* View title close */
 
 /* ESTILOS DEL HEADER */
 

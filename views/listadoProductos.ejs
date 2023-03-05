@@ -8,17 +8,27 @@
         <%- include("partials/header.ejs") %>
 
             <!--Main-->
-            <div class="lista">
-                <% if (locals.usuarioAdmin) { %>
-                    <% productos.forEach(productos=> { %>
-                    <%- include("product.ejs", {productos : productos}) %>
-                    <% }) %>
-                <% } else { %>
-                    <% productos.forEach(productos=> { %>
-                    <%- include("productoUsuario.ejs", {productos : productos}) %>
-                    <% }) %>
-                <% } %>
-            </div>
+            <main>
+                <div class="view-title p-2 ps-4">
+                    <h1 class="fs-6 mb-0 text-muted">| Tortas y postres</h1>
+                </div>
+                <div class="w-100 mt-3">
+                    
+                    <button class="btn ms-4"><i class="fas fa-filter"></i> Filtrar</button>
+                    
+                </div>
+                <section class="lista">
+                    <% if (locals.usuarioAdmin) { %>
+                        <% productos.forEach(productos=> { %>
+                        <%- include("product.ejs", {productos : productos}) %>
+                        <% }) %>
+                    <% } else { %>
+                        <% productos.forEach(productos=> { %>
+                        <%- include("productoUsuario.ejs", {productos : productos}) %>
+                        <% }) %>
+                    <% } %>
+                </section>
+            </main>
 
 
             <!--Footer-->

@@ -74,7 +74,7 @@ const apiProductsController = {
             };
 
             const imageUrl = {
-                image_1: `https://san-jose-reposteria.herokuapp.com/images/Productos/${ product.imagen_1}`,
+                image_1: `/images/Productos/${ product.imagen_1}`,
                 image_2: `https://san-jose-reposteria.herokuapp.com/images/Productos/${ product.imagen_2}`,
                 image_3: `https://san-jose-reposteria.herokuapp.com/images/Productos/${ product.imagen_3}`
             }

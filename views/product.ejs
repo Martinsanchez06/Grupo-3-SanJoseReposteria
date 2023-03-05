@@ -11,8 +11,8 @@
         <p class="p-product mb-0 card-price">$<span><%= productos.precio %></span></p>
         <div class="w-100">
             
-            <button class="w-100 card-add-cart">
-                <span>AGREGAR AL CARRITO</span>
+            <button class="w-100 card-add-cart shopping-add">
+                <span data-id="<%= productos.idProductos %>">AGREGAR AL CARRITO</span>
             </button>
             <button class="w-100 card-edit-btn">
                 <a class="w-100 text-decoration-none text-light" href="/productos/editarProduct/<%= productos.idProductos %>">EDITAR</a>

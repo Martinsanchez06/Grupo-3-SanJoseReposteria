@@ -16,7 +16,20 @@
 
     <ul class="nav-tabs2 m-0">
       <% if (locals.isLogged && locals.usuarioAdmin) { %>
-        <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+        <li>
+          <a class="nav2-link position-relative" href="/productos/carritoDeCompras">
+            <i class=" fas fa-shopping-cart"></i>
+            <div class="container-number-cart position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              <!--<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger card-number">0</span>-->
+            </div>
+            <span class="d-none name-shooping-cart">Carrito</span>
+            <div class="">
+              <!--<div class="container-number-cart">
+                <p class="card-number">0</p>
+              </div>-->
+            </div>
+          </a>
+        </li>
         <div class="search">
           <a class="search-link" href="#"><i id="search-icon" class="fas fa-search"></i></a>
           <div class="container-search">
@@ -68,7 +81,20 @@
           </div>
         </div>
         <% } else if (locals.isLogged) { %>
-          <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+          <li>
+            <a class="nav2-link position-relative" href="/productos/carritoDeCompras">
+              <i class=" fas fa-shopping-cart"></i>
+              <div class="container-number-cart position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <!--<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger card-number">0</span>-->
+              </div>
+              <span class="d-none name-shooping-cart">Carrito</span>
+              <div class="">
+                <!--<div class="container-number-cart">
+                  <p class="card-number">0</p>
+                </div>-->
+              </div>
+            </a>
+          </li>
           <div class="search">
             <a class="search-link" href="#"><i id="search-icon" class="fas fa-search"></i></a>
             <div class="container-search">
@@ -115,7 +141,20 @@
 
           <% } else { %>
 
-            <li><a class="nav2-link" href="/productos/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+            <li>
+              <a class="nav2-link position-relative" href="/productos/carritoDeCompras">
+                <i class=" fas fa-shopping-cart"></i>
+                <div class="container-number-cart position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  <!--<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger card-number">0</span>-->
+                </div>
+                <span class="d-none name-shooping-cart">Carrito</span>
+                <div class="">
+                  <!--<div class="container-number-cart">
+                    <p class="card-number">0</p>
+                  </div>-->
+                </div>
+              </a>
+            </li>
             <div class="search">
               <a class="search-link" href="#"><i id="search-icon" class="fas fa-search"></i></a>
               <div class="container-search">
@@ -169,6 +208,7 @@
     </ul>
   </nav>
   <script src="/js/headerStyles.js"></script>
+  <script src="/js/header.js"></script>
   <!--<div class="search">
     <input type="search" name="search" id="search-header" placeholder="Busca aqui tu postre" autocomplete="off">
   </div>-->

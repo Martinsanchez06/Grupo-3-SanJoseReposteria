@@ -125,8 +125,8 @@
               </div>
             </div>
             <div class="w-100 div-add-button">
-              <button class="w-100 add-button" type="submit">
-                <span>AGREGAR AL CARRITO</span>
+              <button class="w-100 add-button shopping-add"  type="submit">
+                <span data-id="<%= productByPk.idProductos %>">AGREGAR AL CARRITO</span>
               </button>
             </div>
           </div>
@@ -134,97 +134,6 @@
       </div>
       <!-- Slider -->
       
-
-      <!--<div class="container text-center my-3">
-        <div class="row mx-auto my-auto justify-content-center">
-          <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-              <% products.forEach((product, i)=> { %>
-                <div class="carousel-item carousel-i ">
-                  <div class="col-md-3">
-                    <div class="card m-0">
-                      <div class="card-img">
-                        <img src="/images/Productos/<%= product.imagen_1 %>" class="img-fluid">
-                      </div>
-                      <div class="card-img-overlay">
-                        <%= product.idProductos %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <% }); %>
-                  <div class="carousel-item active">
-                    <div class="col-md-3">
-                      <div class="card m-0">
-                        <div class="card-img">
-                          <img src="https://via.placeholder.com/700x500.png/CB997E/333333?text=1" class="img-fluid">
-                        </div>
-                        <div class="card-img-overlay">Slide 1</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="col-md-3">
-                      <div class="card">
-                        <div class="card-img">
-                          <img src="https://via.placeholder.com/700x500.png/DDBEA9/333333?text=2" class="img-fluid">
-                        </div>
-                        <div class="card-img-overlay">Slide 2</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="col-md-3">
-                      <div class="card">
-                        <div class="card-img">
-                          <img src="https://via.placeholder.com/700x500.png/FFE8D6/333333?text=3" class="img-fluid">
-                        </div>
-                        <div class="card-img-overlay">Slide 3</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="col-md-3">
-                      <div class="card">
-                        <div class="card-img">
-                          <img src="https://via.placeholder.com/700x500.png/B7B7A4/333333?text=4" class="img-fluid">
-                        </div>
-                        <div class="card-img-overlay">Slide 4</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="col-md-3">
-                      <div class="card">
-                        <div class="card-img">
-                          <img src="https://via.placeholder.com/700x500.png/A5A58D/333333?text=5" class="img-fluid">
-                        </div>
-                        <div class="card-img-overlay">Slide 5</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="col-md-3">
-                      <div class="card">
-                        <div class="card-img">
-                          <img src="https://via.placeholder.com/700x500.png/6B705C/eeeeee?text=6" class="img-fluid">
-                        </div>
-                        <div class="card-img-overlay">Slide 6</div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
-          </div>
-        </div>
-      </div>-->
       <div class="w-100 mt-5">
         <h3 class="text-center display-5">Recomendados</h3>
       </div>
@@ -257,7 +166,7 @@
                   <span class="p-price">
                     $<%= product.precio %>
                   </span>
-                  <a href="#" class="p-buy-btn text-decoration-none"><i class="slider-cart fas fa-shopping-cart"></i></a>
+                  <a href="#" class="p-buy-btn text-decoration-none shopping-add"><i class="slider-cart fas fa-shopping-cart" data-id="<%= product.idProductos %>"></i></a>
                 </div>
               </div>
             </div>
