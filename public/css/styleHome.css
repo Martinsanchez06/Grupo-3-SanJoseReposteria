@@ -1669,47 +1669,6 @@ button {
     background-color, 0.5s color, 0.5s;
 }
 
-.usuario-content {
-  height: 90vh
-}
-
-.img-usuario {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  height: 70vh;
-  width: 70vw;
-  box-shadow: #000000 1px;
-  margin-left: auto;
-  object-fit: cover;
-  border-radius: 30px;
-  margin-right: auto;
-}
-
-.nombre-usuario {
-  margin-top: 30px;
-  text-align: center;
-  justify-content: center;
-}
-
-.email-div {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.email-usuario {
-  display: flex;
-  justify-content: center;
-  border: 2px solid #3c7d8f;
-  background-color: #00a8a8;
-  color: white;
-  border-radius: 20px;
-  display: inline-block;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /* Admin options view styles start */
 
@@ -1835,8 +1794,74 @@ button {
   transform: translateY(0);
 }
 
-
 /* Admin options view styles close */
+
+/* User profile view styles start */ 
+.profile-content-container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+.img-usuario {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-shadow: #000000 1px;
+  margin-left: auto;
+  object-fit: cover;
+  margin-right: auto;
+}
+.user-content {
+  border-color: #4a4949;
+  border-radius: 15px;
+}
+.user-info {
+  text-align: start;
+}
+.adress-btn {
+  --button_radius: 1em;
+  --button_color: #4d4f52;
+  --button_outline_color: #2e2f31;
+  font-size: 10px;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  align-self: center;
+}
+.adress-btn a {
+  display: block;
+  text-decoration: none; 
+  color: white;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.50em 1em;
+  background: var(--button_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.adress-btn:hover a {
+  transform: translateY(-0.33em);
+}
+.adress-btn:active a {
+  transform: translateY(0);
+}
+
+.nombre-usuario {
+  margin-top: 30px;
+  text-align: center;
+  justify-content: center;
+}
+/* User profile view styles close */
 
 @media only screen and (min-width: 460px) {
 
@@ -2022,6 +2047,19 @@ button {
 /* -Containes 1100 px- */
 @media only screen and (min-width: 834px) {
 
+  /* User profile styles start */
+  .profile-content {
+    display: flex;
+    flex-direction: row;
+  }
+  .user-content {
+    width: 30%;
+  }
+  .orders-table-container {
+    width: 70%;
+    padding: 20px;
+  }
+  /* User profile styles close */
   /* HOME SLIDER STYLES START */
   .carousel-i {
     height: 700px;
@@ -2305,11 +2343,6 @@ button {
     display: flex;
     justify-content: space-between;
   }
-
-  .img-usuario {
-    width: 30vw;
-  }
-
   .div-img-footer {
     display: flex;
     justify-content: center;

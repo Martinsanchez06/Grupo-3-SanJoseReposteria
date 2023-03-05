@@ -7,37 +7,57 @@
     <body>
         <!-- Header -->
         <%- include("partials/header.ejs") %>
-            <div class="content">
-                <section class="usuario-content">
-                    <div>
-
-                        <h1 class="nombre-usuario">Bienvenido: <%= user.nombre %>
-                        </h1>
-
-                    </div>
-                    <div>
-
-                        <img class="img-usuario" src="/images/avatars/<%= user.avatar %>">
-
-                    </div>
-                    <div class="email-div">
-                        <p class="email-usuario">email: <%= user.email %>
-                        </p>
-                    </div>
-                </section>
-                <% if (locals.isLogged && locals.usuarioAdmin) { %>
-
-                    <div class="button-formUser">
-                        <a href="editarUsuario/<%= user.idUsuarios %>">EDITAR USUARIO</a>
-                    </div>
-
-                    <form class="form-delete" action="?_method=DELETE" method="POST">
-                        <div class="button-formc3">
-                            <input class="input-form" type="submit" name="delete" value="ELIMINAR USUARIO">
+            <section class="d-flex p-2 profile-content-container">
+                <div class="w-100 mt-3">
+                    <h1 class="display-5 text-center">Mi cuenta</h1>
+                </div>
+                <div class="d-flex w-100 profile-content">
+                    <div class="border user-content">
+                        <div class="w-100 p-3 d-flex flex-column">
+                            <img class="rounded-3 img-usuario" src="/images/avatars/<%= user.avatar %>">
+                            <div class="user-info">
+                                <h3><%= user.nombre %></h3>
+                                <p class="m-0">
+                                    <%= user.email %>
+                                    <br>
+                                    <%= user.ciudad %>
+                                </p>
+                            </div>
+                            <div class="">
+                                <button class="adress-btn">
+                                    <a href="">ver direcciones</a>
+                                </button>
+                            </div>
                         </div>
-                        <% } %>
-                    </form>
-            </div>
+                    </div>
+                    <div class="orders-table-container">
+                        <div>
+                            <h2 class="display-6 text-center">Pedidos</h2>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Fecha</th>
+                                        <th>Pago</th>
+                                        <th>Estado</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <th>001</th>
+                                    <th>3/5/2022</th>
+                                    <th>Pagada</th>
+                                    <th>concluida</th>
+                                    <th>$90000</th>
+                                </tbody>
+                            </table>
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
 
 
             <!-- Footer -->
