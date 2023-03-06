@@ -77,7 +77,7 @@ const productController = {
                 precio: req.body.precio,
                 descripcion: req.body.descripcion
             })
-            res.redirect("/productos/lista");
+            res.redirect("/user/opcionesAdmin");
             console.log(req.body, req.file)
 
         } catch (error) {
@@ -163,7 +163,7 @@ const productController = {
                 idProductos: btnValue
             }
         }).then(
-            res.redirect("user/opcionesAdmin")
+            res.redirect("/user/opcionesAdmin")
         ).catch((error) => {
             res.send(error);
             console.log(error);

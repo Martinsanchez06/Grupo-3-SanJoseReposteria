@@ -106,8 +106,9 @@
   background: var(--button_outline_color);
 }
 
-.btn-test span {
+.btn-test a {
   display: block;
+  text-decoration: none;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   color: white;
@@ -119,11 +120,11 @@
   transition: transform 0.1s ease;
 }
 
-.btn-test:hover span {
+.btn-test:hover a {
   transform: translateY(-0.33em);
 }
 
-.btn-test:active span {
+.btn-test:active a {
   transform: translateY(0);
 }
 
@@ -732,7 +733,6 @@ button {
 }
 
 .contain-main {
-  min-height: 90vh;
   position: relative;
 }
 
@@ -2444,7 +2444,6 @@ button {
     width: 100%;
     display: flex;
     justify-content: center;
-    min-height: 90vh;
     margin-top: 100px;
     margin-bottom: 100px;
   }
@@ -2636,6 +2635,7 @@ button {
   }
 
   .item-right {
+    width: 40%;
     align-items: flex-start;
     /*padding-right: 50%;*/
     padding-left: 30px;
