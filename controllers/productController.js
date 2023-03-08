@@ -135,10 +135,7 @@ const productController = {
             }
         })
         console.log(req.body, req.files)
-        db.Producto.findAll()
-            .then(function (productos) {
-                res.render("listadoProductos", { productos: productos })
-            })
+        res.redirect("/user/opcionesAdmin");
     },
     delete: (req, res) => {
 

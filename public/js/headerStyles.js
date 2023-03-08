@@ -13,11 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     searchIcon.addEventListener("click", () => {
         searchInput.classList.toggle("active-search");
+        settingsBox.classList.remove("active");
     });
 
     bars.addEventListener("click", () => {
-
         menuBox.classList.add("active2");
+        settingsBox.classList.remove("active");
     });
 
     menuBoxButton.addEventListener("click" , () => {
@@ -26,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     ProfileIcon.addEventListener("click", () => {
-
         settingsBox.classList.toggle("active");
+        searchInput.classList.remove("active-search");
     });
 
 
